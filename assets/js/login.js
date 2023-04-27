@@ -1,0 +1,1 @@
+function checkLogin() {var username = document.getElementById("username").value;var password = document.getElementById("password").value;if ((username === "user1" && password === "pass01") || (username === "user2" && password === "pass02") ||(username === "user3" && password === "pass03")) {window.location.href = "irtl.html";} else {alert("Invalid login credentials.");}}
