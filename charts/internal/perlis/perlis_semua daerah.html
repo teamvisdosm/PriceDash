@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a78e3ac2fb960debf1e794373bc81242 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a78e3ac2fb960debf1e794373bc81242" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a78e3ac2fb960debf1e794373bc81242 = L.map(
+                "map_a78e3ac2fb960debf1e794373bc81242",
+                {
+                    center: [6.463405444776118, 100.22946147014926],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    viewport: {"width": "device-width"},
+                }
+            );
+            L.control.scale().addTo(map_a78e3ac2fb960debf1e794373bc81242);
+
+            
+
+        
+    
+            var tile_layer_fc1194408d030a4551aa9bf390c7e1e4 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        function geo_json_09693fc073f72f1644fb79291b73a988_styler(feature) {
+            switch(feature.properties.state) {
+                default:
+                    return {"color": "black", "fillColor": "grey", "fillOpacity": 0.3, "weight": 1};
+            }
+        }
+
+        function geo_json_09693fc073f72f1644fb79291b73a988_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_09693fc073f72f1644fb79291b73a988 = L.geoJson(null, {
+                onEachFeature: geo_json_09693fc073f72f1644fb79291b73a988_onEachFeature,
+            
+                style: geo_json_09693fc073f72f1644fb79291b73a988_styler,
+        });
+
+        function geo_json_09693fc073f72f1644fb79291b73a988_add (data) {
+            geo_json_09693fc073f72f1644fb79291b73a988
+                .addData(data)
+                .addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        }
+            geo_json_09693fc073f72f1644fb79291b73a988_add({"features": [{"geometry": {"coordinates": [[[[100.2104, 6.72068], [100.2145, 6.71939], [100.22052, 6.70179], [100.22958, 6.69454], [100.23417, 6.69432], [100.24359, 6.69896], [100.24918, 6.69631], [100.25134, 6.69673], [100.25414, 6.70026], [100.25182, 6.70767], [100.25869, 6.71112], [100.26047, 6.71032], [100.26456, 6.70023], [100.26961, 6.70219], [100.27581, 6.7076], [100.28988, 6.71039], [100.29274, 6.70922], [100.29524, 6.70404], [100.29258, 6.70089], [100.2908, 6.69108], [100.29436, 6.68229], [100.29686, 6.67939], [100.30246, 6.68037], [100.30412, 6.6717], [100.30755, 6.6676], [100.31695, 6.66728], [100.31875, 6.6654], [100.32584, 6.66652], [100.32725, 6.66387], [100.32403, 6.65668], [100.32038, 6.65454], [100.32277, 6.64977], [100.32219, 6.64439], [100.31781, 6.63835], [100.32224, 6.63303], [100.3224, 6.62672], [100.32411, 6.62513], [100.32472, 6.62052], [100.31888, 6.61419], [100.30623, 6.611], [100.30439, 6.60786], [100.30962, 6.60321], [100.31729, 6.60044], [100.31885, 6.59473], [100.32714, 6.5845], [100.33393, 6.58363], [100.34039, 6.57997], [100.34574, 6.57116], [100.35232, 6.57065], [100.35488, 6.55877], [100.359, 6.55508], [100.36181, 6.54618], [100.36664, 6.54214], [100.37136, 6.53059], [100.36356, 6.45365], [100.31187, 6.40974], [100.31021, 6.4107], [100.30693, 6.4093], [100.3057, 6.40538], [100.29814, 6.39837], [100.28117, 6.37215], [100.25539, 6.34829], [100.2505, 6.33709], [100.24154, 6.33096], [100.23853, 6.32673], [100.22913, 6.31932], [100.22159, 6.31076], [100.21585, 6.29953], [100.20536, 6.29196], [100.20405, 6.28611], [100.20184, 6.28356], [100.20377, 6.2786], [100.203, 6.2698], [100.19799, 6.26263], [100.19923, 6.25713], [100.18011, 6.27135], [100.16808, 6.29157], [100.15796, 6.31697], [100.13951, 6.37324], [100.12403, 6.40636], [100.12029, 6.42166], [100.13288, 6.43053], [100.13439, 6.43911], [100.1381, 6.44634], [100.1476, 6.45115], [100.14535, 6.45869], [100.14651, 6.46981], [100.15131, 6.47123], [100.1527, 6.47628], [100.15847, 6.47778], [100.15522, 6.48323], [100.15971, 6.48605], [100.16114, 6.49126], [100.15789, 6.49987], [100.15877, 6.50976], [100.1561, 6.51817], [100.15776, 6.523], [100.15814, 6.5343], [100.15378, 6.5514], [100.15556, 6.55743], [100.16022, 6.56162], [100.15866, 6.57116], [100.15626, 6.57335], [100.15656, 6.57639], [100.15848, 6.5783], [100.16317, 6.57568], [100.16814, 6.57753], [100.1765, 6.56816], [100.18221, 6.57221], [100.18354, 6.57609], [100.17873, 6.59104], [100.18127, 6.60073], [100.17898, 6.60391], [100.17419, 6.60383], [100.1711, 6.6062], [100.16726, 6.62305], [100.16926, 6.63936], [100.16841, 6.64739], [100.17716, 6.65233], [100.18025, 6.65792], [100.17858, 6.6652], [100.17956, 6.68031], [100.17344, 6.68694], [100.17199, 6.69309], [100.17828, 6.69654], [100.18817, 6.71677], [100.19846, 6.72113], [100.2033, 6.72558], [100.2104, 6.72068]]]], "type": "MultiPolygon"}, "properties": {"code_district": 1, "code_state": 9, "code_state_district": "9_1", "district": "Perlis", "state": "Perlis"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            var circle_marker_2ab5f09e0ea73122e497f3e3f0e936a2 = L.circleMarker(
+                [6.413649, 100.183522],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_bf198a4750eb36df6eec80617a8adde8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_73e5ef75fc245a718eaf81e1499c6820 = $(`<div id="html_73e5ef75fc245a718eaf81e1499c6820" style="width: 100.0%; height: 100.0%;">AF MAJU JAYA ENTERPRISE: 34 barangan</div>`)[0];
+                popup_bf198a4750eb36df6eec80617a8adde8.setContent(html_73e5ef75fc245a718eaf81e1499c6820);
+            
+        
+
+        circle_marker_2ab5f09e0ea73122e497f3e3f0e936a2.bindPopup(popup_bf198a4750eb36df6eec80617a8adde8)
+        ;
+
+        
+    
+    
+            var circle_marker_65d08460634d4a62954f6fe8c075fe79 = L.circleMarker(
+                [6.550381, 100.28611],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_b7f50ddaf74995963c24362739d08d62 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b517c7bbe74e4aeb7718d5fb51b2669e = $(`<div id="html_b517c7bbe74e4aeb7718d5fb51b2669e" style="width: 100.0%; height: 100.0%;">BAYU RINDU ENTERPRISE: 48 barangan</div>`)[0];
+                popup_b7f50ddaf74995963c24362739d08d62.setContent(html_b517c7bbe74e4aeb7718d5fb51b2669e);
+            
+        
+
+        circle_marker_65d08460634d4a62954f6fe8c075fe79.bindPopup(popup_b7f50ddaf74995963c24362739d08d62)
+        ;
+
+        
+    
+    
+            var circle_marker_c7942629fac426a78af1150d1f66a587 = L.circleMarker(
+                [6.514955, 100.23141],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_d6a151388fc38a4fd8ef1ababd856082 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3bebc99f1e486d5eea31b01250ff9fb4 = $(`<div id="html_3bebc99f1e486d5eea31b01250ff9fb4" style="width: 100.0%; height: 100.0%;">BESERI MINI MARKET: 40 barangan</div>`)[0];
+                popup_d6a151388fc38a4fd8ef1ababd856082.setContent(html_3bebc99f1e486d5eea31b01250ff9fb4);
+            
+        
+
+        circle_marker_c7942629fac426a78af1150d1f66a587.bindPopup(popup_d6a151388fc38a4fd8ef1ababd856082)
+        ;
+
+        
+    
+    
+            var circle_marker_646a9939651813b150d79a336b13b800 = L.circleMarker(
+                [6.4424769, 100.2351739],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_3f83e73aab25f0f4458b0f86a84ec979 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf152981ce44a9a7e0b84f57c859ad3e = $(`<div id="html_cf152981ce44a9a7e0b84f57c859ad3e" style="width: 100.0%; height: 100.0%;">BORONG DIN AS CASH & CARRY (JEJAWI): 91 barangan</div>`)[0];
+                popup_3f83e73aab25f0f4458b0f86a84ec979.setContent(html_cf152981ce44a9a7e0b84f57c859ad3e);
+            
+        
+
+        circle_marker_646a9939651813b150d79a336b13b800.bindPopup(popup_3f83e73aab25f0f4458b0f86a84ec979)
+        ;
+
+        
+    
+    
+            var circle_marker_045f475bc945c579ef09c04fdef07169 = L.circleMarker(
+                [6.65101, 100.2265],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_f44db9e5937e49eafa73b7f8d97e36fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_726ae30bf194d0265843476e831fa5bb = $(`<div id="html_726ae30bf194d0265843476e831fa5bb" style="width: 100.0%; height: 100.0%;">BORONG WANN: 105 barangan</div>`)[0];
+                popup_f44db9e5937e49eafa73b7f8d97e36fe.setContent(html_726ae30bf194d0265843476e831fa5bb);
+            
+        
+
+        circle_marker_045f475bc945c579ef09c04fdef07169.bindPopup(popup_f44db9e5937e49eafa73b7f8d97e36fe)
+        ;
+
+        
+    
+    
+            var circle_marker_97f438686480353a4d33ec35a2242555 = L.circleMarker(
+                [6.400474, 100.133988],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_07485eb8eef4456e65b6991f26ffbbd4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_efcc7e1eb3eeae442cd739c56268bf26 = $(`<div id="html_efcc7e1eb3eeae442cd739c56268bf26" style="width: 100.0%; height: 100.0%;">COMFORT MINI MARKET: 38 barangan</div>`)[0];
+                popup_07485eb8eef4456e65b6991f26ffbbd4.setContent(html_efcc7e1eb3eeae442cd739c56268bf26);
+            
+        
+
+        circle_marker_97f438686480353a4d33ec35a2242555.bindPopup(popup_07485eb8eef4456e65b6991f26ffbbd4)
+        ;
+
+        
+    
+    
+            var circle_marker_b22328250599f23bbdc51fae4e6ed42b = L.circleMarker(
+                [6.400543, 100.134019],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_6095da5c7f6c2248aa1bb0610e0c1053 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b28ef0e4be173efdfd038c80a3e2aa97 = $(`<div id="html_b28ef0e4be173efdfd038c80a3e2aa97" style="width: 100.0%; height: 100.0%;">CONVENIENCE MINI MARKET: 49 barangan</div>`)[0];
+                popup_6095da5c7f6c2248aa1bb0610e0c1053.setContent(html_b28ef0e4be173efdfd038c80a3e2aa97);
+            
+        
+
+        circle_marker_b22328250599f23bbdc51fae4e6ed42b.bindPopup(popup_6095da5c7f6c2248aa1bb0610e0c1053)
+        ;
+
+        
+    
+    
+            var circle_marker_3d0b95234f605bb87c35ce14431d5c4c = L.circleMarker(
+                [6.434749, 100.233731],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_12388af0c4e43b2c2933972a0ac7acbf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6fb5bd17983033fc24e5da75fc572598 = $(`<div id="html_6fb5bd17983033fc24e5da75fc572598" style="width: 100.0%; height: 100.0%;">DINMA TRADING: 48 barangan</div>`)[0];
+                popup_12388af0c4e43b2c2933972a0ac7acbf.setContent(html_6fb5bd17983033fc24e5da75fc572598);
+            
+        
+
+        circle_marker_3d0b95234f605bb87c35ce14431d5c4c.bindPopup(popup_12388af0c4e43b2c2933972a0ac7acbf)
+        ;
+
+        
+    
+    
+            var circle_marker_2bf1293e916ff035aaed3502057c4ea5 = L.circleMarker(
+                [6.260464, 100.196287],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_53b5c444c00a217ea3953dc27d92778a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_336aabc1735889c3a0dc303dff049a94 = $(`<div id="html_336aabc1735889c3a0dc303dff049a94" style="width: 100.0%; height: 100.0%;">ENG HUP LEONG: 42 barangan</div>`)[0];
+                popup_53b5c444c00a217ea3953dc27d92778a.setContent(html_336aabc1735889c3a0dc303dff049a94);
+            
+        
+
+        circle_marker_2bf1293e916ff035aaed3502057c4ea5.bindPopup(popup_53b5c444c00a217ea3953dc27d92778a)
+        ;
+
+        
+    
+    
+            var circle_marker_ded10ec1f86fb8612543de1567b04782 = L.circleMarker(
+                [6.41938, 100.196789],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_9d0150dc3cbdbd02e176948118c1e964 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_09b8ad22b85b40bacedb0e0163b0976f = $(`<div id="html_09b8ad22b85b40bacedb0e0163b0976f" style="width: 100.0%; height: 100.0%;">GIANT SUPERSTORE KANGAR: 169 barangan</div>`)[0];
+                popup_9d0150dc3cbdbd02e176948118c1e964.setContent(html_09b8ad22b85b40bacedb0e0163b0976f);
+            
+        
+
+        circle_marker_ded10ec1f86fb8612543de1567b04782.bindPopup(popup_9d0150dc3cbdbd02e176948118c1e964)
+        ;
+
+        
+    
+    
+            var circle_marker_e134282cdeceb8d97023332cc604a395 = L.circleMarker(
+                [6.655678, 100.295744],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_454197ca1ccfad12e7d789c8331701cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa4464a50b8acbd5f6b2932c0e4f3f2f = $(`<div id="html_aa4464a50b8acbd5f6b2932c0e4f3f2f" style="width: 100.0%; height: 100.0%;">GIAP HONG CHAN TRADING: 49 barangan</div>`)[0];
+                popup_454197ca1ccfad12e7d789c8331701cc.setContent(html_aa4464a50b8acbd5f6b2932c0e4f3f2f);
+            
+        
+
+        circle_marker_e134282cdeceb8d97023332cc604a395.bindPopup(popup_454197ca1ccfad12e7d789c8331701cc)
+        ;
+
+        
+    
+    
+            var circle_marker_5fffc320907f461e9d86fd667b4f7d83 = L.circleMarker(
+                [6.4800142, 100.2324205],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_d884c3136945651f08ced1f39ff0b119 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_03be42a3be409cea10e4b73e483a68c0 = $(`<div id="html_03be42a3be409cea10e4b73e483a68c0" style="width: 100.0%; height: 100.0%;">HAYA MI: 13 barangan</div>`)[0];
+                popup_d884c3136945651f08ced1f39ff0b119.setContent(html_03be42a3be409cea10e4b73e483a68c0);
+            
+        
+
+        circle_marker_5fffc320907f461e9d86fd667b4f7d83.bindPopup(popup_d884c3136945651f08ced1f39ff0b119)
+        ;
+
+        
+    
+    
+            var circle_marker_4833ea0856fc82139e1d50012a1910ec = L.circleMarker(
+                [6.4451952, 100.211666],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_88468c72319b63dc1c917883134cfa92 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e73515eb6f1bcf469cec8c6cda98d1a1 = $(`<div id="html_e73515eb6f1bcf469cec8c6cda98d1a1" style="width: 100.0%; height: 100.0%;">ISHAH BINTONG (REPOH): 48 barangan</div>`)[0];
+                popup_88468c72319b63dc1c917883134cfa92.setContent(html_e73515eb6f1bcf469cec8c6cda98d1a1);
+            
+        
+
+        circle_marker_4833ea0856fc82139e1d50012a1910ec.bindPopup(popup_88468c72319b63dc1c917883134cfa92)
+        ;
+
+        
+    
+    
+            var circle_marker_44fc1da0ace860ba5b7de83aa4e4480b = L.circleMarker(
+                [6.440949, 100.180141],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_c6177d5183271ef1c54aab5010bf8e41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b8dac658a85940181afb5dee08601da0 = $(`<div id="html_b8dac658a85940181afb5dee08601da0" style="width: 100.0%; height: 100.0%;">ISHAH BINTONG ENT (TMN BINTONG MEWAH): 64 barangan</div>`)[0];
+                popup_c6177d5183271ef1c54aab5010bf8e41.setContent(html_b8dac658a85940181afb5dee08601da0);
+            
+        
+
+        circle_marker_44fc1da0ace860ba5b7de83aa4e4480b.bindPopup(popup_c6177d5183271ef1c54aab5010bf8e41)
+        ;
+
+        
+    
+    
+            var circle_marker_b5305ed1301c9d62f3010ced0a1087b3 = L.circleMarker(
+                [6.463194, 100.19569],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_1ad266d4c64cbed90cde0332675d155c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_28c7792d1d4626cb1ecd2d844d112030 = $(`<div id="html_28c7792d1d4626cb1ecd2d844d112030" style="width: 100.0%; height: 100.0%;">ISHAH BINTONG ENTERPRISE: 65 barangan</div>`)[0];
+                popup_1ad266d4c64cbed90cde0332675d155c.setContent(html_28c7792d1d4626cb1ecd2d844d112030);
+            
+        
+
+        circle_marker_b5305ed1301c9d62f3010ced0a1087b3.bindPopup(popup_1ad266d4c64cbed90cde0332675d155c)
+        ;
+
+        
+    
+    
+            var circle_marker_be2836fbfb7b058f1d95297b46a5c028 = L.circleMarker(
+                [6.5252617, 100.2291068],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_3b698ca77bb45254b1dca38020fbb6fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64a117a716fff4b707a57aa17b235a93 = $(`<div id="html_64a117a716fff4b707a57aa17b235a93" style="width: 100.0%; height: 100.0%;">JIMAT-JIMAT FRESH & FROZEN MART (BESERI): 71 barangan</div>`)[0];
+                popup_3b698ca77bb45254b1dca38020fbb6fa.setContent(html_64a117a716fff4b707a57aa17b235a93);
+            
+        
+
+        circle_marker_be2836fbfb7b058f1d95297b46a5c028.bindPopup(popup_3b698ca77bb45254b1dca38020fbb6fa)
+        ;
+
+        
+    
+    
+            var circle_marker_5e3f57f97a221850cf841ca658d5328b = L.circleMarker(
+                [6.423493, 100.197708],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_7f751ef5de9dbbee64ee26587ab36b49 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5779d9bf4a304b9b3e4bf6ee29dff83 = $(`<div id="html_e5779d9bf4a304b9b3e4bf6ee29dff83" style="width: 100.0%; height: 100.0%;">KEDAI BORONG DIN: 105 barangan</div>`)[0];
+                popup_7f751ef5de9dbbee64ee26587ab36b49.setContent(html_e5779d9bf4a304b9b3e4bf6ee29dff83);
+            
+        
+
+        circle_marker_5e3f57f97a221850cf841ca658d5328b.bindPopup(popup_7f751ef5de9dbbee64ee26587ab36b49)
+        ;
+
+        
+    
+    
+            var circle_marker_00f36b5dcd86f205d5cd78e8e40a36ea = L.circleMarker(
+                [6.44068, 100.166773],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_a2f2475de676f8bed0b12d3c16e71012 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_196c1d3187332b92908cdfe354247452 = $(`<div id="html_196c1d3187332b92908cdfe354247452" style="width: 100.0%; height: 100.0%;">KEDAI RUNCIT CHUAN HUAT: 114 barangan</div>`)[0];
+                popup_a2f2475de676f8bed0b12d3c16e71012.setContent(html_196c1d3187332b92908cdfe354247452);
+            
+        
+
+        circle_marker_00f36b5dcd86f205d5cd78e8e40a36ea.bindPopup(popup_a2f2475de676f8bed0b12d3c16e71012)
+        ;
+
+        
+    
+    
+            var circle_marker_f3b46e46b8e13521335870cc38c64112 = L.circleMarker(
+                [6.429422, 100.27478],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_4c55bf38a29d846f3fda6aa72951f80b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d300f245eef957958332810bf5441d36 = $(`<div id="html_d300f245eef957958332810bf5441d36" style="width: 100.0%; height: 100.0%;">KEDAI RUNCIT KOOI: 51 barangan</div>`)[0];
+                popup_4c55bf38a29d846f3fda6aa72951f80b.setContent(html_d300f245eef957958332810bf5441d36);
+            
+        
+
+        circle_marker_f3b46e46b8e13521335870cc38c64112.bindPopup(popup_4c55bf38a29d846f3fda6aa72951f80b)
+        ;
+
+        
+    
+    
+            var circle_marker_846a2f59cea3f6c340feb340ef38747b = L.circleMarker(
+                [6.429167, 100.27479],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_eddda22d4a5d44d7fa43752bc5276c6b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c026493cbc2d3252c316c91c611d818 = $(`<div id="html_2c026493cbc2d3252c316c91c611d818" style="width: 100.0%; height: 100.0%;">KEDAI RUNCIT WAN SURIATI: 88 barangan</div>`)[0];
+                popup_eddda22d4a5d44d7fa43752bc5276c6b.setContent(html_2c026493cbc2d3252c316c91c611d818);
+            
+        
+
+        circle_marker_846a2f59cea3f6c340feb340ef38747b.bindPopup(popup_eddda22d4a5d44d7fa43752bc5276c6b)
+        ;
+
+        
+    
+    
+            var circle_marker_d432844f8f9de32709fd703d09ea9ffa = L.circleMarker(
+                [6.43673, 100.302353],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_1a23ffd57b029e51c3ba58a8bd09b244 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a28530117bc061acfe634f737582970 = $(`<div id="html_1a28530117bc061acfe634f737582970" style="width: 100.0%; height: 100.0%;">KEDAI YONG: 34 barangan</div>`)[0];
+                popup_1a23ffd57b029e51c3ba58a8bd09b244.setContent(html_1a28530117bc061acfe634f737582970);
+            
+        
+
+        circle_marker_d432844f8f9de32709fd703d09ea9ffa.bindPopup(popup_1a23ffd57b029e51c3ba58a8bd09b244)
+        ;
+
+        
+    
+    
+            var circle_marker_d98aee34b1d48b2474fff711fd99054d = L.circleMarker(
+                [6.453429, 100.269714],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_db7913d605a66442242dbd682fc5fb46 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ccf1b40ab043d13e4b23e0a1f0b0b00 = $(`<div id="html_3ccf1b40ab043d13e4b23e0a1f0b0b00" style="width: 100.0%; height: 100.0%;">KUBANG TIGA ENTERPRISE: 53 barangan</div>`)[0];
+                popup_db7913d605a66442242dbd682fc5fb46.setContent(html_3ccf1b40ab043d13e4b23e0a1f0b0b00);
+            
+        
+
+        circle_marker_d98aee34b1d48b2474fff711fd99054d.bindPopup(popup_db7913d605a66442242dbd682fc5fb46)
+        ;
+
+        
+    
+    
+            var circle_marker_e8514d6456e43e42019131ace9cde674 = L.circleMarker(
+                [6.260541, 100.196221],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_a5c9f63d77912baa756bec2199576e49 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2b53ced6e87bd7923b42fb342cae588 = $(`<div id="html_c2b53ced6e87bd7923b42fb342cae588" style="width: 100.0%; height: 100.0%;">KWEEK CHIU THUNG: 38 barangan</div>`)[0];
+                popup_a5c9f63d77912baa756bec2199576e49.setContent(html_c2b53ced6e87bd7923b42fb342cae588);
+            
+        
+
+        circle_marker_e8514d6456e43e42019131ace9cde674.bindPopup(popup_a5c9f63d77912baa756bec2199576e49)
+        ;
+
+        
+    
+    
+            var circle_marker_e60631aac0a5acb5d32e1181abc77f53 = L.circleMarker(
+                [6.441604, 100.234219],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_e317a73d62d6334dd685067f88870fec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c0338eb9b957c7a36cc71ae099c6f0c = $(`<div id="html_6c0338eb9b957c7a36cc71ae099c6f0c" style="width: 100.0%; height: 100.0%;">LEAN ENG TRADING: 45 barangan</div>`)[0];
+                popup_e317a73d62d6334dd685067f88870fec.setContent(html_6c0338eb9b957c7a36cc71ae099c6f0c);
+            
+        
+
+        circle_marker_e60631aac0a5acb5d32e1181abc77f53.bindPopup(popup_e317a73d62d6334dd685067f88870fec)
+        ;
+
+        
+    
+    
+            var circle_marker_bbab2afa1a3ef2e8c484579fe7c1a2f5 = L.circleMarker(
+                [6.550381, 100.285598],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_cde6d364a9d0835d2806cc7819f2355b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46bd0252407ed64fb371bd9e2cfa90bf = $(`<div id="html_46bd0252407ed64fb371bd9e2cfa90bf" style="width: 100.0%; height: 100.0%;">MAHZAN BIN ROMLAN: 47 barangan</div>`)[0];
+                popup_cde6d364a9d0835d2806cc7819f2355b.setContent(html_46bd0252407ed64fb371bd9e2cfa90bf);
+            
+        
+
+        circle_marker_bbab2afa1a3ef2e8c484579fe7c1a2f5.bindPopup(popup_cde6d364a9d0835d2806cc7819f2355b)
+        ;
+
+        
+    
+    
+            var circle_marker_f70b980ddc873e76719a595cae05f8e7 = L.circleMarker(
+                [6.4174634, 100.2763698],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_fe8096c8dd73335a310eff3ff6938b4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2f3a3eedee329ac871d7ec0471dca40 = $(`<div id="html_a2f3a3eedee329ac871d7ec0471dca40" style="width: 100.0%; height: 100.0%;">MAJID STORE: 51 barangan</div>`)[0];
+                popup_fe8096c8dd73335a310eff3ff6938b4d.setContent(html_a2f3a3eedee329ac871d7ec0471dca40);
+            
+        
+
+        circle_marker_f70b980ddc873e76719a595cae05f8e7.bindPopup(popup_fe8096c8dd73335a310eff3ff6938b4d)
+        ;
+
+        
+    
+    
+            var circle_marker_d0380d2d9d4ec03daa0f42fd6d705a7c = L.circleMarker(
+                [6.41704, 100.276927],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_65f29b5115fd9a6a19df731e82733461 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a856d0650a1eabf2b4ac61d7d0e3a06f = $(`<div id="html_a856d0650a1eabf2b4ac61d7d0e3a06f" style="width: 100.0%; height: 100.0%;">MANAK ENTERPRISE: 61 barangan</div>`)[0];
+                popup_65f29b5115fd9a6a19df731e82733461.setContent(html_a856d0650a1eabf2b4ac61d7d0e3a06f);
+            
+        
+
+        circle_marker_d0380d2d9d4ec03daa0f42fd6d705a7c.bindPopup(popup_65f29b5115fd9a6a19df731e82733461)
+        ;
+
+        
+    
+    
+            var circle_marker_c31780c4617d87d6405ee4d7b002216d = L.circleMarker(
+                [6.636543, 100.218453],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_35a2f0605e81b897354bcfe701621049 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53adbcf6a2f8560e3bf1e92ace3abd7d = $(`<div id="html_53adbcf6a2f8560e3bf1e92ace3abd7d" style="width: 100.0%; height: 100.0%;">NATIEZA INDERA ENTERPRISE: 108 barangan</div>`)[0];
+                popup_35a2f0605e81b897354bcfe701621049.setContent(html_53adbcf6a2f8560e3bf1e92ace3abd7d);
+            
+        
+
+        circle_marker_c31780c4617d87d6405ee4d7b002216d.bindPopup(popup_35a2f0605e81b897354bcfe701621049)
+        ;
+
+        
+    
+    
+            var circle_marker_a5eed51a139b51d74e53dc3970670dc1 = L.circleMarker(
+                [6.436568, 100.200504],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_ae408716a9a32c264b26f948b715979b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b8079935dcf1560b9c64c2cd22a288fa = $(`<div id="html_b8079935dcf1560b9c64c2cd22a288fa" style="width: 100.0%; height: 100.0%;">PASAR BASAH AWAM SENA: 149 barangan</div>`)[0];
+                popup_ae408716a9a32c264b26f948b715979b.setContent(html_b8079935dcf1560b9c64c2cd22a288fa);
+            
+        
+
+        circle_marker_a5eed51a139b51d74e53dc3970670dc1.bindPopup(popup_ae408716a9a32c264b26f948b715979b)
+        ;
+
+        
+    
+    
+            var circle_marker_69d1f1a5215eb29bd5ef7304b99bd984 = L.circleMarker(
+                [6.404455, 100.13477],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_8ea1411957b5933c80809e5158b1e719 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6036f1e73eba258d919bbfe8239db1a6 = $(`<div id="html_6036f1e73eba258d919bbfe8239db1a6" style="width: 100.0%; height: 100.0%;">PASAR BASAH KUALA PERLIS: 123 barangan</div>`)[0];
+                popup_8ea1411957b5933c80809e5158b1e719.setContent(html_6036f1e73eba258d919bbfe8239db1a6);
+            
+        
+
+        circle_marker_69d1f1a5215eb29bd5ef7304b99bd984.bindPopup(popup_8ea1411957b5933c80809e5158b1e719)
+        ;
+
+        
+    
+    
+            var circle_marker_81891ea19483331e0f1d7e4e9553b51f = L.circleMarker(
+                [6.476343, 100.259208],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_96d1aff12ae94af9177c99d12371a4e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d11d37443c56a93429d7d746b0deddf = $(`<div id="html_7d11d37443c56a93429d7d746b0deddf" style="width: 100.0%; height: 100.0%;">PASAR BASAH MATA AYER: 118 barangan</div>`)[0];
+                popup_96d1aff12ae94af9177c99d12371a4e4.setContent(html_7d11d37443c56a93429d7d746b0deddf);
+            
+        
+
+        circle_marker_81891ea19483331e0f1d7e4e9553b51f.bindPopup(popup_96d1aff12ae94af9177c99d12371a4e4)
+        ;
+
+        
+    
+    
+            var circle_marker_098676d37207c37fd9402feda734ea63 = L.circleMarker(
+                [6.657418, 100.317301],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_46649f6eb6c9d3c7e605cedd7034a116 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f36309490cf225f314d6bb3de33eac45 = $(`<div id="html_f36309490cf225f314d6bb3de33eac45" style="width: 100.0%; height: 100.0%;">PASAR BASAH PADANG BESAR: 126 barangan</div>`)[0];
+                popup_46649f6eb6c9d3c7e605cedd7034a116.setContent(html_f36309490cf225f314d6bb3de33eac45);
+            
+        
+
+        circle_marker_098676d37207c37fd9402feda734ea63.bindPopup(popup_46649f6eb6c9d3c7e605cedd7034a116)
+        ;
+
+        
+    
+    
+            var circle_marker_c284d50cd2ec0299a9c5475030b12fcf = L.circleMarker(
+                [6.428386, 100.279838],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_4dedadfe5e9e8cce4549bde15172a3d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b495f1644225bb5d99ac3e902eba2d6 = $(`<div id="html_9b495f1644225bb5d99ac3e902eba2d6" style="width: 100.0%; height: 100.0%;">PASAR BESAR ARAU: 133 barangan</div>`)[0];
+                popup_4dedadfe5e9e8cce4549bde15172a3d8.setContent(html_9b495f1644225bb5d99ac3e902eba2d6);
+            
+        
+
+        circle_marker_c284d50cd2ec0299a9c5475030b12fcf.bindPopup(popup_4dedadfe5e9e8cce4549bde15172a3d8)
+        ;
+
+        
+    
+    
+            var circle_marker_8b6b8ac8ca0d4bd397179bfb3ba353e2 = L.circleMarker(
+                [6.3402237, 100.1894968],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_161aa928e35a01156bc8b1aaa3f03b5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2ee4027bae7463ae00365835dce876a7 = $(`<div id="html_2ee4027bae7463ae00365835dce876a7" style="width: 100.0%; height: 100.0%;">PASAR BESAR SIMPANG EMPAT: 125 barangan</div>`)[0];
+                popup_161aa928e35a01156bc8b1aaa3f03b5c.setContent(html_2ee4027bae7463ae00365835dce876a7);
+            
+        
+
+        circle_marker_8b6b8ac8ca0d4bd397179bfb3ba353e2.bindPopup(popup_161aa928e35a01156bc8b1aaa3f03b5c)
+        ;
+
+        
+    
+    
+            var circle_marker_0d8a52df41238fb04c8af1c5c2cb2826 = L.circleMarker(
+                [6.4344925, 100.2017388],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_674da75d1fa5cd329c8f3d31ea0b4624 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f48224a619cf5037ddd60b6c702e75e5 = $(`<div id="html_f48224a619cf5037ddd60b6c702e75e5" style="width: 100.0%; height: 100.0%;">PASAR BORONG KANGAR: 17 barangan</div>`)[0];
+                popup_674da75d1fa5cd329c8f3d31ea0b4624.setContent(html_f48224a619cf5037ddd60b6c702e75e5);
+            
+        
+
+        circle_marker_0d8a52df41238fb04c8af1c5c2cb2826.bindPopup(popup_674da75d1fa5cd329c8f3d31ea0b4624)
+        ;
+
+        
+    
+    
+            var circle_marker_8e95d63bad879360d83a3e213acaeab9 = L.circleMarker(
+                [6.405181, 100.20138],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_27340827b9876f1a9cd7d6826c84f728 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_616d31a7d29eab52f325209a7e58f50e = $(`<div id="html_616d31a7d29eab52f325209a7e58f50e" style="width: 100.0%; height: 100.0%;">PASAR MINI KARIM: 68 barangan</div>`)[0];
+                popup_27340827b9876f1a9cd7d6826c84f728.setContent(html_616d31a7d29eab52f325209a7e58f50e);
+            
+        
+
+        circle_marker_8e95d63bad879360d83a3e213acaeab9.bindPopup(popup_27340827b9876f1a9cd7d6826c84f728)
+        ;
+
+        
+    
+    
+            var circle_marker_eca822020e86650841d4270f29b5df99 = L.circleMarker(
+                [6.514814, 100.24133],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_ea4438765376e6e33a42846f39156e47 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_828285d523c569c5a3107ccfecb9ee15 = $(`<div id="html_828285d523c569c5a3107ccfecb9ee15" style="width: 100.0%; height: 100.0%;">PASAR MINI MELATI JAYA: 43 barangan</div>`)[0];
+                popup_ea4438765376e6e33a42846f39156e47.setContent(html_828285d523c569c5a3107ccfecb9ee15);
+            
+        
+
+        circle_marker_eca822020e86650841d4270f29b5df99.bindPopup(popup_ea4438765376e6e33a42846f39156e47)
+        ;
+
+        
+    
+    
+            var circle_marker_591c9e2b981c40da6075c6556c68fbb7 = L.circleMarker(
+                [6.4274142, 100.2789497],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_65869de253ffb97f51e747bb62c922ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1f83217a0e2a6f71ae7ad6e0b1bab404 = $(`<div id="html_1f83217a0e2a6f71ae7ad6e0b1bab404" style="width: 100.0%; height: 100.0%;">PASAR MINI OMIYA: 58 barangan</div>`)[0];
+                popup_65869de253ffb97f51e747bb62c922ff.setContent(html_1f83217a0e2a6f71ae7ad6e0b1bab404);
+            
+        
+
+        circle_marker_591c9e2b981c40da6075c6556c68fbb7.bindPopup(popup_65869de253ffb97f51e747bb62c922ff)
+        ;
+
+        
+    
+    
+            var circle_marker_9a7a60db3c8a1b597ae68bbc2bd41052 = L.circleMarker(
+                [6.661562, 100.323547],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_a674e420782eef3a51964a5eef89451e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27ea3b21707a44f1a33f22bcd6363cf9 = $(`<div id="html_27ea3b21707a44f1a33f22bcd6363cf9" style="width: 100.0%; height: 100.0%;">PASAR MINI RAR: 55 barangan</div>`)[0];
+                popup_a674e420782eef3a51964a5eef89451e.setContent(html_27ea3b21707a44f1a33f22bcd6363cf9);
+            
+        
+
+        circle_marker_9a7a60db3c8a1b597ae68bbc2bd41052.bindPopup(popup_a674e420782eef3a51964a5eef89451e)
+        ;
+
+        
+    
+    
+            var circle_marker_596eee824a8d99718068a999508fadf4 = L.circleMarker(
+                [6.340832, 100.18916],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_5dbc2ca3eb2ff947e34182d26fed142d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_782670e4363cb0127fd857e068b4d0c4 = $(`<div id="html_782670e4363cb0127fd857e068b4d0c4" style="width: 100.0%; height: 100.0%;">PASARAYA AMBAR SEJATI: 74 barangan</div>`)[0];
+                popup_5dbc2ca3eb2ff947e34182d26fed142d.setContent(html_782670e4363cb0127fd857e068b4d0c4);
+            
+        
+
+        circle_marker_596eee824a8d99718068a999508fadf4.bindPopup(popup_5dbc2ca3eb2ff947e34182d26fed142d)
+        ;
+
+        
+    
+    
+            var circle_marker_f4921da2c01e115004b722a1da33e7fb = L.circleMarker(
+                [6.445967, 100.206957],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_8cf39a8d07429af815adcd3a2dbe9f4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d1c3d9707fb5ac6d61d7cbd42a0cdcd = $(`<div id="html_7d1c3d9707fb5ac6d61d7cbd42a0cdcd" style="width: 100.0%; height: 100.0%;">PASARAYA AMS MUTIARA: 66 barangan</div>`)[0];
+                popup_8cf39a8d07429af815adcd3a2dbe9f4e.setContent(html_7d1c3d9707fb5ac6d61d7cbd42a0cdcd);
+            
+        
+
+        circle_marker_f4921da2c01e115004b722a1da33e7fb.bindPopup(popup_8cf39a8d07429af815adcd3a2dbe9f4e)
+        ;
+
+        
+    
+    
+            var circle_marker_a01c9b0851a25f73582bc45d587c2af0 = L.circleMarker(
+                [6.514734, 100.241762],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_217b4c7240749796c630d0881715712c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d9e85ffffb752737692496aca0dcae3 = $(`<div id="html_1d9e85ffffb752737692496aca0dcae3" style="width: 100.0%; height: 100.0%;">PASARAYA AMWAN: 73 barangan</div>`)[0];
+                popup_217b4c7240749796c630d0881715712c.setContent(html_1d9e85ffffb752737692496aca0dcae3);
+            
+        
+
+        circle_marker_a01c9b0851a25f73582bc45d587c2af0.bindPopup(popup_217b4c7240749796c630d0881715712c)
+        ;
+
+        
+    
+    
+            var circle_marker_b857b53dda191221b64ec7fafbfce0e3 = L.circleMarker(
+                [6.526954, 100.229641],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_02e1008f2ae78c564db87ebb66482e3a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e55d3ca91513d31140a96888f3627b43 = $(`<div id="html_e55d3ca91513d31140a96888f3627b43" style="width: 100.0%; height: 100.0%;">PASARAYA BORONG DIN: 102 barangan</div>`)[0];
+                popup_02e1008f2ae78c564db87ebb66482e3a.setContent(html_e55d3ca91513d31140a96888f3627b43);
+            
+        
+
+        circle_marker_b857b53dda191221b64ec7fafbfce0e3.bindPopup(popup_02e1008f2ae78c564db87ebb66482e3a)
+        ;
+
+        
+    
+    
+            var circle_marker_c59c5af847ad74871fe7b3050e6cce71 = L.circleMarker(
+                [6.428696, 100.273305],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_769282aff32796e83d862f4601710fad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_923f342ca5962961c237f5105d9733e5 = $(`<div id="html_923f342ca5962961c237f5105d9733e5" style="width: 100.0%; height: 100.0%;">PASARAYA C-MART - ARAU: 141 barangan</div>`)[0];
+                popup_769282aff32796e83d862f4601710fad.setContent(html_923f342ca5962961c237f5105d9733e5);
+            
+        
+
+        circle_marker_c59c5af847ad74871fe7b3050e6cce71.bindPopup(popup_769282aff32796e83d862f4601710fad)
+        ;
+
+        
+    
+    
+            var circle_marker_2e27e2c1fe454faec590cd5d93b62be5 = L.circleMarker(
+                [6.5170499, 100.2500654],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_6bee14063261fdf7140d412d9409b8dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9a9693620be6b6ab6ece081c11666df = $(`<div id="html_e9a9693620be6b6ab6ece081c11666df" style="width: 100.0%; height: 100.0%;">PASARAYA ECO JIMAT (BUKIT KETERI): 39 barangan</div>`)[0];
+                popup_6bee14063261fdf7140d412d9409b8dd.setContent(html_e9a9693620be6b6ab6ece081c11666df);
+            
+        
+
+        circle_marker_2e27e2c1fe454faec590cd5d93b62be5.bindPopup(popup_6bee14063261fdf7140d412d9409b8dd)
+        ;
+
+        
+    
+    
+            var circle_marker_6af0457df6943ad7c6cd4d14b6144331 = L.circleMarker(
+                [6.3414361, 100.1902424],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_4771570e56c0591ad0f2a562424658b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_832ae9c319cda1587d210aec79be40b1 = $(`<div id="html_832ae9c319cda1587d210aec79be40b1" style="width: 100.0%; height: 100.0%;">PASARAYA EKONOMI A-WANG: 73 barangan</div>`)[0];
+                popup_4771570e56c0591ad0f2a562424658b6.setContent(html_832ae9c319cda1587d210aec79be40b1);
+            
+        
+
+        circle_marker_6af0457df6943ad7c6cd4d14b6144331.bindPopup(popup_4771570e56c0591ad0f2a562424658b6)
+        ;
+
+        
+    
+    
+            var circle_marker_4459b5b1951526e76cd426dbf2158828 = L.circleMarker(
+                [6.4070644, 100.182162],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_060199c00418b4232b64586d7644c09a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_911b0b1e6d3e2e92247c59be7e4d0f92 = $(`<div id="html_911b0b1e6d3e2e92247c59be7e4d0f92" style="width: 100.0%; height: 100.0%;">PASARAYA JMART (SERIAB): 74 barangan</div>`)[0];
+                popup_060199c00418b4232b64586d7644c09a.setContent(html_911b0b1e6d3e2e92247c59be7e4d0f92);
+            
+        
+
+        circle_marker_4459b5b1951526e76cd426dbf2158828.bindPopup(popup_060199c00418b4232b64586d7644c09a)
+        ;
+
+        
+    
+    
+            var circle_marker_afcd029ce7962f6bb24e0edbc339486c = L.circleMarker(
+                [6.415741, 100.183456],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_0b59a9181ad590f0eeecdbd69c7da163 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_61980d41bcb137e6c9df38d19f5099ea = $(`<div id="html_61980d41bcb137e6c9df38d19f5099ea" style="width: 100.0%; height: 100.0%;">PASARAYA K-CERIA (KANGAR) SDN. BHD: 135 barangan</div>`)[0];
+                popup_0b59a9181ad590f0eeecdbd69c7da163.setContent(html_61980d41bcb137e6c9df38d19f5099ea);
+            
+        
+
+        circle_marker_afcd029ce7962f6bb24e0edbc339486c.bindPopup(popup_0b59a9181ad590f0eeecdbd69c7da163)
+        ;
+
+        
+    
+    
+            var circle_marker_519d5b49c3487d097a2045f400197df5 = L.circleMarker(
+                [6.468534, 100.2567],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_6fbd47a5a460eb3aae6422fdbc74f67e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d29ff4bcdd6918e986b087fbe32ac791 = $(`<div id="html_d29ff4bcdd6918e986b087fbe32ac791" style="width: 100.0%; height: 100.0%;">PASARAYA MAJU AHAMMAD: 109 barangan</div>`)[0];
+                popup_6fbd47a5a460eb3aae6422fdbc74f67e.setContent(html_d29ff4bcdd6918e986b087fbe32ac791);
+            
+        
+
+        circle_marker_519d5b49c3487d097a2045f400197df5.bindPopup(popup_6fbd47a5a460eb3aae6422fdbc74f67e)
+        ;
+
+        
+    
+    
+            var circle_marker_b9d5a93f8527410600d109ea27c643ae = L.circleMarker(
+                [6.3407086, 100.1888839],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_fc4aa2379f4ea03cdb7898d76e247826 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2dc06e02d0e0bd917f47baad1237ef60 = $(`<div id="html_2dc06e02d0e0bd917f47baad1237ef60" style="width: 100.0%; height: 100.0%;">PASARAYA MESRA JIMAT: 65 barangan</div>`)[0];
+                popup_fc4aa2379f4ea03cdb7898d76e247826.setContent(html_2dc06e02d0e0bd917f47baad1237ef60);
+            
+        
+
+        circle_marker_b9d5a93f8527410600d109ea27c643ae.bindPopup(popup_fc4aa2379f4ea03cdb7898d76e247826)
+        ;
+
+        
+    
+    
+            var circle_marker_27ef374547ae06b9e01b916f2d72e23d = L.circleMarker(
+                [6.473628, 100.2581921],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_09230ecf96123585e03c6d30bd69b541 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e98b8ca6f3fafe0d95166b303f7649d8 = $(`<div id="html_e98b8ca6f3fafe0d95166b303f7649d8" style="width: 100.0%; height: 100.0%;">PASARAYA PERMATA: 36 barangan</div>`)[0];
+                popup_09230ecf96123585e03c6d30bd69b541.setContent(html_e98b8ca6f3fafe0d95166b303f7649d8);
+            
+        
+
+        circle_marker_27ef374547ae06b9e01b916f2d72e23d.bindPopup(popup_09230ecf96123585e03c6d30bd69b541)
+        ;
+
+        
+    
+    
+            var circle_marker_08ce5befc62ab7e0073ee58c0145d627 = L.circleMarker(
+                [6.526166, 100.229084],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_2a5b7c71cfa882e720a13575e37fd6c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1cf03b0308f61454ff28efed76c63e86 = $(`<div id="html_1cf03b0308f61454ff28efed76c63e86" style="width: 100.0%; height: 100.0%;">PASARAYA PERTUBUHAN PELADANG: 73 barangan</div>`)[0];
+                popup_2a5b7c71cfa882e720a13575e37fd6c9.setContent(html_1cf03b0308f61454ff28efed76c63e86);
+            
+        
+
+        circle_marker_08ce5befc62ab7e0073ee58c0145d627.bindPopup(popup_2a5b7c71cfa882e720a13575e37fd6c9)
+        ;
+
+        
+    
+    
+            var circle_marker_6fd2233c4e3d703093449f65aec853c3 = L.circleMarker(
+                [6.428524, 100.215677],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_3db0609c292e322c0d29617bd25d7a47 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff24b496c59cb74439b0f47f2b1f2336 = $(`<div id="html_ff24b496c59cb74439b0f47f2b1f2336" style="width: 100.0%; height: 100.0%;">PASARAYA SERI  UTAMA SDN. BHD. (CAWANGAN BOHOR PULAI): 72 barangan</div>`)[0];
+                popup_3db0609c292e322c0d29617bd25d7a47.setContent(html_ff24b496c59cb74439b0f47f2b1f2336);
+            
+        
+
+        circle_marker_6fd2233c4e3d703093449f65aec853c3.bindPopup(popup_3db0609c292e322c0d29617bd25d7a47)
+        ;
+
+        
+    
+    
+            var circle_marker_43f57c4c1b805388432db682954b1def = L.circleMarker(
+                [6.400986, 100.133639],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_bd5049365735b7fba13b087a4dbad7a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d04d02682c26d593eee8b722b3561f3 = $(`<div id="html_8d04d02682c26d593eee8b722b3561f3" style="width: 100.0%; height: 100.0%;">PASARAYA SERI UTAMA (KUALA PERLIS): 71 barangan</div>`)[0];
+                popup_bd5049365735b7fba13b087a4dbad7a9.setContent(html_8d04d02682c26d593eee8b722b3561f3);
+            
+        
+
+        circle_marker_43f57c4c1b805388432db682954b1def.bindPopup(popup_bd5049365735b7fba13b087a4dbad7a9)
+        ;
+
+        
+    
+    
+            var circle_marker_5105675955429443626c448dece7c005 = L.circleMarker(
+                [6.440912, 100.27988],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_b88bfd3622f72fea430114a5d1e4d204 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_273577bc39fffd0458f9314a083cb1fb = $(`<div id="html_273577bc39fffd0458f9314a083cb1fb" style="width: 100.0%; height: 100.0%;">PASARAYA TAMAN SRI WANG: 73 barangan</div>`)[0];
+                popup_b88bfd3622f72fea430114a5d1e4d204.setContent(html_273577bc39fffd0458f9314a083cb1fb);
+            
+        
+
+        circle_marker_5105675955429443626c448dece7c005.bindPopup(popup_b88bfd3622f72fea430114a5d1e4d204)
+        ;
+
+        
+    
+    
+            var circle_marker_69256e8a8a87e524b7b1a7ee7a98f966 = L.circleMarker(
+                [6.641894, 100.210819],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_2b2e9cd988d4a6b5d034ef6df949ca34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3c825bd6c3f74273316247d31d3c01e = $(`<div id="html_d3c825bd6c3f74273316247d31d3c01e" style="width: 100.0%; height: 100.0%;">PERNIAGAAN SIM KHEONG: 62 barangan</div>`)[0];
+                popup_2b2e9cd988d4a6b5d034ef6df949ca34.setContent(html_d3c825bd6c3f74273316247d31d3c01e);
+            
+        
+
+        circle_marker_69256e8a8a87e524b7b1a7ee7a98f966.bindPopup(popup_2b2e9cd988d4a6b5d034ef6df949ca34)
+        ;
+
+        
+    
+    
+            var circle_marker_eb540f6b93cb4bad5716ce97970b297d = L.circleMarker(
+                [6.437092, 100.3003874],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_43ea6056efedbdb64fd09f6a8d7e3b2b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aaa9f1f706d64262a7ddb3a8af247aad = $(`<div id="html_aaa9f1f706d64262a7ddb3a8af247aad" style="width: 100.0%; height: 100.0%;">PERNIAGAAN WENG-LEE: 49 barangan</div>`)[0];
+                popup_43ea6056efedbdb64fd09f6a8d7e3b2b.setContent(html_aaa9f1f706d64262a7ddb3a8af247aad);
+            
+        
+
+        circle_marker_eb540f6b93cb4bad5716ce97970b297d.bindPopup(popup_43ea6056efedbdb64fd09f6a8d7e3b2b)
+        ;
+
+        
+    
+    
+            var circle_marker_161b38e0fb37f2f32f15b5704f6365b4 = L.circleMarker(
+                [6.476151, 100.2612],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_cdb9b1b7c38194ec621d5264da865bda = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8e7b0b000d414950aa40f2aafe2259d4 = $(`<div id="html_8e7b0b000d414950aa40f2aafe2259d4" style="width: 100.0%; height: 100.0%;">PERTUBUHAN PELADANG KAWASAN MATA AYER: 59 barangan</div>`)[0];
+                popup_cdb9b1b7c38194ec621d5264da865bda.setContent(html_8e7b0b000d414950aa40f2aafe2259d4);
+            
+        
+
+        circle_marker_161b38e0fb37f2f32f15b5704f6365b4.bindPopup(popup_cdb9b1b7c38194ec621d5264da865bda)
+        ;
+
+        
+    
+    
+            var circle_marker_f313f325ecba2617d8e180076f2e3fb1 = L.circleMarker(
+                [6.467185, 100.283315],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_2b1984ba856579e081d2550d6ea56eaf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f0e5701fa07bfc4ae986f471a78cc23 = $(`<div id="html_7f0e5701fa07bfc4ae986f471a78cc23" style="width: 100.0%; height: 100.0%;">RASHIDAH BT SENAPI: 108 barangan</div>`)[0];
+                popup_2b1984ba856579e081d2550d6ea56eaf.setContent(html_7f0e5701fa07bfc4ae986f471a78cc23);
+            
+        
+
+        circle_marker_f313f325ecba2617d8e180076f2e3fb1.bindPopup(popup_2b1984ba856579e081d2550d6ea56eaf)
+        ;
+
+        
+    
+    
+            var circle_marker_a6c3d95ce5a081937c18ad0aa085d636 = L.circleMarker(
+                [6.47215, 100.229369],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_2dbc35a300066a97d725edbaa2107be0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5048345da5d817632c4a0b59248587fe = $(`<div id="html_5048345da5d817632c4a0b59248587fe" style="width: 100.0%; height: 100.0%;">ROHANI BT. SALLEH: 26 barangan</div>`)[0];
+                popup_2dbc35a300066a97d725edbaa2107be0.setContent(html_5048345da5d817632c4a0b59248587fe);
+            
+        
+
+        circle_marker_a6c3d95ce5a081937c18ad0aa085d636.bindPopup(popup_2dbc35a300066a97d725edbaa2107be0)
+        ;
+
+        
+    
+    
+            var circle_marker_c6f3d6cee4e9f62cb8b886a32641500a = L.circleMarker(
+                [6.51686, 100.273728],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_88ecd6be428669146be640a9acedf485 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_957e1f24caed418ccddf35ce90b3a95c = $(`<div id="html_957e1f24caed418ccddf35ce90b3a95c" style="width: 100.0%; height: 100.0%;">ROZITA BT AHMAD: 51 barangan</div>`)[0];
+                popup_88ecd6be428669146be640a9acedf485.setContent(html_957e1f24caed418ccddf35ce90b3a95c);
+            
+        
+
+        circle_marker_c6f3d6cee4e9f62cb8b886a32641500a.bindPopup(popup_88ecd6be428669146be640a9acedf485)
+        ;
+
+        
+    
+    
+            var circle_marker_964f9f18bdac92a2e1261b6f50a1cc1b = L.circleMarker(
+                [6.395934, 100.136534],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_aed13e83b2cc01d157dd8a0d23adba82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_933fac192dc9be68495764218cee8606 = $(`<div id="html_933fac192dc9be68495764218cee8606" style="width: 100.0%; height: 100.0%;">SIN CHERN MINI MARKET: 46 barangan</div>`)[0];
+                popup_aed13e83b2cc01d157dd8a0d23adba82.setContent(html_933fac192dc9be68495764218cee8606);
+            
+        
+
+        circle_marker_964f9f18bdac92a2e1261b6f50a1cc1b.bindPopup(popup_aed13e83b2cc01d157dd8a0d23adba82)
+        ;
+
+        
+    
+    
+            var circle_marker_ff9fff129fa30c481ff25fd70ef32927 = L.circleMarker(
+                [6.658013, 100.317766],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_27b40e21e2300b6f357b79393aca08cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16f0e1483676ef9b283f95f990f161d1 = $(`<div id="html_16f0e1483676ef9b283f95f990f161d1" style="width: 100.0%; height: 100.0%;">SUPER G- MART MINI MARKET: 57 barangan</div>`)[0];
+                popup_27b40e21e2300b6f357b79393aca08cf.setContent(html_16f0e1483676ef9b283f95f990f161d1);
+            
+        
+
+        circle_marker_ff9fff129fa30c481ff25fd70ef32927.bindPopup(popup_27b40e21e2300b6f357b79393aca08cf)
+        ;
+
+        
+    
+    
+            var circle_marker_204a9ec1bf8af0c7dae50c134a23d8cf = L.circleMarker(
+                [6.439605, 100.195],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_e4b3a5fcdbb3c1b280a8ec98afb43ea2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49f0fa3af10dd6bf33232315ea56c6bb = $(`<div id="html_49f0fa3af10dd6bf33232315ea56c6bb" style="width: 100.0%; height: 100.0%;">THE STORE KANGAR: 121 barangan</div>`)[0];
+                popup_e4b3a5fcdbb3c1b280a8ec98afb43ea2.setContent(html_49f0fa3af10dd6bf33232315ea56c6bb);
+            
+        
+
+        circle_marker_204a9ec1bf8af0c7dae50c134a23d8cf.bindPopup(popup_e4b3a5fcdbb3c1b280a8ec98afb43ea2)
+        ;
+
+        
+    
+    
+            var circle_marker_e42310972f55ef4f2019e92493cc9a01 = L.circleMarker(
+                [6.530405, 100.22913],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_3767113fe72b2e8c7e18eb243db1857b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69fa86dea7cedb14a0038bf1412ddbd8 = $(`<div id="html_69fa86dea7cedb14a0038bf1412ddbd8" style="width: 100.0%; height: 100.0%;">WATIKAH UNGGUL SDN. BHD. (P.M.BESERI INDAH): 21 barangan</div>`)[0];
+                popup_3767113fe72b2e8c7e18eb243db1857b.setContent(html_69fa86dea7cedb14a0038bf1412ddbd8);
+            
+        
+
+        circle_marker_e42310972f55ef4f2019e92493cc9a01.bindPopup(popup_3767113fe72b2e8c7e18eb243db1857b)
+        ;
+
+        
+    
+    
+            var circle_marker_5dcc71d45b0faa848e35495ce43e4e07 = L.circleMarker(
+                [6.535892, 100.228962],
+                {"bubblingMouseEvents": true, "color": "#1E7664", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1E7664", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_3c428aa1c7ea42b331e078f7ba418326 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e45b8824a57f1d2f4081f5a2a905271 = $(`<div id="html_3e45b8824a57f1d2f4081f5a2a905271" style="width: 100.0%; height: 100.0%;">YI ANN TRADING: 31 barangan</div>`)[0];
+                popup_3c428aa1c7ea42b331e078f7ba418326.setContent(html_3e45b8824a57f1d2f4081f5a2a905271);
+            
+        
+
+        circle_marker_5dcc71d45b0faa848e35495ce43e4e07.bindPopup(popup_3c428aa1c7ea42b331e078f7ba418326)
+        ;
+
+        
+    
+    
+            var circle_marker_fb0bfe74519e4c773d2fd6a0c670622c = L.circleMarker(
+                [6.437326, 100.194634],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a78e3ac2fb960debf1e794373bc81242);
+        
+    
+        var popup_ea3585f727ffb38c8d9393bcbe725ed8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0f7417c1350d673e61904a3b4f2e8f9 = $(`<div id="html_d0f7417c1350d673e61904a3b4f2e8f9" style="width: 100.0%; height: 100.0%;">YONHIN (PS) SDN BHD: 56 barangan</div>`)[0];
+                popup_ea3585f727ffb38c8d9393bcbe725ed8.setContent(html_d0f7417c1350d673e61904a3b4f2e8f9);
+            
+        
+
+        circle_marker_fb0bfe74519e4c773d2fd6a0c670622c.bindPopup(popup_ea3585f727ffb38c8d9393bcbe725ed8)
+        ;
+
+        
+    
+</script>
+</html>
