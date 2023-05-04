@@ -1,0 +1,1499 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6) {
+                background-color: #1E7664;
+                color: #fff; /* add this line */
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Premis dan Item di Sabah bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+            <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan Outlet</th>
+                <th>Harga Purata DOSM</th>
+                
+                <tr class="">
+                <td>1</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>2</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>3</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>4</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.055555555555555</td>
+                </tr>
+                
+                <tr class="">
+                <td>5</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>6</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>BERAS BASMATHI - FAIZA (KASHMIR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">39.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>7</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>BERAS SUPER CAP ANGGUR SAZARICE 5% (IMPORT THAILAND)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>8</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>BERAS SUPER CAP RODA SAZARICE 5% (IMPORT THAILAND)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>9</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>10</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>11</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>12</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>13</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>CILI MERAH - KULAI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">23.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>14</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>15</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">42.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>16</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>17</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>GULA MERAH LEMBUT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>18</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.455555555555556</td>
+                </tr>
+                
+                <tr class="">
+                <td>19</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>20</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">40.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>21</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">50.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>22</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>23</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>24</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.944444444444445</td>
+                </tr>
+                
+                <tr class="">
+                <td>25</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>26</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>27</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>28</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>29</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>30</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KRAFT HI - CALCIUM SINGLES PROCESSED CHEESE 12 SLICES</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>31</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>32</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>33</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>KUBIS PANJANG (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.900000000000001</td>
+                </tr>
+                
+                <tr class="">
+                <td>34</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>35</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>36</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>37</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>38</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>39</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>40</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>MINYAK MASAK SEBATIAN CAP HELANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>41</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>MINYAK MASAK SEBATIAN CAP NEPTUNE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">40.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>42</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>MINYAK MASAK TULEN CAP BURUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.188888888888889</td>
+                </tr>
+                
+                <tr class="">
+                <td>43</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.82</td>
+                </tr>
+                
+                <tr class="">
+                <td>44</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.566666666666666</td>
+                </tr>
+                
+                <tr class="">
+                <td>45</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>PAHA AYAM (CHICKEN DRUMSTICK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>46</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>PAHA AYAM (CHICKEN DRUMSTICK) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.990000000000002</td>
+                </tr>
+                
+                <tr class="">
+                <td>47</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>48</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>49</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>50</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>51</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>52</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>53</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>54</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>55</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SUSU SEJAT PENUH KRIM CAP IDEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>56</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>57</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>SYAMPU REJOICE (RICH SOFT SMOOTH)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>58</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>59</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.855555555555556</td>
+                </tr>
+                
+                <tr class="">
+                <td>60</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>61</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.63</td>
+                </tr>
+                
+                <tr class="">
+                <td>62</td>
+                <td>SIPITANG</td>
+                <td>BESTAMART SUPERMARKET</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>63</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.333333333333333</td>
+                </tr>
+                
+                <tr class="">
+                <td>64</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>65</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>66</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>67</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>68</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>GULA MERAH LEMBUT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>69</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>70</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>71</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>72</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>73</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>74</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>75</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>KRAFT HI - CALCIUM SINGLES PROCESSED CHEESE 12 SLICES</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>76</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>77</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>78</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>79</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>80</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>81</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>82</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>83</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>MINYAK MASAK TULEN CAP BURUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.26</td>
+                </tr>
+                
+                <tr class="">
+                <td>84</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.82</td>
+                </tr>
+                
+                <tr class="">
+                <td>85</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>86</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>87</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>88</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>89</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>90</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>91</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>92</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.555555555555555</td>
+                </tr>
+                
+                <tr class="">
+                <td>93</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7222222222222223</td>
+                </tr>
+                
+                <tr class="">
+                <td>94</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.041666666666667</td>
+                </tr>
+                
+                <tr class="">
+                <td>95</td>
+                <td>SIPITANG</td>
+                <td>CHOON CHEONG DEPARTMENTAL STORE</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>96</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.69</td>
+                </tr>
+                
+                <tr class="">
+                <td>97</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.598695652173912</td>
+                </tr>
+                
+                <tr class="">
+                <td>98</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8122222222222226</td>
+                </tr>
+                
+                <tr class="">
+                <td>99</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.423333333333334</td>
+                </tr>
+                
+                <tr class="">
+                <td>100</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.234444444444445</td>
+                </tr>
+                
+                <tr class="">
+                <td>101</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>BERAS BASMATHI - FAIZA (KASHMIR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">38.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>102</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.49</td>
+                </tr>
+                
+                <tr class="">
+                <td>103</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>104</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.878888888888884</td>
+                </tr>
+                
+                <tr class="">
+                <td>105</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>CILI MERAH - KULAI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.80925925925926</td>
+                </tr>
+                
+                <tr class="">
+                <td>106</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>107</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>108</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">36.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>109</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">50.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>110</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.59</td>
+                </tr>
+                
+                <tr class="">
+                <td>111</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.24</td>
+                </tr>
+                
+                <tr class="">
+                <td>112</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.569999999999999</td>
+                </tr>
+                
+                <tr class="">
+                <td>113</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>114</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.112222222222222</td>
+                </tr>
+                
+                <tr class="">
+                <td>115</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.59</td>
+                </tr>
+                
+                <tr class="">
+                <td>116</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.59</td>
+                </tr>
+                
+                <tr class="">
+                <td>117</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.590000000000001</td>
+                </tr>
+                
+                <tr class="">
+                <td>118</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.79</td>
+                </tr>
+                
+                <tr class="">
+                <td>119</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.134444444444445</td>
+                </tr>
+                
+                <tr class="">
+                <td>120</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>121</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>KUBIS PANJANG (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.267777777777777</td>
+                </tr>
+                
+                <tr class="">
+                <td>122</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.59</td>
+                </tr>
+                
+                <tr class="">
+                <td>123</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.669999999999998</td>
+                </tr>
+                
+                <tr class="">
+                <td>124</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.19</td>
+                </tr>
+                
+                <tr class="">
+                <td>125</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.723333333333334</td>
+                </tr>
+                
+                <tr class="">
+                <td>126</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.49</td>
+                </tr>
+                
+                <tr class="">
+                <td>127</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.684615384615386</td>
+                </tr>
+                
+                <tr class="">
+                <td>128</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.16025641025641</td>
+                </tr>
+                
+                <tr class="">
+                <td>129</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.09</td>
+                </tr>
+                
+                <tr class="">
+                <td>130</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>SABUN MANDIAN LUX (MAGICAL SPELL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>131</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.29</td>
+                </tr>
+                
+                <tr class="">
+                <td>132</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.294347826086957</td>
+                </tr>
+                
+                <tr class="">
+                <td>133</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>134</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.19</td>
+                </tr>
+                
+                <tr class="">
+                <td>135</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8899999999999997</td>
+                </tr>
+                
+                <tr class="">
+                <td>136</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.7899999999999998</td>
+                </tr>
+                
+                <tr class="">
+                <td>137</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>SUSU SEJAT PENUH KRIM CAP IDEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.59</td>
+                </tr>
+                
+                <tr class="">
+                <td>138</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.89</td>
+                </tr>
+                
+                <tr class="">
+                <td>139</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>TEMBIKAI SUSU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>140</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.89</td>
+                </tr>
+                
+                <tr class="">
+                <td>141</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5455555555555565</td>
+                </tr>
+                
+                <tr class="">
+                <td>142</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.532857142857143</td>
+                </tr>
+                
+                <tr class="">
+                <td>143</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.367777777777778</td>
+                </tr>
+                
+                <tr class="">
+                <td>144</td>
+                <td>SIPITANG</td>
+                <td>G-MART SUPERMARKET</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.59</td>
+                </tr>
+                
+                <tr class="">
+                <td>145</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.981481481481482</td>
+                </tr>
+                
+                <tr class="">
+                <td>146</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>147</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>148</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>149</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>150</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.466666666666667</td>
+                </tr>
+                
+                <tr class="">
+                <td>151</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.75</td>
+                </tr>
+                
+                <tr class="">
+                <td>152</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>153</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.584615384615384</td>
+                </tr>
+                
+                <tr class="">
+                <td>154</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>155</td>
+                <td>SIPITANG</td>
+                <td>PASAR AM SIPITANG</td>
+                <td>SOTONG ( 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20DOSM%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C13.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C4.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C5.055555555555555%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C7.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CBERAS%20BASMATHI%20-%20FAIZA%20%28KASHMIR%29%2CTIDAK%2C39.2%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CBERAS%20SUPER%20CAP%20ANGGUR%20SAZARICE%205%25%20%28IMPORT%20THAILAND%29%2CTIDAK%2C27.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CBERAS%20SUPER%20CAP%20RODA%20SAZARICE%205%25%20%28IMPORT%20THAILAND%29%2CTIDAK%2C26.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C3.6%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CBROKOLI%2CTIDAK%2C18.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C30.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C19.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CCILI%20MERAH%20-%20KULAI%2CTIDAK%2C23.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.7%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C42.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C25.7%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CGULA%20MERAH%20LEMBUT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C9.455555555555556%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C11.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C40.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C50.0%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKACANG%20BENDI%2CTIDAK%2C7.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKACANG%20BUNCIS%2CTIDAK%2C8.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C7.944444444444445%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKACANG%20PANJANG%2CTIDAK%2C6.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.99%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.99%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C6.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C14.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKRAFT%20HI%20-%20CALCIUM%20SINGLES%20PROCESSED%20CHEESE%2012%20SLICES%2CTIDAK%2C12.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C4.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C13.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CKUBIS%20PANJANG%20%28TEMPATAN%29%2CTIDAK%2C7.900000000000001%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C18.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CLIMAU%20KASTURI%2CTIDAK%2C3.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CLOBAK%20MERAH%2CTIDAK%2C4.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.7%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C13.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20HELANG%2CTIDAK%2C11.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20NEPTUNE%2CTIDAK%2C40.99%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CMINYAK%20MASAK%20TULEN%20CAP%20BURUH%2CTIDAK%2C7.188888888888889%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C13.82%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C19.566666666666666%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CPAHA%20AYAM%20%28CHICKEN%20DRUMSTICK%29%2CTIDAK%2C11.99%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CPAHA%20AYAM%20%28CHICKEN%20DRUMSTICK%29%20%281KG%29%2CTIDAK%2C11.990000000000002%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.1%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C3.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.2%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSAWI%2CTIDAK%2C7.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C7.2%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C6.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.6%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.6%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSUSU%20SEJAT%20PENUH%20KRIM%20CAP%20IDEAL%2CTIDAK%2C5.5%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C19.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CSYAMPU%20REJOICE%20%28RICH%20SOFT%20SMOOTH%29%2CTIDAK%2C9.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.99%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CTERUNG%20PANJANG%2CTIDAK%2C6.855555555555556%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CTIMUN%2CTIDAK%2C3.9%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CTOMATO%2CTIDAK%2C7.63%0D%0ASIPITANG%2CBESTAMART%20SUPERMARKET%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C3.9%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C6.333333333333333%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C8.5%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C18.0%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.5%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C29.9%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CGULA%20MERAH%20LEMBUT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.6%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C8.5%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CKACANG%20PANJANG%2CTIDAK%2C7.0%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.0%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.0%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.99%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C14.5%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CKRAFT%20HI%20-%20CALCIUM%20SINGLES%20PROCESSED%20CHEESE%2012%20SLICES%2CTIDAK%2C12.5%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C6.0%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C15.0%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C26.8%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CLOBAK%20MERAH%2CTIDAK%2C8.0%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.3%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CMARJERIN%20PLANTA%2CTIDAK%2C5.5%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CMINYAK%20MASAK%20TULEN%20CAP%20BURUH%2CTIDAK%2C7.26%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C13.82%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.1%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.9%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C6.6%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.8%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.8%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.5%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.1%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CTERUNG%20PANJANG%2CTIDAK%2C6.555555555555555%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CTIMUN%2CTIDAK%2C3.7222222222222223%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CTOMATO%2CTIDAK%2C6.041666666666667%0D%0ASIPITANG%2CCHOON%20CHEONG%20DEPARTMENTAL%20STORE%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C4.0%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.69%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C14.598695652173912%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C3.8122222222222226%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.423333333333334%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C6.234444444444445%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CBERAS%20BASMATHI%20-%20FAIZA%20%28KASHMIR%29%2CTIDAK%2C38.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CTIDAK%2C5.49%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CBROKOLI%2CTIDAK%2C10.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C19.878888888888884%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CCILI%20MERAH%20-%20KULAI%2CTIDAK%2C19.80925925925926%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C24.9%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C8.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C36.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C50.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C8.59%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKACANG%20BENDI%2CTIDAK%2C9.24%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKACANG%20BUNCIS%2CTIDAK%2C7.569999999999999%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C9.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKACANG%20PANJANG%2CTIDAK%2C6.112222222222222%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.59%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.59%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C6.590000000000001%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.79%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C4.134444444444445%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C12.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CKUBIS%20PANJANG%20%28TEMPATAN%29%2CTIDAK%2C5.267777777777777%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.59%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C16.669999999999998%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CLIMAU%20KASTURI%2CTIDAK%2C10.19%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CLOBAK%20MERAH%2CTIDAK%2C4.723333333333334%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.49%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C13.684615384615386%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C16.16025641025641%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.09%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CSABUN%20MANDIAN%20LUX%20%28MAGICAL%20SPELL%29%2CTIDAK%2C5.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.29%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CSAWI%2CTIDAK%2C7.294347826086957%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C7.19%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.8899999999999997%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.7899999999999998%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CSUSU%20SEJAT%20PENUH%20KRIM%20CAP%20IDEAL%2CTIDAK%2C5.59%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.89%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CTEMBIKAI%20SUSU%2CTIDAK%2C3.99%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.89%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CTERUNG%20PANJANG%2CTIDAK%2C6.5455555555555565%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CTIMUN%2CTIDAK%2C3.532857142857143%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CTOMATO%2CTIDAK%2C5.367777777777778%0D%0ASIPITANG%2CG-MART%20SUPERMARKET%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C3.59%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C6.981481481481482%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C7.0%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C12.0%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C13.2%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CIKAN%20KERISI%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C12.0%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C9.466666666666667%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CIKAN%20TONGKOL/AYA/KAYU%20HITAM%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.75%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C14.7%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C14.584615384615384%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C6.0%0D%0ASIPITANG%2CPASAR%20AM%20SIPITANG%2CSOTONG%20%28%E2%89%A5%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C20.0%0D%0A" download="overview_daerah.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
