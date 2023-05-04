@@ -1,0 +1,2527 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6) {
+                background-color: #1E7664;
+                color: #fff; /* add this line */
+                }
+                table.display thead th:nth-child(7),
+                table.display thead th:nth-child(8),
+                table.display thead th:nth-child(9),
+                table.display thead th:nth-child(10),
+                table.display thead th:nth-child(11) {
+                background-color: #FFA500;
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Premis dan Item di Sarawak bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+            <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan Outlet</th>
+                <th>Harga Purata DOSM</th>
+                <th>Harga Purata KPDN</th>
+                <th>Sebut Harga KPDN</th>
+                <th>Harga Terkini KPDN <br> (2022-10-31)</th>
+                <th>Min Harga KPDN</th>
+                <th>Max Harga KPDN</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr class="">
+                <td>1</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>2</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.9</td>
+                <td class="text-center">28</td>
+                <td class="text-center">13.9</td>
+                <td class="text-center">13.9</td>
+                <td class="text-center">13.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>3</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.184210526315789</td>
+                <td class="text-center">19</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>4</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.882857142857143</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.99</td>
+                <td class="text-center">3.49</td>
+                <td class="text-center">4.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>5</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">7.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>6</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>BERAS PREMIUM CAP UNCLE TAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">30.6</td>
+                <td class="text-center">4</td>
+                <td class="text-center">30.6</td>
+                <td class="text-center">30.6</td>
+                <td class="text-center">30.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>7</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">29.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">29.8</td>
+                <td class="text-center">29.8</td>
+                <td class="text-center">29.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>8</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">16.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">16.99</td>
+                <td class="text-center">16.99</td>
+                <td class="text-center">16.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>9</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">23.629090909090905</td>
+                <td class="text-center">22</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">24.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>10</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>11</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">38.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">38.9</td>
+                <td class="text-center">38.9</td>
+                <td class="text-center">38.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>12</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">28.353999999999996</td>
+                <td class="text-center">5</td>
+                <td class="text-center">29.99</td>
+                <td class="text-center">25.9</td>
+                <td class="text-center">29.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>13</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>14</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">8.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>15</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">36.9</td>
+                <td class="text-center">1</td>
+                <td class="text-center">36.9</td>
+                <td class="text-center">36.9</td>
+                <td class="text-center">36.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>16</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">26.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">26.99</td>
+                <td class="text-center">26.99</td>
+                <td class="text-center">26.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>17</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">28</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">8.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>18</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">10.20857142857143</td>
+                <td class="text-center">28</td>
+                <td class="text-center">10.5</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">10.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>19</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">22</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">7.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>20</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">13.99</td>
+                <td class="text-center">13.99</td>
+                <td class="text-center">13.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>21</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">9.5</td>
+                <td class="text-center">28</td>
+                <td class="text-center">9.5</td>
+                <td class="text-center">9.5</td>
+                <td class="text-center">9.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>22</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>23</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">14.99</td>
+                <td class="text-center">1</td>
+                <td class="text-center">14.99</td>
+                <td class="text-center">14.99</td>
+                <td class="text-center">14.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>24</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">14.61962962962963</td>
+                <td class="text-center">27</td>
+                <td class="text-center">14.99</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">14.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>25</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">14.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">14.5</td>
+                <td class="text-center">14.5</td>
+                <td class="text-center">14.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>26</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">14.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">14.99</td>
+                <td class="text-center">14.99</td>
+                <td class="text-center">14.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>27</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">24.75</td>
+                <td class="text-center">4</td>
+                <td class="text-center">25.6</td>
+                <td class="text-center">23.9</td>
+                <td class="text-center">25.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>28</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">19.99</td>
+                <td class="text-center">5</td>
+                <td class="text-center">19.99</td>
+                <td class="text-center">19.99</td>
+                <td class="text-center">19.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>29</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>30</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.5</td>
+                <td class="text-center">28</td>
+                <td class="text-center">5.5</td>
+                <td class="text-center">5.5</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>31</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">4.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>32</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.12</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.2</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">7.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>33</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>MINYAK MASAK SEBATIAN CAP NEPTUNE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">38.99</td>
+                <td class="text-center">8</td>
+                <td class="text-center">38.99</td>
+                <td class="text-center">38.99</td>
+                <td class="text-center">38.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>34</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">31.5</td>
+                <td class="text-center">15</td>
+                <td class="text-center">31.5</td>
+                <td class="text-center">31.5</td>
+                <td class="text-center">31.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>35</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>PAHA AYAM (CHICKEN DRUMSTICK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>36</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>PAHA AYAM (CHICKEN DRUMSTICK) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">27</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>37</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.9899999999999998</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.99</td>
+                <td class="text-center">1.99</td>
+                <td class="text-center">1.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>38</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.99</td>
+                <td class="text-center">2</td>
+                <td class="text-center">2.99</td>
+                <td class="text-center">2.99</td>
+                <td class="text-center">2.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>39</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.5</td>
+                <td class="text-center">7.5</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>40</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.9175</td>
+                <td class="text-center">4</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.7</td>
+                <td class="text-center">6.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>41</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>42</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.5</td>
+                <td class="text-center">1.5</td>
+                <td class="text-center">1.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>43</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>SUSU SEJAT PENUH KRIM CAP IDEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">3</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">4.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>44</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">19.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>45</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>SYAMPU REJOICE (RICH SOFT SMOOTH)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.99</td>
+                <td class="text-center">1</td>
+                <td class="text-center">13.99</td>
+                <td class="text-center">13.99</td>
+                <td class="text-center">13.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>46</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>47</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">27</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>48</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">2.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>49</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">8.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>50</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.9899999999999998</td>
+                <td class="text-center">28</td>
+                <td class="text-center">2.99</td>
+                <td class="text-center">2.99</td>
+                <td class="text-center">2.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>51</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">9.125</td>
+                <td class="text-center">28</td>
+                <td class="text-center">9.5</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">9.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>52</td>
+                <td>SRI AMAN</td>
+                <td>DOREMART SDN. BHD. SRI AMAN</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.99</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.99</td>
+                <td class="text-center">4.99</td>
+                <td class="text-center">4.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>53</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>54</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>AYAM BERSIH - STANDARD</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>55</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.29</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>56</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>57</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.29</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>58</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>BERAS PREMIUM CAP UNCLE TAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>59</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>60</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>61</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.407142857142857</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>62</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.99</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>63</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.815454545454546</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>64</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>65</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>66</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.561428571428571</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>67</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">36.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>68</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>69</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.085714285714285</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>70</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.151428571428571</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>71</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>72</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.2727272727272725</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>73</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>74</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>75</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>76</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>KRAFT HI - CALCIUM SINGLES PROCESSED CHEESE 12 SLICES</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>77</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.964285714285714</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>78</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>79</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.171428571428572</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>80</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>81</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>82</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>83</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>84</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>85</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>MINYAK MASAK SEBATIAN CAP HELANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>86</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>MINYAK MASAK SEBATIAN CAP NEPTUNE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">38.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>87</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>MINYAK MASAK TULEN CAP BURUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.139999999999999</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>88</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.85</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>89</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.419999999999998</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>90</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>PAHA AYAM (CHICKEN DRUMSTICK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>91</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>PAHA AYAM (CHICKEN DRUMSTICK) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>92</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>93</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>94</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>95</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>96</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>97</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>98</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>SUSU SEJAT PENUH KRIM CAP IDEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>99</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>100</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>101</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>102</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.452857142857143</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>103</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.6371428571428575</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>104</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.417857142857143</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>105</td>
+                <td>SRI AMAN</td>
+                <td>K&L FARMING INDUSTRIES SDN. BHD. (FAIR PRICE)</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.29</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>106</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>107</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>BERAS PREMIUM CAP UNCLE TAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>108</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>109</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>110</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">35.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>111</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.899999999999995</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>112</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>113</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>114</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>115</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>116</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>117</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>118</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>MINYAK MASAK SEBATIAN CAP HELANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>119</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>120</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>121</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>122</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.62</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>123</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>124</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>125</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>126</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>127</td>
+                <td>SRI AMAN</td>
+                <td>LIAN YII MARKETING SDN.BHD.</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>128</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>129</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>130</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>131</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>132</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>DAGING BABI (DAGING & LEMAK / LEAN & FAT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.214285714285715</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>133</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>DAGING BABI (ISI DAGING / PURE LEAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.214285714285715</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>134</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>135</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">22.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>136</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>137</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>138</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>139</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>140</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>141</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>SOTONG ( 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">22.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>142</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>143</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>144</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>TEMBIKAI MERAH TANPA BIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>145</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>TEMBIKAI SUSU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>146</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>147</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>148</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>149</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU BERSEPADU SRI AMAN</td>
+                <td>UDANG PUTIH/VANNAMEI (TERNAK) (ANTARA 41 HINGGA 60 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">39.285714285714285</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>150</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.142857142857142</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>151</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.875</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>152</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.178571428571429</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>153</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>154</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>155</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>156</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">23.846153846153847</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>157</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>158</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>159</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>160</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>161</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.47037037037037</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>162</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>KERANG (SAIZ SEDERHANA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>163</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.307692307692308</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>164</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>165</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>166</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.821428571428571</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>167</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>168</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>169</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>TEMBIKAI SUSU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>170</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.928571428571429</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>171</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.427321428571428</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>172</td>
+                <td>SRI AMAN</td>
+                <td>PASAR TAMU SRI AMAN,SRI AMAN</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.303571428571429</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20DOSM%2CHarga%20Purata%20KPDN%2CSebut%20Harga%20KPDN%2CHarga%20Terkini%20KPDN%2CMin%20Harga%20KPDN%2CMax%20Harga%20KPDN%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C0.0%2C3.8%2C1%2C3.8%2C3.8%2C3.8%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C0.0%2C13.9%2C28%2C13.9%2C13.9%2C13.9%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C0.0%2C5.184210526315789%2C19%2C4.5%2C4.5%2C5.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C0.0%2C4.882857142857143%2C28%2C4.99%2C3.49%2C4.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C7.99%2C28%2C7.99%2C7.99%2C7.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CBERAS%20PREMIUM%20CAP%20UNCLE%20TAN%2CTIDAK%2C0.0%2C30.6%2C4%2C30.6%2C30.6%2C30.6%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C0.0%2C29.8%2C5%2C29.8%2C29.8%2C29.8%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CBROKOLI%2CTIDAK%2C0.0%2C16.99%2C28%2C16.99%2C16.99%2C16.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C0.0%2C23.629090909090905%2C22%2C20.0%2C20.0%2C24.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C0.0%2C1.6%2C1%2C1.6%2C1.6%2C1.6%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C0.0%2C38.9%2C5%2C38.9%2C38.9%2C38.9%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C0.0%2C28.353999999999996%2C5%2C29.99%2C25.9%2C29.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.85%2C5%2C2.85%2C2.85%2C2.85%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C0.0%2C8.99%2C28%2C8.99%2C8.99%2C8.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C0.0%2C36.9%2C1%2C36.9%2C36.9%2C36.9%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CIKAN%20BAWAL%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C26.99%2C28%2C26.99%2C26.99%2C26.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C8.5%2C28%2C8.5%2C8.5%2C8.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C10.20857142857143%2C28%2C10.5%2C9.99%2C10.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CKACANG%20BENDI%2CTIDAK%2C0.0%2C7.99%2C22%2C7.99%2C7.99%2C7.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CKACANG%20BUNCIS%2CTIDAK%2C0.0%2C13.99%2C28%2C13.99%2C13.99%2C13.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C0.0%2C9.5%2C28%2C9.5%2C9.5%2C9.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CKACANG%20PANJANG%2CTIDAK%2C0.0%2C6.99%2C28%2C6.99%2C6.99%2C6.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C0.0%2C14.99%2C1%2C14.99%2C14.99%2C14.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C0.0%2C14.61962962962963%2C27%2C14.99%2C9.99%2C14.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C0.0%2C14.5%2C1%2C14.5%2C14.5%2C14.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C0.0%2C14.99%2C28%2C14.99%2C14.99%2C14.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C0.0%2C24.75%2C4%2C25.6%2C23.9%2C25.6%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C0.0%2C19.99%2C5%2C19.99%2C19.99%2C19.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CLIMAU%20KASTURI%2CTIDAK%2C0.0%2C6.99%2C28%2C6.99%2C6.99%2C6.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CLOBAK%20MERAH%2CTIDAK%2C0.0%2C5.5%2C28%2C5.5%2C5.5%2C5.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C0.0%2C4.7%2C5%2C4.7%2C4.7%2C4.7%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CMARJERIN%20PLANTA%2CTIDAK%2C0.0%2C7.12%2C5%2C7.2%2C6.8%2C7.2%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20NEPTUNE%2CTIDAK%2C0.0%2C38.99%2C8%2C38.99%2C38.99%2C38.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C0.0%2C31.5%2C15%2C31.5%2C31.5%2C31.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CPAHA%20AYAM%20%28CHICKEN%20DRUMSTICK%29%2CTIDAK%2C0.0%2C13.5%2C1%2C13.5%2C13.5%2C13.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CPAHA%20AYAM%20%28CHICKEN%20DRUMSTICK%29%20%281KG%29%2CTIDAK%2C0.0%2C13.5%2C27%2C13.5%2C13.5%2C13.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C0.0%2C1.9899999999999998%2C5%2C1.99%2C1.99%2C1.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C0.0%2C2.99%2C2%2C2.99%2C2.99%2C2.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C0.0%2C7.5%2C5%2C7.5%2C7.5%2C7.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C0.0%2C6.9175%2C4%2C6.99%2C6.7%2C6.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CSOS%20CILI%20MAGGI%2CTIDAK%2C0.0%2C3.8%2C5%2C3.8%2C3.8%2C3.8%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C0.0%2C1.5%2C5%2C1.5%2C1.5%2C1.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CSUSU%20SEJAT%20PENUH%20KRIM%20CAP%20IDEAL%2CTIDAK%2C0.0%2C4.8%2C3%2C4.8%2C4.8%2C4.8%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C0.0%2C19.9%2C5%2C19.9%2C19.9%2C19.9%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CSYAMPU%20REJOICE%20%28RICH%20SOFT%20SMOOTH%29%2CTIDAK%2C0.0%2C13.99%2C1%2C13.99%2C13.99%2C13.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C0.0%2C4.5%2C1%2C4.5%2C4.5%2C4.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C0.0%2C4.5%2C27%2C4.5%2C4.5%2C4.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.8%2C5%2C2.8%2C2.8%2C2.8%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CTERUNG%20PANJANG%2CTIDAK%2C0.0%2C8.99%2C28%2C8.99%2C8.99%2C8.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CTIMUN%2CTIDAK%2C0.0%2C2.9899999999999998%2C28%2C2.99%2C2.99%2C2.99%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CTOMATO%2CTIDAK%2C0.0%2C9.125%2C28%2C9.5%2C8.0%2C9.5%0D%0ASRI%20AMAN%2CDOREMART%20SDN.%20BHD.%20SRI%20AMAN%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C4.99%2C28%2C4.99%2C4.99%2C4.99%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C4.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CAYAM%20BERSIH%20-%20STANDARD%2CTIDAK%2C10.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C4.29%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C8.29%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CBERAS%20PREMIUM%20CAP%20UNCLE%20TAN%2CTIDAK%2C31.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C29.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C4.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CBROKOLI%2CTIDAK%2C15.407142857142857%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C27.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C19.815454545454546%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C30.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C8.561428571428571%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C36.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C9.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CKACANG%20BENDI%2CTIDAK%2C11.085714285714285%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CKACANG%20BUNCIS%2CTIDAK%2C14.151428571428571%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C8.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CKACANG%20PANJANG%2CTIDAK%2C7.2727272727272725%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C14.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C14.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C15.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CKRAFT%20HI%20-%20CALCIUM%20SINGLES%20PROCESSED%20CHEESE%2012%20SLICES%2CTIDAK%2C11.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C12.964285714285714%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C18.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CLIMAU%20KASTURI%2CTIDAK%2C6.171428571428572%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CLOBAK%20MERAH%2CTIDAK%2C5.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CMARJERIN%20PLANTA%2CTIDAK%2C7.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C12.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20HELANG%2CTIDAK%2C8.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20NEPTUNE%2CTIDAK%2C38.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CMINYAK%20MASAK%20TULEN%20CAP%20BURUH%2CTIDAK%2C7.139999999999999%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C13.85%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C19.419999999999998%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CPAHA%20AYAM%20%28CHICKEN%20DRUMSTICK%29%2CTIDAK%2C13.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CPAHA%20AYAM%20%28CHICKEN%20DRUMSTICK%29%20%281KG%29%2CTIDAK%2C13.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C7.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CSUSU%20SEJAT%20PENUH%20KRIM%20CAP%20IDEAL%2CTIDAK%2C5.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C5.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C5.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CTERUNG%20PANJANG%2CTIDAK%2C9.452857142857143%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CTIMUN%2CTIDAK%2C3.6371428571428575%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CTOMATO%2CTIDAK%2C7.417857142857143%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CK%26L%20FARMING%20INDUSTRIES%20SDN.%20BHD.%20%28FAIR%20PRICE%29%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C4.29%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CBERAS%20PREMIUM%20CAP%20UNCLE%20TAN%2CTIDAK%2C31.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C29.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C35.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C24.899999999999995%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C25.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C8.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CMARJERIN%20PLANTA%2CTIDAK%2C5.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C12.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20HELANG%2CTIDAK%2C8.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C13.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C2.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.62%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C6.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C19.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CLIAN%20YII%20MARKETING%20SDN.BHD.%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C24.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C5.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C10.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CBROKOLI%2CTIDAK%2C20.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CDAGING%20BABI%20%28DAGING%20%26%20LEMAK%20/%20LEAN%20%26%20FAT%29%2CTIDAK%2C29.214285714285715%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CDAGING%20BABI%20%28ISI%20DAGING%20/%20PURE%20LEAN%29%2CTIDAK%2C31.214285714285715%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C12.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CIKAN%20BAWAL%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C22.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C11.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C15.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CLOBAK%20MERAH%2CTIDAK%2C6.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CSOTONG%20%28%E2%89%A5%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C22.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C4.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C4.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CTEMBIKAI%20MERAH%20TANPA%20BIJI%2CTIDAK%2C5.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CTEMBIKAI%20SUSU%2CTIDAK%2C7.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CTIMUN%2CTIDAK%2C5.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CTOMATO%2CTIDAK%2C9.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C4.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2CPASAR%20TAMU%20BERSEPADU%20SRI%20AMAN%2CUDANG%20PUTIH/VANNAMEI%20%28TERNAK%29%20%28ANTARA%2041%20HINGGA%2060%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C39.285714285714285%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C18.142857142857142%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C4.875%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C5.178571428571429%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C9.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CBROKOLI%2CTIDAK%2C18.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C28.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C23.846153846153847%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C9.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CIKAN%20BAWAL%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C30.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CKACANG%20BUNCIS%2CTIDAK%2C12.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.47037037037037%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CKERANG%20%28SAIZ%20SEDERHANA%29%2CTIDAK%2C20.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C14.307692307692308%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CLIMAU%20KASTURI%2CTIDAK%2C6.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CLOBAK%20MERAH%2CTIDAK%2C7.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CSAWI%2CTIDAK%2C12.821428571428571%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C5.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C5.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CTEMBIKAI%20SUSU%2CTIDAK%2C7.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CTIMUN%2CTIDAK%2C4.928571428571429%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CTOMATO%2CTIDAK%2C10.427321428571428%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ASRI%20AMAN%2C%22PASAR%20TAMU%20SRI%20AMAN%2CSRI%20AMAN%22%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C4.303571428571429%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0A" download="overview_daerah.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
