@@ -1,0 +1,98 @@
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+<style>
+    table#myTable {
+        margin: auto;
+    }
+    body {
+        font-family: Arial;
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    table.display tbody tr td {
+        font-size: 12px;
+        line-height: 1.0;
+    }
+    table.display thead th {
+        font-size: 14px;
+        background-color: #D4D4D4;
+        padding: 5px;
+    }
+    .malaysia-row td {
+        font-weight: bold;
+    }
+    /* Define a CSS class for pagination buttons */
+    .pagination-button {
+        font-size: 12px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    table.display thead th:nth-child(2),
+    table.display thead th:nth-child(3),
+    table.display thead th:nth-child(4) {
+    background-color: #1E7664;
+    color: #fff; /* add this line */
+    }
+    table.display thead th:nth-child(5),
+    table.display thead th:nth-child(6),
+    table.display thead th:nth-child(7) {
+    background-color: #FFA500;
+    }
+</style>
+<script>
+$(document).ready(function() {
+    $('#myTable').DataTable({
+        "paging": false,
+        "pageLength": 17,
+        "lengthChange": false,
+        "searching": false, // change searching to carian
+        "ordering": true,
+        "info": false,
+        "autoWidth": false,
+        "order": [],
+        "language": {
+            "lengthMenu": "Paparkan _MENU_ item",
+            "zeroRecords": "Tiada rekod yang ditemui",
+            "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+            "infoEmpty": "Tiada rekod yang tersedia",
+            "zeroRecords": "Tiada rekod yang dicari",
+            "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+            "search": "Carian:",
+            "paginate": {
+                "previous": "Sebelum",
+                "next": "Seterusnya",
+                "first": "Pertama",
+                "last": "Akhir",
+                "paginate_button": {
+                    "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                }
+            }
+        }
+    });
+    $('#refreshButton').click(function() {
+        table.draw();
+    });
+});
+</script>
+<table id="myTable" class="display" border="1">
+  <thead>
+    <tr>
+      <th>Negeri</th>
+      <th>Outlet DOSM</th>
+      <th>Sebut DOSM</th>
+      <th>Item DOSM</th>
+      <th>Outlet KPDN</th>
+      <th>Sebut Harga KPDN</th>
+      <th>Item KPDN</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+  <h2>Bilangan outlet, sebut harga dan item di setiap negeri</h2>
+</table><br>
