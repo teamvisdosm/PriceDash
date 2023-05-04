@@ -1,0 +1,819 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6) {
+                background-color: #1E7664;
+                color: #fff; /* add this line */
+                }
+                table.display thead th:nth-child(7),
+                table.display thead th:nth-child(8),
+                table.display thead th:nth-child(9),
+                table.display thead th:nth-child(10),
+                table.display thead th:nth-child(11) {
+                background-color: #FFA500;
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Premis dan Item di Sarawak bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+            <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan Outlet</th>
+                <th>Harga Purata DOSM</th>
+                <th>Harga Purata KPDN</th>
+                <th>Sebut Harga KPDN</th>
+                <th>Harga Terkini KPDN <br> (2022-10-31)</th>
+                <th>Min Harga KPDN</th>
+                <th>Max Harga KPDN</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr class="">
+                <td>1</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>2</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>BERAS PREMIUM CAP UNCLE TAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.899999999999995</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>3</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.899999999999995</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>4</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>5</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.899999999999995</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>6</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>7</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>8</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>9</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>10</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>11</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>12</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>13</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>SYAMPU REJOICE (RICH SOFT SMOOTH)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>14</td>
+                <td>LUBOK ANTU</td>
+                <td>D & J MINI MARKET</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>15</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">3.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>16</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>BERAS PREMIUM CAP UNCLE TAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">32.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">32.0</td>
+                <td class="text-center">32.0</td>
+                <td class="text-center">32.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>17</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>18</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>19</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>20</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">30.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">30.4</td>
+                <td class="text-center">30.4</td>
+                <td class="text-center">30.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>21</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>22</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">16.8</td>
+                <td class="text-center">1</td>
+                <td class="text-center">16.8</td>
+                <td class="text-center">16.8</td>
+                <td class="text-center">16.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>23</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">15.8</td>
+                <td class="text-center">1</td>
+                <td class="text-center">15.8</td>
+                <td class="text-center">15.8</td>
+                <td class="text-center">15.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>24</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>KRAFT HI - CALCIUM SINGLES PROCESSED CHEESE 12 SLICES</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">12.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">12.5</td>
+                <td class="text-center">12.5</td>
+                <td class="text-center">12.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>25</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">26.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">26.5</td>
+                <td class="text-center">26.5</td>
+                <td class="text-center">26.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>26</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>27</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.8</td>
+                <td class="text-center">7.8</td>
+                <td class="text-center">7.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>28</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.3</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.3</td>
+                <td class="text-center">2.3</td>
+                <td class="text-center">2.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>29</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>30</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.2000000000000006</td>
+                <td class="text-center">3</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>31</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>32</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.2</td>
+                <td class="text-center">7.2</td>
+                <td class="text-center">7.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>33</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">4</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>34</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>35</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">20.5</td>
+                <td class="text-center">3</td>
+                <td class="text-center">20.5</td>
+                <td class="text-center">20.5</td>
+                <td class="text-center">20.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>36</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>37</td>
+                <td>LUBOK ANTU</td>
+                <td>JIT SIANG</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.3</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1.3</td>
+                <td class="text-center">1.3</td>
+                <td class="text-center">1.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>38</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>39</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>40</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>41</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.55</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>42</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>43</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>44</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">32.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>45</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>46</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>47</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>48</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.38</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>49</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>SYAMPU REJOICE (RICH SOFT SMOOTH)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>50</td>
+                <td>LUBOK ANTU</td>
+                <td>MIN HOE CAFE</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.88</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20DOSM%2CHarga%20Purata%20KPDN%2CSebut%20Harga%20KPDN%2CHarga%20Terkini%20KPDN%2CMin%20Harga%20KPDN%2CMax%20Harga%20KPDN%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CBERAS%20PREMIUM%20CAP%20UNCLE%20TAN%2CTIDAK%2C31.899999999999995%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C29.899999999999995%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C2.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C25.899999999999995%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CMARJERIN%20PLANTA%2CTIDAK%2C7.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CSYAMPU%20REJOICE%20%28RICH%20SOFT%20SMOOTH%29%2CTIDAK%2C11.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CD%20%26%20J%20MINI%20MARKET%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C0.0%2C3.7%2C1%2C3.7%2C3.7%2C3.7%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CBERAS%20PREMIUM%20CAP%20UNCLE%20TAN%2CTIDAK%2C0.0%2C32.0%2C5%2C32.0%2C32.0%2C32.0%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C0.0%2C30.0%2C5%2C30.0%2C30.0%2C30.0%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C0.0%2C3.8%2C1%2C3.8%2C3.8%2C3.8%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C0.0%2C2.0%2C1%2C2.0%2C2.0%2C2.0%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C0.0%2C30.4%2C5%2C30.4%2C30.4%2C30.4%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.85%2C5%2C2.85%2C2.85%2C2.85%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C0.0%2C16.8%2C1%2C16.8%2C16.8%2C16.8%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C0.0%2C15.8%2C1%2C15.8%2C15.8%2C15.8%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CKRAFT%20HI%20-%20CALCIUM%20SINGLES%20PROCESSED%20CHEESE%2012%20SLICES%2CTIDAK%2C0.0%2C12.5%2C5%2C12.5%2C12.5%2C12.5%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C0.0%2C26.5%2C5%2C26.5%2C26.5%2C26.5%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C0.0%2C5.0%2C5%2C5.0%2C5.0%2C5.0%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CMARJERIN%20PLANTA%2CTIDAK%2C0.0%2C7.8%2C5%2C7.8%2C7.8%2C7.8%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C0.0%2C2.3%2C5%2C2.3%2C2.3%2C2.3%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C0.0%2C3.8%2C1%2C3.8%2C3.8%2C3.8%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C0.0%2C3.2000000000000006%2C3%2C3.2%2C3.2%2C3.2%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C0.0%2C7.0%2C5%2C7.0%2C7.0%2C7.0%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C0.0%2C7.2%2C5%2C7.2%2C7.2%2C7.2%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CSOS%20CILI%20MAGGI%2CTIDAK%2C0.0%2C3.9%2C4%2C3.9%2C3.9%2C3.9%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C0.0%2C1.6%2C5%2C1.6%2C1.6%2C1.6%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C0.0%2C20.5%2C3%2C20.5%2C20.5%2C20.5%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C3.0%2C5%2C3.0%2C3.0%2C3.0%0D%0ALUBOK%20ANTU%2CJIT%20SIANG%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C0.0%2C1.3%2C1%2C1.3%2C1.3%2C1.3%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C4.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C2.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C25.55%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C32.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C3.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.38%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CSYAMPU%20REJOICE%20%28RICH%20SOFT%20SMOOTH%29%2CTIDAK%2C10.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUBOK%20ANTU%2CMIN%20HOE%20CAFE%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.88%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0A" download="overview_daerah.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
