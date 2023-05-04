@@ -1,0 +1,1607 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6) {
+                background-color: #1E7664;
+                color: #fff; /* add this line */
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Premis dan Item di Kedah bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+            <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan Outlet</th>
+                <th>Harga Purata DOSM</th>
+                
+                <tr class="">
+                <td>1</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>BERAS PULUT THAILAND (BIASA) PELBAGAI JENAMA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>2</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>3</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>4</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>5</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">21.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>6</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>7</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.6000000000000005</td>
+                </tr>
+                
+                <tr class="">
+                <td>8</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>9</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>10</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>11</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>12</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.78</td>
+                </tr>
+                
+                <tr class="">
+                <td>13</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>14</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>15</td>
+                <td>PENDANG</td>
+                <td>HOCK HUP HIN</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>16</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>17</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>AYAM BERSIH - STANDARD</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>18</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>19</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>BAYAM HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.793103448275862</td>
+                </tr>
+                
+                <tr class="">
+                <td>20</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>BETIK BIASA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>21</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.482758620689655</td>
+                </tr>
+                
+                <tr class="">
+                <td>22</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>CILI HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>23</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>24</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>CILI MERAH - KULAI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.379310344827587</td>
+                </tr>
+                
+                <tr class="">
+                <td>25</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>26</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>DAGING LEMBU TEMPATAN (BAHAGIAN 1 DAGING PAHA (KECUALI BATANG PINANG - TENDERLOIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">39.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>27</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>EPAL HIJAU GRANNY SMITH (SAIZ M)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>28</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.275862068965518</td>
+                </tr>
+                
+                <tr class="">
+                <td>29</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.130434782608695</td>
+                </tr>
+                
+                <tr class="">
+                <td>30</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.818181818181818</td>
+                </tr>
+                
+                <tr class="">
+                <td>31</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN JENAHAK (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">45.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>32</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN JENAHAK (KEPINGAN) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">47.77777777777778</td>
+                </tr>
+                
+                <tr class="">
+                <td>33</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN KELI (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>34</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.103448275862068</td>
+                </tr>
+                
+                <tr class="">
+                <td>35</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN KEMBUNG KECIL/PELALING (ANTARA 10 HINGGA 18 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>36</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN KERAPU (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">23.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>37</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.869565217391305</td>
+                </tr>
+                
+                <tr class="">
+                <td>38</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN PARI (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>39</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN SELAR/PELATA ( 7 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>40</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.826086956521738</td>
+                </tr>
+                
+                <tr class="">
+                <td>41</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN SENANGIN (ANTARA 2 HINGGA 8 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>42</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN SIAKAP (ANTARA 2 HINGGA 4 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">21.517241379310345</td>
+                </tr>
+                
+                <tr class="">
+                <td>43</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN TAMBAN BELURU (ANTARA 10 HINGGA 19 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>44</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN TENGGIRI BATANG (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">39.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>45</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN TENGGIRI BATANG (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">45.625</td>
+                </tr>
+                
+                <tr class="">
+                <td>46</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN TILAPIA MERAH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>47</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.166666666666666</td>
+                </tr>
+                
+                <tr class="">
+                <td>48</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>JAMBU BATU BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>49</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.241379310344827</td>
+                </tr>
+                
+                <tr class="">
+                <td>50</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.862068965517242</td>
+                </tr>
+                
+                <tr class="">
+                <td>51</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.137931034482759</td>
+                </tr>
+                
+                <tr class="">
+                <td>52</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>KAILAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.862068965517242</td>
+                </tr>
+                
+                <tr class="">
+                <td>53</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>KANGKUNG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.482758620689655</td>
+                </tr>
+                
+                <tr class="">
+                <td>54</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>KELAPA PARUT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.917241379310345</td>
+                </tr>
+                
+                <tr class="">
+                <td>55</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>KERANG (SAIZ SEDERHANA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>56</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>KETAM RENJONG/BUNGA (ANTARA 5 HINGGA 8 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">34.38461538461539</td>
+                </tr>
+                
+                <tr class="">
+                <td>57</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.10344827586207</td>
+                </tr>
+                
+                <tr class="">
+                <td>58</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.444444444444445</td>
+                </tr>
+                
+                <tr class="">
+                <td>59</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.931034482758621</td>
+                </tr>
+                
+                <tr class="">
+                <td>60</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>LIMAU NIPIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.931034482758621</td>
+                </tr>
+                
+                <tr class="">
+                <td>61</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.827586206896552</td>
+                </tr>
+                
+                <tr class="">
+                <td>62</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>OREN VALENCIA (SAIZ M)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>63</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>PISANG BERANGAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.258620689655173</td>
+                </tr>
+                
+                <tr class="">
+                <td>64</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>PISANG EMAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.327586206896552</td>
+                </tr>
+                
+                <tr class="">
+                <td>65</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>SANTAN KELAPA SEGAR (PEKAT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>66</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.206896551724138</td>
+                </tr>
+                
+                <tr class="">
+                <td>67</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>SOTONG ( 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">33.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>68</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>69</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.982142857142857</td>
+                </tr>
+                
+                <tr class="">
+                <td>70</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>TEMBIKAI MERAH TANPA BIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.362068965517241</td>
+                </tr>
+                
+                <tr class="">
+                <td>71</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.724137931034482</td>
+                </tr>
+                
+                <tr class="">
+                <td>72</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.4655172413793105</td>
+                </tr>
+                
+                <tr class="">
+                <td>73</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.655172413793103</td>
+                </tr>
+                
+                <tr class="">
+                <td>74</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>UDANG PUTIH KECIL ( 61 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.814814814814813</td>
+                </tr>
+                
+                <tr class="">
+                <td>75</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH PENDANG</td>
+                <td>UDANG PUTIH/VANNAMEI (TERNAK) (ANTARA 41 HINGGA 60 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.17241379310345</td>
+                </tr>
+                
+                <tr class="">
+                <td>76</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>BAYAM HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.809523809523809</td>
+                </tr>
+                
+                <tr class="">
+                <td>77</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>78</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">17.64</td>
+                </tr>
+                
+                <tr class="">
+                <td>79</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.872</td>
+                </tr>
+                
+                <tr class="">
+                <td>80</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.11111111111111</td>
+                </tr>
+                
+                <tr class="">
+                <td>81</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN GELAMA (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>82</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN KELI (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>83</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.65</td>
+                </tr>
+                
+                <tr class="">
+                <td>84</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN KEMBUNG KECIL/PELALING (ANTARA 10 HINGGA 18 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>85</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.666666666666666</td>
+                </tr>
+                
+                <tr class="">
+                <td>86</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.470588235294118</td>
+                </tr>
+                
+                <tr class="">
+                <td>87</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN SIAKAP (ANTARA 2 HINGGA 4 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>88</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN TAMBAN BELURU (ANTARA 10 HINGGA 19 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.909090909090909</td>
+                </tr>
+                
+                <tr class="">
+                <td>89</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN TILAPIA MERAH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.083333333333334</td>
+                </tr>
+                
+                <tr class="">
+                <td>90</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.826086956521738</td>
+                </tr>
+                
+                <tr class="">
+                <td>91</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.125</td>
+                </tr>
+                
+                <tr class="">
+                <td>92</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>93</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.826086956521739</td>
+                </tr>
+                
+                <tr class="">
+                <td>94</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>KANGKUNG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.304347826086956</td>
+                </tr>
+                
+                <tr class="">
+                <td>95</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.72</td>
+                </tr>
+                
+                <tr class="">
+                <td>96</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>97</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>LIMAU NIPIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>98</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.78</td>
+                </tr>
+                
+                <tr class="">
+                <td>99</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.88</td>
+                </tr>
+                
+                <tr class="">
+                <td>100</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>101</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>102</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.04</td>
+                </tr>
+                
+                <tr class="">
+                <td>103</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>104</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.96</td>
+                </tr>
+                
+                <tr class="">
+                <td>105</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>UDANG PUTIH KECIL ( 61 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.956521739130434</td>
+                </tr>
+                
+                <tr class="">
+                <td>106</td>
+                <td>PENDANG</td>
+                <td>PASAR BASAH TANAH MERAH</td>
+                <td>UDANG PUTIH/VANNAMEI (TERNAK) (ANTARA 41 HINGGA 60 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.166666666666668</td>
+                </tr>
+                
+                <tr class="">
+                <td>107</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>108</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>109</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>BERAS BASMATHI - FAIZA (KASHMIR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>110</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>BERAS CAP JASMINE (SST5%)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>111</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>BERAS CAP JATI (SST5%)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>112</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>BERAS PULUT THAILAND (BIASA) PELBAGAI JENAMA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.08</td>
+                </tr>
+                
+                <tr class="">
+                <td>113</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>BERAS SUPER CAP RAMBUTAN 5% (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>114</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>115</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>BIHUN KERING TEMPATAN (CAP JASMINE)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>116</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">23.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>117</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>118</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>119</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">22.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>120</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>121</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.496551724137931</td>
+                </tr>
+                
+                <tr class="">
+                <td>122</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>123</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>124</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>125</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>126</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>127</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>128</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>129</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>130</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>131</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.33</td>
+                </tr>
+                
+                <tr class="">
+                <td>132</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>133</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.720000000000001</td>
+                </tr>
+                
+                <tr class="">
+                <td>134</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>135</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>136</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.648148148148149</td>
+                </tr>
+                
+                <tr class="">
+                <td>137</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.57758620689655</td>
+                </tr>
+                
+                <tr class="">
+                <td>138</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.65</td>
+                </tr>
+                
+                <tr class="">
+                <td>139</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>140</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>ROTI GARDENIA WHOLEMEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>141</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>142</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>143</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>144</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>145</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>146</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>SUSU SEJAT PENUH KRIM CAP IDEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.55</td>
+                </tr>
+                
+                <tr class="">
+                <td>147</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>148</td>
+                <td>PENDANG</td>
+                <td>PASARAYA KH (TANAH MERAH)</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.7666666666666666</td>
+                </tr>
+                
+                <tr class="">
+                <td>149</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>150</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>BERAS PULUT THAILAND (BIASA) PELBAGAI JENAMA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>151</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>152</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>153</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>154</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>155</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>156</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>157</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>158</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>159</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>160</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>161</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>162</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>163</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>164</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>165</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>166</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>167</td>
+                <td>PENDANG</td>
+                <td>PASARAYA TANAH MERAH</td>
+                <td>TELUR AYAM GRED B (BERAT 60.0GM HINGGA 64.9GM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.3</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20DOSM%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CBERAS%20PULUT%20THAILAND%20%28BIASA%29%20PELBAGAI%20JENAMA%2CTIDAK%2C4.5%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C26.8%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.8%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C10.0%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C21.4%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C8.0%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.6000000000000005%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.0%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.9%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CMARJERIN%20PLANTA%2CTIDAK%2C7.5%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C1.78%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.0%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.8%0D%0APENDANG%2CHOCK%20HUP%20HIN%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C8.99%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CAYAM%20BERSIH%20-%20STANDARD%2CTIDAK%2C9.4%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C4.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CBAYAM%20HIJAU%2CTIDAK%2C4.793103448275862%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CBETIK%20BIASA%2CTIDAK%2C5.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CBROKOLI%2CTIDAK%2C12.482758620689655%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CCILI%20HIJAU%2CTIDAK%2C12.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C28.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CCILI%20MERAH%20-%20KULAI%2CTIDAK%2C18.379310344827587%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C16.5%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CDAGING%20LEMBU%20TEMPATAN%20%28BAHAGIAN%201%20DAGING%20PAHA%20%28KECUALI%20BATANG%20PINANG%20-%20TENDERLOIN%29%2CTIDAK%2C39.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CEPAL%20HIJAU%20GRANNY%20SMITH%20%28SAIZ%20M%29%2CTIDAK%2C1.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C8.275862068965518%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20BAWAL%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C28.130434782608695%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C9.818181818181818%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20JENAHAK%20%28KEPINGAN%29%2CTIDAK%2C45.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20JENAHAK%20%28KEPINGAN%29%20%281KG%29%2CTIDAK%2C47.77777777777778%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20KELI%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C16.103448275862068%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20KEMBUNG%20KECIL/PELALING%20%28ANTARA%2010%20HINGGA%2018%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.8%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20KERAPU%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C23.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20KERISI%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C12.869565217391305%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20PARI%20%28KEPINGAN%29%2CTIDAK%2C27.5%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20SELAR/PELATA%20%28%E2%89%A4%207%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C8.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C11.826086956521738%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20SENANGIN%20%28ANTARA%202%20HINGGA%208%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C28.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20SIAKAP%20%28ANTARA%202%20HINGGA%204%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C21.517241379310345%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20TAMBAN%20BELURU%20%28ANTARA%2010%20HINGGA%2019%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C8.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20TENGGIRI%20BATANG%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C39.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20TENGGIRI%20BATANG%20%28KEPINGAN%29%2CTIDAK%2C45.625%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20TILAPIA%20MERAH%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C13.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CIKAN%20TONGKOL/AYA/KAYU%20HITAM%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C13.166666666666666%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CJAMBU%20BATU%20BERBIJI%2CTIDAK%2C6.7%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CKACANG%20BENDI%2CTIDAK%2C8.241379310344827%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CKACANG%20BUNCIS%2CTIDAK%2C11.862068965517242%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CKACANG%20PANJANG%2CTIDAK%2C7.137931034482759%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CKAILAN%2CTIDAK%2C8.862068965517242%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CKANGKUNG%2CTIDAK%2C4.482758620689655%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CKELAPA%20PARUT%2CTIDAK%2C7.917241379310345%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CKERANG%20%28SAIZ%20SEDERHANA%29%2CTIDAK%2C12.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CKETAM%20RENJONG/BUNGA%20%28ANTARA%205%20HINGGA%208%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C34.38461538461539%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C11.10344827586207%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C15.444444444444445%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CLIMAU%20KASTURI%2CTIDAK%2C7.931034482758621%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CLIMAU%20NIPIS%2CTIDAK%2C7.931034482758621%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CLOBAK%20MERAH%2CTIDAK%2C4.827586206896552%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2COREN%20VALENCIA%20%28SAIZ%20M%29%2CTIDAK%2C1.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CPISANG%20BERANGAN%2CTIDAK%2C5.258620689655173%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CPISANG%20EMAS%2CTIDAK%2C5.327586206896552%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CSANTAN%20KELAPA%20SEGAR%20%28PEKAT%29%2CTIDAK%2C12.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CSAWI%2CTIDAK%2C5.206896551724138%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CSOTONG%20%28%E2%89%A5%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C33.8%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C4.0%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C3.982142857142857%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CTEMBIKAI%20MERAH%20TANPA%20BIJI%2CTIDAK%2C4.362068965517241%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CTERUNG%20PANJANG%2CTIDAK%2C8.724137931034482%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CTIMUN%2CTIDAK%2C3.4655172413793105%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CTOMATO%2CTIDAK%2C5.655172413793103%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CUDANG%20PUTIH%20KECIL%20%28%E2%89%A5%2061%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C18.814814814814813%0D%0APENDANG%2CPASAR%20BASAH%20PENDANG%2CUDANG%20PUTIH/VANNAMEI%20%28TERNAK%29%20%28ANTARA%2041%20HINGGA%2060%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C29.17241379310345%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CBAYAM%20HIJAU%2CTIDAK%2C5.809523809523809%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CBROKOLI%2CTIDAK%2C15.0%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C17.64%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C8.872%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C9.11111111111111%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20GELAMA%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C8.0%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20KELI%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.0%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C13.65%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20KEMBUNG%20KECIL/PELALING%20%28ANTARA%2010%20HINGGA%2018%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.0%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20KERISI%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C11.666666666666666%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.470588235294118%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20SIAKAP%20%28ANTARA%202%20HINGGA%204%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C20.0%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20TAMBAN%20BELURU%20%28ANTARA%2010%20HINGGA%2019%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C6.909090909090909%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20TILAPIA%20MERAH%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C13.083333333333334%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CIKAN%20TONGKOL/AYA/KAYU%20HITAM%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C12.826086956521738%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CKACANG%20BENDI%2CTIDAK%2C9.125%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CKACANG%20BUNCIS%2CTIDAK%2C12.2%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CKACANG%20PANJANG%2CTIDAK%2C7.826086956521739%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CKANGKUNG%2CTIDAK%2C5.304347826086956%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C12.72%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CLIMAU%20KASTURI%2CTIDAK%2C8.0%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CLIMAU%20NIPIS%2CTIDAK%2C8.0%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CLOBAK%20MERAH%2CTIDAK%2C4.78%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CSAWI%2CTIDAK%2C5.88%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C4.0%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C4.0%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CTERUNG%20PANJANG%2CTIDAK%2C8.04%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CTIMUN%2CTIDAK%2C3.7%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CTOMATO%2CTIDAK%2C5.96%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CUDANG%20PUTIH%20KECIL%20%28%E2%89%A5%2061%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C16.956521739130434%0D%0APENDANG%2CPASAR%20BASAH%20TANAH%20MERAH%2CUDANG%20PUTIH/VANNAMEI%20%28TERNAK%29%20%28ANTARA%2041%20HINGGA%2060%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C25.166666666666668%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.6%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C6.2%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CBERAS%20BASMATHI%20-%20FAIZA%20%28KASHMIR%29%2CTIDAK%2C28.4%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CBERAS%20CAP%20JASMINE%20%28SST5%25%29%2CTIDAK%2C24.99%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CBERAS%20CAP%20JATI%20%28SST5%25%29%2CTIDAK%2C24.5%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CBERAS%20PULUT%20THAILAND%20%28BIASA%29%20PELBAGAI%20JENAMA%2CTIDAK%2C5.08%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CBERAS%20SUPER%20CAP%20RAMBUTAN%205%25%20%28IMPORT%29%2CTIDAK%2C27.4%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C3.0%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CBIHUN%20KERING%20TEMPATAN%20%28CAP%20JASMINE%29%2CTIDAK%2C2.5%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C23.0%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.9%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C30.99%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C22.99%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C7.496551724137931%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C12.8%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C31.9%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C20.6%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C8.6%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C6.0%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.4%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C12.2%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C26.2%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C5.9%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.33%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CMARJERIN%20PLANTA%2CTIDAK%2C7.3%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.720000000000001%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C12.7%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C13.648148148148149%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C19.57758620689655%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C1.65%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CROTI%20GARDENIA%20BREAKTHRU%20-%20ROTI%20GANDUM%20PENUH%2CTIDAK%2C4.0%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CROTI%20GARDENIA%20WHOLEMEAL%2CTIDAK%2C4.0%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.1%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.1%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.6%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CSUSU%20SEJAT%20PENUH%20KRIM%20CAP%20IDEAL%2CTIDAK%2C4.55%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.9%0D%0APENDANG%2CPASARAYA%20KH%20%28TANAH%20MERAH%29%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C1.7666666666666666%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.7%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CBERAS%20PULUT%20THAILAND%20%28BIASA%29%20PELBAGAI%20JENAMA%2CTIDAK%2C4.3%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C8.5%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C7.5%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.8%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C12.9%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C24.9%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C6.9%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.8%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CMARJERIN%20PLANTA%2CTIDAK%2C6.9%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.5%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C1.9%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C3.99%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.2%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.5%0D%0APENDANG%2CPASARAYA%20TANAH%20MERAH%2CTELUR%20AYAM%20GRED%20B%20%28BERAT%2060.0GM%20HINGGA%2064.9GM%29%2CTIDAK%2C4.3%0D%0A" download="overview_daerah.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
