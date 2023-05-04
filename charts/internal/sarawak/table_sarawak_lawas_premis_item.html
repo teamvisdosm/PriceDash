@@ -1,0 +1,3913 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6) {
+                background-color: #1E7664;
+                color: #fff; /* add this line */
+                }
+                table.display thead th:nth-child(7),
+                table.display thead th:nth-child(8),
+                table.display thead th:nth-child(9),
+                table.display thead th:nth-child(10),
+                table.display thead th:nth-child(11) {
+                background-color: #FFA500;
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Premis dan Item di Sarawak bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+            <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan Outlet</th>
+                <th>Harga Purata DOSM</th>
+                <th>Harga Purata KPDN</th>
+                <th>Sebut Harga KPDN</th>
+                <th>Harga Terkini KPDN <br> (2022-10-31)</th>
+                <th>Min Harga KPDN</th>
+                <th>Max Harga KPDN</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr class="">
+                <td>1</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>2</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>3</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>4</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">11.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>5</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>6</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>BIHUN KERING IMPORT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">4.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>7</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>8</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>9</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">31.7</td>
+                <td class="text-center">5</td>
+                <td class="text-center">31.7</td>
+                <td class="text-center">31.7</td>
+                <td class="text-center">31.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>10</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">2</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>11</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>12</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">8.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">8.6</td>
+                <td class="text-center">8.6</td>
+                <td class="text-center">8.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>13</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">15.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>14</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">4</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">15.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>15</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.375</td>
+                <td class="text-center">4</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>16</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>17</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">4</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>18</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">27.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">27.6</td>
+                <td class="text-center">27.6</td>
+                <td class="text-center">27.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>19</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>20</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>21</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">12.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">12.8</td>
+                <td class="text-center">12.8</td>
+                <td class="text-center">12.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>22</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.6</td>
+                <td class="text-center">2.6</td>
+                <td class="text-center">2.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>23</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.3</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.3</td>
+                <td class="text-center">2.3</td>
+                <td class="text-center">2.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>24</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>25</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">3.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>26</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">6.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>27</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>28</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">4</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>29</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">1.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>30</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">20.9</td>
+                <td class="text-center">4</td>
+                <td class="text-center">20.9</td>
+                <td class="text-center">20.9</td>
+                <td class="text-center">20.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>31</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">3.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>32</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>33</td>
+                <td>LAWAS</td>
+                <td>CHOP CHOON SENG HIN</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>34</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>35</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>36</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>37</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>38</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>39</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>BERUS GIGI ORAL B (COMPLETE EASY CLEAN - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>40</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>41</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.75</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>42</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>43</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.76</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>44</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>45</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.25</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>46</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>47</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>48</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>49</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>50</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>51</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.900000000000001</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>52</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>53</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>54</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>55</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>56</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>57</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>58</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>59</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>60</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.1</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>61</td>
+                <td>LAWAS</td>
+                <td>CHOP HOCK HAI</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>62</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>63</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.642857142857142</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>64</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>65</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.689285714285715</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>66</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.828571428571429</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>67</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BAYAM HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.941428571428572</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>68</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BAYAM MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.233333333333334</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>69</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BERAS PREMIUM CAP UNCLE TAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>70</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>71</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>72</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BETIK BIASA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>73</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BIHUN KERING IMPORT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>74</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.599999999999998</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>75</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>CILI HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">21.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>76</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.95</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>77</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">21.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>78</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">21.747999999999998</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>79</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>80</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">39.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>81</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>82</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>83</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>84</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>85</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">33.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>86</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>JAMBU BATU BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>87</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.85</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>88</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.928571428571429</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>89</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>90</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.830769230769231</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>91</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>92</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>93</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>94</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.304545454545455</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>95</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.077777777777778</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>96</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>97</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>98</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.593181818181819</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>99</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.890000000000001</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>100</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>101</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>102</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>103</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.55</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>104</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>MINYAK MASAK SEBATIAN CAP HELANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>105</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>MINYAK MASAK TULEN CAP BURUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>106</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">23.509756097560974</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>107</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>108</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.28</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>109</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.016666666666667</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>110</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>111</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>112</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>113</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>114</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>115</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>116</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>TEMBIKAI SUSU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>117</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.3200000000000003</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>118</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.892857142857143</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>119</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.75</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>120</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.336363636363637</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>121</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>122</td>
+                <td>LAWAS</td>
+                <td>LAWAS SUPERMARKET & HARDWARE SDN BHD</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>123</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>124</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>125</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.75</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>126</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>127</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>BIHUN KERING IMPORT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>128</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>129</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>130</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>131</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>132</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>133</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>134</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>135</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>136</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>137</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>138</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>139</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>140</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>141</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.62</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>142</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>143</td>
+                <td>LAWAS</td>
+                <td>MAJU TRADING</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>144</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>145</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>146</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">8.95</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>147</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">8.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>148</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">4.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>149</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>150</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>BIHUN KERING IMPORT (PELBAGAI JENAMA)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>151</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>152</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">24.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>153</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">2.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>154</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">12.95</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>155</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">7.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>156</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>157</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">15.625</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>158</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">15.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>159</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">26.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>160</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">4.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>161</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">7.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>162</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">2.55</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>163</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>164</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>165</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">6.95</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>166</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>167</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">20.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>168</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>SYAMPU REJOICE (RICH SOFT SMOOTH)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">11.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>169</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>170</td>
+                <td>LAWAS</td>
+                <td>NEW 2099</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">SEPADAN</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>171</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>172</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>173</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>174</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>175</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>176</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>177</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>178</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>179</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>180</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>181</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.19</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>182</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>183</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>184</td>
+                <td>LAWAS</td>
+                <td>SOON LAI HUAT</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>185</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">25.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>186</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.357142857142857</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>187</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">11</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>188</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.125</td>
+                <td class="text-center">12</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">6.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>189</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>190</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>BETIK BIASA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>191</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>192</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>CILI HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>193</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>194</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>195</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">23.75</td>
+                <td class="text-center">28</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">25.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>196</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>EPAL HIJAU GRANNY SMITH (SAIZ M)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>197</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>198</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">27.142857142857142</td>
+                <td class="text-center">7</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>199</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">39.57142857142857</td>
+                <td class="text-center">28</td>
+                <td class="text-center">40.0</td>
+                <td class="text-center">38.0</td>
+                <td class="text-center">40.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>200</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.11111111111111</td>
+                <td class="text-center">27</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>201</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN JENAHAK (KEPINGAN) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>202</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">14.68421052631579</td>
+                <td class="text-center">19</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>203</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN KEMBUNG KECIL/PELALING (ANTARA 10 HINGGA 18 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">11.866666666666667</td>
+                <td class="text-center">15</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>204</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">14.363636363636363</td>
+                <td class="text-center">22</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>205</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN MERAH (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>206</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN MERAH ( 1 KILOGRAM SEEKOR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>207</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN PARI (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">17.0</td>
+                <td class="text-center">4</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>208</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN SELAR KUNING ( 11 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.428571428571429</td>
+                <td class="text-center">7</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>209</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN SELAR PELATA ( 7 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>210</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN SELAR/PELATA ( 7 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">14.777777777777779</td>
+                <td class="text-center">9</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>211</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">11.68</td>
+                <td class="text-center">25</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>212</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN SIAKAP (ANTARA 2 HINGGA 4 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">27.0</td>
+                <td class="text-center">8</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">28.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>213</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN TAMBAN BELURU (ANTARA 10 HINGGA 19 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">3</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>214</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN TENGGIRI BATANG (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">29.733333333333334</td>
+                <td class="text-center">15</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>215</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN TENGGIRI BATANG (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">29.692307692307693</td>
+                <td class="text-center">13</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>216</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">14.625</td>
+                <td class="text-center">24</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>217</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>JAMBU BATU BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">14</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>218</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>JAMBU BATU TANPA BIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">7</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>219</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>220</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.678571428571429</td>
+                <td class="text-center">28</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>221</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>222</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>223</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>KANGKUNG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.217391304347826</td>
+                <td class="text-center">23</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>224</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>225</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>226</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>KUBIS PANJANG (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>227</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>228</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.25</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>229</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>LIMAU NIPIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>230</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.892857142857143</td>
+                <td class="text-center">28</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>231</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>OREN VALENCIA (SAIZ M)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>232</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>PISANG BERANGAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>233</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>234</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>SOTONG ( 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">21.25</td>
+                <td class="text-center">4</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">25.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>235</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>236</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">27</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>237</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>TEMBIKAI MERAH TANPA BIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>238</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>TEMBIKAI SUSU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>239</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.857142857142857</td>
+                <td class="text-center">28</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>240</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.892857142857143</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>241</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.214285714285714</td>
+                <td class="text-center">28</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>242</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>243</td>
+                <td>LAWAS</td>
+                <td>TAMU BESAR LAWAS</td>
+                <td>UDANG PUTIH KECIL ( 61 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>244</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>245</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>246</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">9.3</td>
+                <td class="text-center">5</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>247</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>248</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">4.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>249</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">1.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>250</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.9</td>
+                <td class="text-center">2</td>
+                <td class="text-center">2.9</td>
+                <td class="text-center">2.9</td>
+                <td class="text-center">2.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>251</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">11.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>252</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>253</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">2</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>254</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.24</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.6</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>255</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">15.5</td>
+                <td class="text-center">15.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>256</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">26.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">26.8</td>
+                <td class="text-center">26.8</td>
+                <td class="text-center">26.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>257</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">3</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">4.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>258</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>259</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">12.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">12.5</td>
+                <td class="text-center">12.5</td>
+                <td class="text-center">12.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>260</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">2</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>261</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>262</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.2</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.2</td>
+                <td class="text-center">4.2</td>
+                <td class="text-center">4.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>263</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>264</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>265</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.42</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.7</td>
+                <td class="text-center">5.7</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>266</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.62</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>267</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>268</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">20.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">20.9</td>
+                <td class="text-center">20.9</td>
+                <td class="text-center">20.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>269</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>270</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.666666666666667</td>
+                <td class="text-center">3</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>271</td>
+                <td>LAWAS</td>
+                <td>YANG KWANG DEPARTMENT STORE SDN BHD</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">1.0</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20DOSM%2CHarga%20Purata%20KPDN%2CSebut%20Harga%20KPDN%2CHarga%20Terkini%20KPDN%2CMin%20Harga%20KPDN%2CMax%20Harga%20KPDN%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C0.0%2C4.0%2C1%2C4.0%2C4.0%2C4.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C0.0%2C7.0%2C5%2C7.0%2C7.0%2C7.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C0.0%2C10.0%2C1%2C10.0%2C10.0%2C10.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C11.0%2C5%2C11.0%2C11.0%2C11.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C0.0%2C30.0%2C5%2C30.0%2C30.0%2C30.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CBIHUN%20KERING%20IMPORT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C4.8%2C5%2C4.8%2C4.8%2C4.8%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C0.0%2C26.0%2C5%2C26.0%2C26.0%2C26.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C0.0%2C2.0%2C1%2C2.0%2C2.0%2C2.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C0.0%2C31.7%2C5%2C31.7%2C31.7%2C31.7%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C3.0%2C2%2C3.0%2C3.0%2C3.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C0.0%2C13.5%2C1%2C13.5%2C13.5%2C13.5%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C0.0%2C8.6%2C5%2C8.6%2C8.6%2C8.6%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C0.0%2C15.5%2C1%2C15.5%2C15.5%2C15.5%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C0.0%2C15.5%2C4%2C15.5%2C15.5%2C15.5%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C0.0%2C6.375%2C4%2C6.5%2C6.0%2C6.5%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C0.0%2C15.0%2C1%2C15.0%2C15.0%2C15.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C0.0%2C6.0%2C4%2C6.0%2C6.0%2C6.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C0.0%2C27.6%2C5%2C27.6%2C27.6%2C27.6%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C0.0%2C5.0%2C4%2C5.0%2C5.0%2C5.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CMARJERIN%20PLANTA%2CTIDAK%2C0.0%2C8.0%2C5%2C8.0%2C8.0%2C8.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C0.0%2C12.8%2C5%2C12.8%2C12.8%2C12.8%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.6%2C5%2C2.6%2C2.6%2C2.6%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C0.0%2C2.3%2C5%2C2.3%2C2.3%2C2.3%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C0.0%2C4.5%2C1%2C4.5%2C4.5%2C4.5%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C0.0%2C3.7%2C5%2C3.7%2C3.7%2C3.7%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C0.0%2C6.5%2C5%2C6.5%2C6.5%2C6.5%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C0.0%2C7.0%2C5%2C7.0%2C7.0%2C7.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CSOS%20CILI%20MAGGI%2CTIDAK%2C0.0%2C3.8%2C4%2C3.8%2C3.8%2C3.8%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C0.0%2C1.7%2C5%2C1.7%2C1.7%2C1.7%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C0.0%2C20.9%2C4%2C20.9%2C20.9%2C20.9%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C3.3%2C5%2C3.3%2C3.3%2C3.3%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CTIMUN%2CTIDAK%2C0.0%2C5.0%2C4%2C5.0%2C5.0%2C5.0%0D%0ALAWAS%2CCHOP%20CHOON%20SENG%20HIN%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C5.0%2C5%2C5.0%2C5.0%2C5.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C7.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C11.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CTIDAK%2C4.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C4.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CBERUS%20GIGI%20ORAL%20B%20%28COMPLETE%20EASY%20CLEAN%20-%20SOFT%29%2CTIDAK%2C4.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C31.75%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C10.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C8.76%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.25%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C6.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C16.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CMARJERIN%20PLANTA%2CTIDAK%2C7.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.900000000000001%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C13.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C5.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C6.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C2.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.1%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CCHOP%20HOCK%20HAI%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C5.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C4.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C18.642857142857142%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C6.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C6.689285714285715%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C7.828571428571429%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBAYAM%20HIJAU%2CTIDAK%2C7.941428571428572%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBAYAM%20MERAH%2CTIDAK%2C7.233333333333334%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBERAS%20PREMIUM%20CAP%20UNCLE%20TAN%2CTIDAK%2C30.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C29.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C4.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBETIK%20BIASA%2CTIDAK%2C3.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBIHUN%20KERING%20IMPORT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C4.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CBROKOLI%2CTIDAK%2C18.599999999999998%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CCILI%20HIJAU%2CTIDAK%2C21.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C25.95%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C21.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C21.747999999999998%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C39.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C24.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C8.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C14.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C33.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CJAMBU%20BATU%20BERBIJI%2CTIDAK%2C8.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CKACANG%20BENDI%2CTIDAK%2C8.85%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CKACANG%20BUNCIS%2CTIDAK%2C8.928571428571429%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C7.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CKACANG%20PANJANG%2CTIDAK%2C8.830769230769231%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C15.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C5.304545454545455%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C14.077777777777778%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C18.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CLIMAU%20KASTURI%2CTIDAK%2C9.593181818181819%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CLOBAK%20MERAH%2CTIDAK%2C7.890000000000001%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CMARJERIN%20PLANTA%2CTIDAK%2C7.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.55%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20HELANG%2CTIDAK%2C10.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CMINYAK%20MASAK%20TULEN%20CAP%20BURUH%2CTIDAK%2C7.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C23.509756097560974%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.28%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CSAWI%2CTIDAK%2C8.016666666666667%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C7.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C6.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C6.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CTEMBIKAI%20SUSU%2CTIDAK%2C7.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.3200000000000003%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CTERUNG%20PANJANG%2CTIDAK%2C7.892857142857143%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CTIMUN%2CTIDAK%2C3.75%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CTOMATO%2CTIDAK%2C6.336363636363637%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C5.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CLAWAS%20SUPERMARKET%20%26%20HARDWARE%20SDN%20BHD%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C1.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C6.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C5.75%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C12.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CBIHUN%20KERING%20IMPORT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C4.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C12.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C10.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C14.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C14.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C16.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C26.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CMARJERIN%20PLANTA%2CTIDAK%2C6.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C10.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C7.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.62%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C6.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CMAJU%20TRADING%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C1.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2C100%20PLUS%20%28ORIGINAL%29%2CSEPADAN%2C4.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CSEPADAN%2C6.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CSEPADAN%2C8.95%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CSEPADAN%2C8.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CSEPADAN%2C4.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CSEPADAN%2C3.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CBIHUN%20KERING%20IMPORT%20%28PELBAGAI%20JENAMA%29%2CSEPADAN%2C4.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CCOCA%20COLA%20%28TIN%29%2CSEPADAN%2C1.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CSEPADAN%2C24.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CSEPADAN%2C2.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CHORLICKS%20%28PAKET%29%2CSEPADAN%2C12.95%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CKACANG%20HIJAU%20%28IMPORT%29%2CSEPADAN%2C7.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CSEPADAN%2C16.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CSEPADAN%2C15.625%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CSEPADAN%2C15.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CSEPADAN%2C26.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CSEPADAN%2C4.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CMARJERIN%20PLANTA%2CSEPADAN%2C7.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CSEPADAN%2C2.55%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CSEPADAN%2C13.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CSEPADAN%2C3.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CSERBUK%20CILI%20BABAS%2CSEPADAN%2C6.95%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CSOS%20CILI%20MAGGI%2CSEPADAN%2C3.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CSEPADAN%2C20.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CSYAMPU%20REJOICE%20%28RICH%20SOFT%20SMOOTH%29%2CSEPADAN%2C11.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CSEPADAN%2C3.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CNEW%202099%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CSEPADAN%2C5.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C5.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C8.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CTIDAK%2C3.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C2.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C13.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C26.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C14.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.19%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CSOS%20CILI%20MAGGI%2CTIDAK%2C4.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CSOON%20LAI%20HUAT%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C0.0%2C25.0%2C5%2C25.0%2C25.0%2C25.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C0.0%2C5.357142857142857%2C28%2C4.5%2C4.5%2C6.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C0.0%2C6.0%2C11%2C6.0%2C6.0%2C6.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C0.0%2C6.125%2C12%2C6.5%2C5.0%2C6.5%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C9.0%2C28%2C9.0%2C9.0%2C9.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CBETIK%20BIASA%2CTIDAK%2C0.0%2C4.0%2C28%2C4.0%2C4.0%2C4.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CBROKOLI%2CTIDAK%2C0.0%2C18.0%2C28%2C18.0%2C18.0%2C18.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CCILI%20HIJAU%2CTIDAK%2C0.0%2C15.0%2C28%2C15.0%2C15.0%2C15.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C0.0%2C20.0%2C28%2C20.0%2C20.0%2C20.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C0.0%2C18.0%2C28%2C18.0%2C18.0%2C18.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C0.0%2C23.75%2C28%2C25.0%2C20.0%2C25.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CEPAL%20HIJAU%20GRANNY%20SMITH%20%28SAIZ%20M%29%2CTIDAK%2C0.0%2C2.0%2C28%2C2.0%2C2.0%2C2.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C0.0%2C10.0%2C28%2C10.0%2C10.0%2C10.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20BAWAL%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C27.142857142857142%2C7%2C30.0%2C25.0%2C30.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C0.0%2C39.57142857142857%2C28%2C40.0%2C38.0%2C40.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C13.11111111111111%2C27%2C13.0%2C12.0%2C15.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20JENAHAK%20%28KEPINGAN%29%20%281KG%29%2CTIDAK%2C0.0%2C30.0%2C5%2C30.0%2C30.0%2C30.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C14.68421052631579%2C19%2C15.0%2C12.0%2C15.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20KEMBUNG%20KECIL/PELALING%20%28ANTARA%2010%20HINGGA%2018%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C11.866666666666667%2C15%2C12.0%2C10.0%2C14.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20KERISI%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C14.363636363636363%2C22%2C15.0%2C13.0%2C15.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20MERAH%20%28KEPINGAN%29%2CTIDAK%2C0.0%2C30.0%2C1%2C30.0%2C30.0%2C30.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20MERAH%20%28%E2%89%A5%201%20KILOGRAM%20SEEKOR%29%2CTIDAK%2C0.0%2C30.0%2C1%2C30.0%2C30.0%2C30.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20PARI%20%28KEPINGAN%29%2CTIDAK%2C0.0%2C17.0%2C4%2C20.0%2C8.0%2C20.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20SELAR%20KUNING%20%28%E2%89%A5%2011%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C13.428571428571429%2C7%2C15.0%2C12.0%2C15.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20SELAR%20PELATA%20%28%E2%89%A4%207%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C15.0%2C1%2C15.0%2C15.0%2C15.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20SELAR/PELATA%20%28%E2%89%A4%207%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C14.777777777777779%2C9%2C15.0%2C13.0%2C15.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C11.68%2C25%2C12.0%2C10.0%2C12.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20SIAKAP%20%28ANTARA%202%20HINGGA%204%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C27.0%2C8%2C28.0%2C26.0%2C28.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20TAMBAN%20BELURU%20%28ANTARA%2010%20HINGGA%2019%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C7.0%2C3%2C7.0%2C7.0%2C7.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20TENGGIRI%20BATANG%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C29.733333333333334%2C15%2C30.0%2C28.0%2C30.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20TENGGIRI%20BATANG%20%28KEPINGAN%29%2CTIDAK%2C0.0%2C29.692307692307693%2C13%2C30.0%2C28.0%2C30.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CIKAN%20TONGKOL/AYA/KAYU%20HITAM%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C14.625%2C24%2C14.0%2C13.0%2C15.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CJAMBU%20BATU%20BERBIJI%2CTIDAK%2C0.0%2C8.0%2C14%2C8.0%2C8.0%2C8.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CJAMBU%20BATU%20TANPA%20BIJI%2CTIDAK%2C0.0%2C10.0%2C7%2C10.0%2C10.0%2C10.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CKACANG%20BENDI%2CTIDAK%2C0.0%2C8.0%2C28%2C8.0%2C8.0%2C8.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CKACANG%20BUNCIS%2CTIDAK%2C0.0%2C7.678571428571429%2C28%2C7.0%2C7.0%2C8.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C0.0%2C9.0%2C28%2C9.0%2C9.0%2C9.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CKACANG%20PANJANG%2CTIDAK%2C0.0%2C6.0%2C28%2C6.0%2C6.0%2C6.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CKANGKUNG%2CTIDAK%2C0.0%2C5.217391304347826%2C23%2C5.0%2C5.0%2C6.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C0.0%2C6.0%2C28%2C6.0%2C6.0%2C6.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C0.0%2C18.0%2C28%2C18.0%2C18.0%2C18.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CKUBIS%20PANJANG%20%28TEMPATAN%29%2CTIDAK%2C0.0%2C6.0%2C28%2C6.0%2C6.0%2C6.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C0.0%2C20.0%2C28%2C20.0%2C20.0%2C20.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CLIMAU%20KASTURI%2CTIDAK%2C0.0%2C6.25%2C28%2C6.0%2C6.0%2C7.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CLIMAU%20NIPIS%2CTIDAK%2C0.0%2C6.0%2C28%2C6.0%2C6.0%2C6.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CLOBAK%20MERAH%2CTIDAK%2C0.0%2C6.892857142857143%2C28%2C7.0%2C6.0%2C7.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2COREN%20VALENCIA%20%28SAIZ%20M%29%2CTIDAK%2C0.0%2C2.0%2C28%2C2.0%2C2.0%2C2.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CPISANG%20BERANGAN%2CTIDAK%2C0.0%2C6.0%2C28%2C6.0%2C6.0%2C6.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CSAWI%2CTIDAK%2C0.0%2C8.0%2C5%2C8.0%2C8.0%2C8.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CSOTONG%20%28%E2%89%A5%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C21.25%2C4%2C25.0%2C20.0%2C25.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C0.0%2C5.0%2C1%2C5.0%2C5.0%2C5.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C0.0%2C5.0%2C27%2C5.0%2C5.0%2C5.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CTEMBIKAI%20MERAH%20TANPA%20BIJI%2CTIDAK%2C0.0%2C5.0%2C28%2C5.0%2C5.0%2C5.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CTEMBIKAI%20SUSU%2CTIDAK%2C0.0%2C4.0%2C28%2C4.0%2C4.0%2C4.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CTERUNG%20PANJANG%2CTIDAK%2C0.0%2C6.857142857142857%2C28%2C7.0%2C6.0%2C7.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CTIMUN%2CTIDAK%2C0.0%2C3.892857142857143%2C28%2C4.0%2C3.0%2C4.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CTOMATO%2CTIDAK%2C0.0%2C7.214285714285714%2C28%2C7.0%2C7.0%2C8.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C4.0%2C28%2C4.0%2C4.0%2C4.0%0D%0ALAWAS%2CTAMU%20BESAR%20LAWAS%2CUDANG%20PUTIH%20KECIL%20%28%E2%89%A5%2061%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C18.0%2C1%2C18.0%2C18.0%2C18.0%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C0.0%2C4.0%2C1%2C4.0%2C4.0%2C4.0%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C0.0%2C5.4%2C5%2C6.0%2C5.0%2C6.0%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C0.0%2C9.3%2C5%2C10.0%2C6.5%2C10.0%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C10.0%2C5%2C10.0%2C10.0%2C10.0%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CTIDAK%2C0.0%2C4.8%2C1%2C4.8%2C4.8%2C4.8%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C0.0%2C1.9%2C1%2C1.9%2C1.9%2C1.9%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.9%2C2%2C2.9%2C2.9%2C2.9%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C0.0%2C11.6%2C5%2C12.0%2C10.0%2C12.0%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C0.0%2C13.5%2C1%2C13.5%2C13.5%2C13.5%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C0.0%2C7.0%2C2%2C7.0%2C7.0%2C7.0%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C0.0%2C6.24%2C5%2C6.6%2C6.0%2C6.6%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C0.0%2C15.5%2C1%2C15.5%2C15.5%2C15.5%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C0.0%2C26.8%2C5%2C26.8%2C26.8%2C26.8%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C0.0%2C4.7%2C3%2C4.7%2C4.7%2C4.7%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C0.0%2C6.8%2C5%2C6.8%2C6.8%2C6.8%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C0.0%2C12.5%2C5%2C12.5%2C12.5%2C12.5%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C0.0%2C13.5%2C2%2C13.5%2C13.5%2C13.5%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C0.0%2C2.0%2C5%2C2.0%2C2.0%2C2.0%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C0.0%2C4.2%2C1%2C4.2%2C4.2%2C4.2%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C0.0%2C3.2%2C5%2C3.2%2C3.2%2C3.2%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C0.0%2C6.8%2C5%2C6.8%2C6.8%2C6.8%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C0.0%2C6.42%2C5%2C5.7%2C5.7%2C6.9%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CSOS%20CILI%20MAGGI%2CTIDAK%2C0.0%2C3.62%2C5%2C3.8%2C3.5%2C3.8%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C0.0%2C1.6%2C5%2C1.6%2C1.6%2C1.6%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C0.0%2C20.9%2C5%2C20.9%2C20.9%2C20.9%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C3.2%2C5%2C3.2%2C3.2%2C3.2%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C4.666666666666667%2C3%2C4.5%2C4.5%2C5.0%0D%0ALAWAS%2CYANG%20KWANG%20DEPARTMENT%20STORE%20SDN%20BHD%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C0.0%2C1.0%2C1%2C1.0%2C1.0%2C1.0%0D%0A" download="overview_daerah.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
