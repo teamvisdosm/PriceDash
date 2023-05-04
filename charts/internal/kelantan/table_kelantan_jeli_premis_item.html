@@ -1,0 +1,2705 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6) {
+                background-color: #1E7664;
+                color: #fff; /* add this line */
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Premis dan Item di Kelantan bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+            <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan Outlet</th>
+                <th>Harga Purata DOSM</th>
+                
+                <tr class="">
+                <td>1</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>2</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>3</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>4</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>5</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>BERAS BASMATHI - FAIZA (KASHMIR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.95</td>
+                </tr>
+                
+                <tr class="">
+                <td>6</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>BERAS CAP FAIZA EMAS (SST5%)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>7</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>8</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>9</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>10</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>11</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>12</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>13</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>14</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>15</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>16</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>17</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>18</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>19</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>20</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>21</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>MINYAK MASAK SEBATIAN CAP NEPTUNE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">52.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>22</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.66</td>
+                </tr>
+                
+                <tr class="">
+                <td>23</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>24</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>25</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>26</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>ROTI GARDENIA WHOLEMEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>27</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>28</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>29</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>30</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>31</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>32</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>33</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>34</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>35</td>
+                <td>JELI</td>
+                <td>AL-TAQWA TAWAKKAL SDN.BHD</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>36</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>37</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>BERAS BASMATHI - FAIZA (KASHMIR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>38</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>BERAS PULUT THAILAND (BIASA) PELBAGAI JENAMA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>39</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>40</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>41</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>42</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>43</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>44</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>45</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>46</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>47</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>48</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>49</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>50</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>51</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>ROTI GARDENIA WHOLEMEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>52</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>53</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>54</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>55</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.16</td>
+                </tr>
+                
+                <tr class="">
+                <td>56</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>57</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>58</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>59</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>60</td>
+                <td>JELI</td>
+                <td>AMIDI ENTERPRISE</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>61</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>62</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>63</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>64</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>BERAS CAP FAIZA EMAS (SST5%)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>65</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>BERAS PULUT THAILAND (BIASA) PELBAGAI JENAMA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>66</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>67</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>68</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>69</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>70</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>71</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>72</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>73</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>74</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>75</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>76</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>77</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>ROTI GARDENIA WHOLEMEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>78</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>79</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.19</td>
+                </tr>
+                
+                <tr class="">
+                <td>80</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>81</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>82</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>83</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>84</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>85</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>TELUR AYAM GRED B (BERAT 60.0GM HINGGA 64.9GM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>86</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>87</td>
+                <td>JELI</td>
+                <td>AZW JAYA ENTERPRISE</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>88</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>89</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>90</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>91</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>92</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>93</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>94</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>95</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>96</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>97</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.19</td>
+                </tr>
+                
+                <tr class="">
+                <td>98</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>99</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>100</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>101</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>102</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>103</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>104</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>105</td>
+                <td>JELI</td>
+                <td>ISA KEDAI RUNCIT</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>106</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>107</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>AYAM BERSIH - STANDARD</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.36</td>
+                </tr>
+                
+                <tr class="">
+                <td>108</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>109</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>BERAS PULUT THAILAND (BIASA) PELBAGAI JENAMA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>110</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>111</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>112</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>113</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>114</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>115</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>116</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>117</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>118</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>IKAN SIAKAP (ANTARA 2 HINGGA 4 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>119</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>IKAN TILAPIA MERAH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>120</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>121</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>JAMBU BATU BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>122</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.75</td>
+                </tr>
+                
+                <tr class="">
+                <td>123</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>124</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>125</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>KAILAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>126</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>KANGKUNG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>127</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>128</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>129</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>130</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.600000000000005</td>
+                </tr>
+                
+                <tr class="">
+                <td>131</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>132</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>LIMAU NIPIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>133</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>134</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>135</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>136</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>137</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>138</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.19</td>
+                </tr>
+                
+                <tr class="">
+                <td>139</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>140</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>141</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>142</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>143</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>SOTONG ( 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>144</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>145</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>146</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>SYAMPU REJOICE (RICH SOFT SMOOTH)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>147</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>148</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>149</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>150</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>151</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>152</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>153</td>
+                <td>JELI</td>
+                <td>LUSTY ENTERPRISE</td>
+                <td>UDANG PUTIH/VANNAMEI (TERNAK) (ANTARA 41 HINGGA 60 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>154</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>155</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>156</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">33.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>157</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>158</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>159</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>160</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>161</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>162</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>163</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>MINYAK MASAK TULEN CAP SAJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>164</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>165</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>166</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>ROTI GARDENIA WHOLEMEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>167</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>168</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>169</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>170</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>171</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>172</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>TELUR AYAM GRED B (BERAT 60.0GM HINGGA 64.9GM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>173</td>
+                <td>JELI</td>
+                <td>NIK JAYA TRADING K.R</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>174</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>175</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>176</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>177</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>178</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>179</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>180</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>181</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>182</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>183</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>184</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>185</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>186</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>187</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>188</td>
+                <td>JELI</td>
+                <td>SUNGAI BERUDANG ENTERPRISE</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>189</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>190</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>191</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>192</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>193</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>194</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>195</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>196</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>197</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>198</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>199</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.96</td>
+                </tr>
+                
+                <tr class="">
+                <td>200</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>201</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>202</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>203</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>204</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>205</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>ROTI GARDENIA WHOLEMEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>206</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>207</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>208</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>209</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>210</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.333333333333333</td>
+                </tr>
+                
+                <tr class="">
+                <td>211</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>212</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>213</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>214</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>TELUR AYAM GRED B (BERAT 60.0GM HINGGA 64.9GM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>215</td>
+                <td>JELI</td>
+                <td>TASNIM TRADING</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>216</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>217</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>BERAS BASMATHI - FAIZA (KASHMIR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>218</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>BERAS CAP FAIZA EMAS (SST5%)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>219</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>220</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">34.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>221</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>222</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>223</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>224</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>225</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>226</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.899999999999995</td>
+                </tr>
+                
+                <tr class="">
+                <td>227</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>228</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>229</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>MINYAK MASAK TULEN CAP SAJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.18</td>
+                </tr>
+                
+                <tr class="">
+                <td>230</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>231</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>232</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>ROTI GARDENIA WHOLEMEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>233</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>234</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.19</td>
+                </tr>
+                
+                <tr class="">
+                <td>235</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>236</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.675</td>
+                </tr>
+                
+                <tr class="">
+                <td>237</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.14</td>
+                </tr>
+                
+                <tr class="">
+                <td>238</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>239</td>
+                <td>JELI</td>
+                <td>WN BERKAT JAYA ENTERPRISE (ZAKUAN)</td>
+                <td>YEO'S SOYA (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>240</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>241</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>242</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>243</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>BERAS PULUT THAILAND (BIASA) PELBAGAI JENAMA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>244</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>245</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>246</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>247</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>248</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>249</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>250</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>251</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>252</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>253</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>254</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7999999999999994</td>
+                </tr>
+                
+                <tr class="">
+                <td>255</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>256</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">21.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>257</td>
+                <td>JELI</td>
+                <td>YUSRI BIN YUSOFF</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.6750000000000003</td>
+                </tr>
+                
+                <tr class="">
+                <td>258</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>259</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>260</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>BERAS BASMATHI - FAIZA (KASHMIR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>261</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>BERAS CAP FAIZA EMAS (SST5%)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>262</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>263</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>264</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>265</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>266</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>267</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>268</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>269</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>270</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>271</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>272</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.68</td>
+                </tr>
+                
+                <tr class="">
+                <td>273</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>274</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>275</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.900000000000001</td>
+                </tr>
+                
+                <tr class="">
+                <td>276</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>277</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.66</td>
+                </tr>
+                
+                <tr class="">
+                <td>278</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>279</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>280</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>ROTI GARDENIA WHOLEMEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>281</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>282</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>283</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>284</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>285</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>286</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>287</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>SUSU SEGAR DUTCH LADY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>288</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>289</td>
+                <td>JELI</td>
+                <td>ZANITA MOHD NOOR</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.4</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20DOSM%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.5%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.5%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C4.0%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C8.0%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CBERAS%20BASMATHI%20-%20FAIZA%20%28KASHMIR%29%2CTIDAK%2C29.95%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CBERAS%20CAP%20FAIZA%20EMAS%20%28SST5%25%29%2CTIDAK%2C26.0%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CTIDAK%2C4.9%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C31.9%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C29.2%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C13.9%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C8.8%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.8%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C14.9%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.6%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C7.9%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.4%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CMARJERIN%20PLANTA%2CTIDAK%2C6.8%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C7.0%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C14.0%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20NEPTUNE%2CTIDAK%2C52.5%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C13.66%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C31.5%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.0%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CROTI%20GARDENIA%20BREAKTHRU%20-%20ROTI%20GANDUM%20PENUH%2CTIDAK%2C4.0%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CROTI%20GARDENIA%20WHOLEMEAL%2CTIDAK%2C4.0%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.5%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.2%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.8%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C7.5%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CSOS%20CILI%20MAGGI%2CTIDAK%2C4.1%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.3%0D%0AJELI%2CAL-TAQWA%20TAWAKKAL%20SDN.BHD%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C1.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CBERAS%20BASMATHI%20-%20FAIZA%20%28KASHMIR%29%2CTIDAK%2C30.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CBERAS%20PULUT%20THAILAND%20%28BIASA%29%20PELBAGAI%20JENAMA%2CTIDAK%2C5.5%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C28.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C30.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C11.9%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C9.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.8%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.5%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CMARJERIN%20PLANTA%2CTIDAK%2C5.9%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.5%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CROTI%20GARDENIA%20BREAKTHRU%20-%20ROTI%20GANDUM%20PENUH%2CTIDAK%2C4.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CROTI%20GARDENIA%20WHOLEMEAL%2CTIDAK%2C4.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C3.9%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.2%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.16%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C5.5%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.5%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C19.9%0D%0AJELI%2CAMIDI%20ENTERPRISE%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C1.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C3.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C7.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CBERAS%20CAP%20FAIZA%20EMAS%20%28SST5%25%29%2CTIDAK%2C26.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CBERAS%20PULUT%20THAILAND%20%28BIASA%29%20PELBAGAI%20JENAMA%2CTIDAK%2C5.5%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C16.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C31.9%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C8.5%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.3%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.5%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CMARJERIN%20PLANTA%2CTIDAK%2C6.8%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CROTI%20GARDENIA%20BREAKTHRU%20-%20ROTI%20GANDUM%20PENUH%2CTIDAK%2C4.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CROTI%20GARDENIA%20WHOLEMEAL%2CTIDAK%2C4.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.19%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.0%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C6.7%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.5%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.9%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CTELUR%20AYAM%20GRED%20B%20%28BERAT%2060.0GM%20HINGGA%2064.9GM%29%2CTIDAK%2C4.3%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0AJELI%2CAZW%20JAYA%20ENTERPRISE%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C1.0%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.0%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C3.5%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.8%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.5%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.6%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C31.9%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.0%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.19%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.3%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.3%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C5.5%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CSOS%20CILI%20MAGGI%2CTIDAK%2C4.0%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.8%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.8%0D%0AJELI%2CISA%20KEDAI%20RUNCIT%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C1.2%0D%0AJELI%2CLUSTY%20ENTERPRISE%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C4.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CAYAM%20BERSIH%20-%20STANDARD%2CTIDAK%2C9.36%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C5.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CBERAS%20PULUT%20THAILAND%20%28BIASA%29%20PELBAGAI%20JENAMA%2CTIDAK%2C6.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C18.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C18.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C7.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C12.5%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C9.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C12.8%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C9.4%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CIKAN%20SIAKAP%20%28ANTARA%202%20HINGGA%204%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C19.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CIKAN%20TILAPIA%20MERAH%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C15.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CIKAN%20TONGKOL/AYA/KAYU%20HITAM%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.8%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CJAMBU%20BATU%20BERBIJI%2CTIDAK%2C7.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CKACANG%20BENDI%2CTIDAK%2C9.75%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C9.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CKACANG%20PANJANG%2CTIDAK%2C10.6%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CKAILAN%2CTIDAK%2C7.6%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CKANGKUNG%2CTIDAK%2C8.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.8%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C14.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C10.6%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.600000000000005%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C6.5%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CLIMAU%20NIPIS%2CTIDAK%2C6.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CLOBAK%20MERAH%2CTIDAK%2C5.8%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.5%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.9%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.5%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.19%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.5%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CSAWI%2CTIDAK%2C6.2%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.8%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CSOS%20CILI%20MAGGI%2CTIDAK%2C4.5%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CSOTONG%20%28%E2%89%A5%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C28.4%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.9%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CSYAMPU%20REJOICE%20%28RICH%20SOFT%20SMOOTH%29%2CTIDAK%2C10.9%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C5.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C5.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CTERUNG%20PANJANG%2CTIDAK%2C7.0%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CTIMUN%2CTIDAK%2C4.6%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CTOMATO%2CTIDAK%2C5.2%0D%0AJELI%2CLUSTY%20ENTERPRISE%2CUDANG%20PUTIH/VANNAMEI%20%28TERNAK%29%20%28ANTARA%2041%20HINGGA%2060%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C28.0%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.5%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C20.0%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C33.5%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C8.0%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.8%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.0%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.0%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CMINYAK%20MASAK%20TULEN%20CAP%20SAJI%2CTIDAK%2C7.1%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.5%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CROTI%20GARDENIA%20BREAKTHRU%20-%20ROTI%20GANDUM%20PENUH%2CTIDAK%2C4.0%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CROTI%20GARDENIA%20WHOLEMEAL%2CTIDAK%2C4.0%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C3.99%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.2%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.8%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C7.5%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CTELUR%20AYAM%20GRED%20B%20%28BERAT%2060.0GM%20HINGGA%2064.9GM%29%2CTIDAK%2C4.3%0D%0AJELI%2CNIK%20JAYA%20TRADING%20K.R%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.0%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.0%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C10.0%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.8%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C14.0%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.6%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C6.0%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.5%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.0%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.5%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C5.5%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CSOS%20CILI%20MAGGI%2CTIDAK%2C4.5%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.5%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.0%0D%0AJELI%2CSUNGAI%20BERUDANG%20ENTERPRISE%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C1.3%0D%0AJELI%2CTASNIM%20TRADING%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C3.9%0D%0AJELI%2CTASNIM%20TRADING%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C27.0%0D%0AJELI%2CTASNIM%20TRADING%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C30.0%0D%0AJELI%2CTASNIM%20TRADING%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CTASNIM%20TRADING%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C8.8%0D%0AJELI%2CTASNIM%20TRADING%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C8.0%0D%0AJELI%2CTASNIM%20TRADING%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.5%0D%0AJELI%2CTASNIM%20TRADING%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.5%0D%0AJELI%2CTASNIM%20TRADING%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.6%0D%0AJELI%2CTASNIM%20TRADING%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C7.5%0D%0AJELI%2CTASNIM%20TRADING%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.96%0D%0AJELI%2CTASNIM%20TRADING%2CMARJERIN%20PLANTA%2CTIDAK%2C6.2%0D%0AJELI%2CTASNIM%20TRADING%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.8%0D%0AJELI%2CTASNIM%20TRADING%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C13.2%0D%0AJELI%2CTASNIM%20TRADING%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.0%0D%0AJELI%2CTASNIM%20TRADING%2CROTI%20GARDENIA%20BREAKTHRU%20-%20ROTI%20GANDUM%20PENUH%2CTIDAK%2C4.0%0D%0AJELI%2CTASNIM%20TRADING%2CROTI%20GARDENIA%20WHOLEMEAL%2CTIDAK%2C4.0%0D%0AJELI%2CTASNIM%20TRADING%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0AJELI%2CTASNIM%20TRADING%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.0%0D%0AJELI%2CTASNIM%20TRADING%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.1%0D%0AJELI%2CTASNIM%20TRADING%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.8%0D%0AJELI%2CTASNIM%20TRADING%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C7.333333333333333%0D%0AJELI%2CTASNIM%20TRADING%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.8%0D%0AJELI%2CTASNIM%20TRADING%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0AJELI%2CTASNIM%20TRADING%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.9%0D%0AJELI%2CTASNIM%20TRADING%2CTELUR%20AYAM%20GRED%20B%20%28BERAT%2060.0GM%20HINGGA%2064.9GM%29%2CTIDAK%2C4.3%0D%0AJELI%2CTASNIM%20TRADING%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.0%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.0%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CBERAS%20BASMATHI%20-%20FAIZA%20%28KASHMIR%29%2CTIDAK%2C30.0%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CBERAS%20CAP%20FAIZA%20EMAS%20%28SST5%25%29%2CTIDAK%2C26.0%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C16.0%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C34.9%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C30.0%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C14.9%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.8%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.9%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C26.899999999999995%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.3%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CMINYAK%20MASAK%20TULEN%20CAP%20SAJI%2CTIDAK%2C7.18%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.5%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CROTI%20GARDENIA%20BREAKTHRU%20-%20ROTI%20GANDUM%20PENUH%2CTIDAK%2C4.0%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CROTI%20GARDENIA%20WHOLEMEAL%2CTIDAK%2C4.0%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.19%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.5%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.675%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CSOS%20CILI%20MAGGI%2CTIDAK%2C4.14%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.5%0D%0AJELI%2CWN%20BERKAT%20JAYA%20ENTERPRISE%20%28ZAKUAN%29%2CYEO%27S%20SOYA%20%28KOTAK%29%2CTIDAK%2C1.3%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.0%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C3.0%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C8.0%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CBERAS%20PULUT%20THAILAND%20%28BIASA%29%20PELBAGAI%20JENAMA%2CTIDAK%2C5.5%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C18.0%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C9.6%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.5%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.0%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C7.5%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.0%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.0%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C6.2%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.7999999999999994%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C21.0%0D%0AJELI%2CYUSRI%20BIN%20YUSOFF%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.6750000000000003%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.7%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.5%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CBERAS%20BASMATHI%20-%20FAIZA%20%28KASHMIR%29%2CTIDAK%2C30.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CBERAS%20CAP%20FAIZA%20EMAS%20%28SST5%25%29%2CTIDAK%2C26.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.9%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C30.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C12.8%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C31.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C8.5%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C10.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.5%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.5%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C26.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C6.68%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C5.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CMARJERIN%20PLANTA%2CTIDAK%2C6.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.900000000000001%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C13.66%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C1.9%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CROTI%20GARDENIA%20BREAKTHRU%20-%20ROTI%20GANDUM%20PENUH%2CTIDAK%2C4.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CROTI%20GARDENIA%20WHOLEMEAL%2CTIDAK%2C4.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.3%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.2%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.8%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.7%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CSUSU%20SEGAR%20DUTCH%20LADY%2CTIDAK%2C7.5%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.9%0D%0AJELI%2CZANITA%20MOHD%20NOOR%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.4%0D%0A" download="overview_daerah.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>

@@ -1,0 +1,1349 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6),
+                table.display thead th:nth-child(7),
+                table.display thead th:nth-child(8),
+                table.display thead th:nth-child(9),
+                table.display thead th:nth-child(10) {
+                background-color: #FFA500;
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Premis dan Item di Perak bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+            <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan Outlet</th>
+                <th>Harga Purata KPDN</th>
+                <th>Sebut Harga KPDN</th>
+                <th>Harga Terkini KPDN <br> (2022-10-31)</th>
+                <th>Min Harga KPDN</th>
+                <th>Max Harga KPDN</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr class="">
+                <td>1</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.790000000000001</td>
+                <td class="text-center">20</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">8.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>2</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>AYAM BERSIH - STANDARD</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">28</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">9.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>3</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9642857142857144</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>4</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.964285714285714</td>
+                <td class="text-center">28</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>5</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.39</td>
+                <td class="text-center">2</td>
+                <td class="text-center">3.49</td>
+                <td class="text-center">3.29</td>
+                <td class="text-center">3.49</td>
+                </tr>
+                
+                <tr class="">
+                <td>6</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.821428571428571</td>
+                <td class="text-center">28</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>7</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BAYAM HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.607142857142857</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>8</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BAYAM MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.333333333333333</td>
+                <td class="text-center">15</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>9</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BERAS CAP RAMBUTAN (SST5%)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>10</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BETIK BIASA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.833333333333333</td>
+                <td class="text-center">12</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>11</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BIHUN KERING TEMPATAN (CAP JASMINE)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>12</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.409090909090908</td>
+                <td class="text-center">22</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>13</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>CILI HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.464285714285714</td>
+                <td class="text-center">28</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>14</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.714285714285715</td>
+                <td class="text-center">28</td>
+                <td class="text-center">27.0</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">27.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>15</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.714285714285715</td>
+                <td class="text-center">28</td>
+                <td class="text-center">27.0</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">27.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>16</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.428571428571429</td>
+                <td class="text-center">28</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">19.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>17</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>EPAL HIJAU GRANNY SMITH (SAIZ M)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">27</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">1.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>18</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>19</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.107142857142858</td>
+                <td class="text-center">28</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>20</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.678571428571427</td>
+                <td class="text-center">28</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">35.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>21</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN BAWAL PUTIH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">40.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">40.0</td>
+                <td class="text-center">40.0</td>
+                <td class="text-center">40.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>22</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">24</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>23</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.321428571428571</td>
+                <td class="text-center">28</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>24</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN GELAMA (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.374375</td>
+                <td class="text-center">16</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>25</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN JENAHAK (KEPINGAN) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">45.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">45.0</td>
+                <td class="text-center">45.0</td>
+                <td class="text-center">45.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>26</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN KELI (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">28</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">8.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>27</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.62962962962963</td>
+                <td class="text-center">27</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">17.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>28</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN KEMBUNG KECIL/PELALING (ANTARA 10 HINGGA 18 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.5</td>
+                <td class="text-center">2</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>29</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN KERAPU (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">22.333333333333332</td>
+                <td class="text-center">15</td>
+                <td class="text-center">24.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>30</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.62962962962963</td>
+                <td class="text-center">27</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">22.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>31</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN MERAH (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">45.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">45.0</td>
+                <td class="text-center">45.0</td>
+                <td class="text-center">45.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>32</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN MERAH ( 1 KILOGRAM SEEKOR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">44.999</td>
+                <td class="text-center">5</td>
+                <td class="text-center">45.995000000000005</td>
+                <td class="text-center">35.0</td>
+                <td class="text-center">48.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>33</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN PARI (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.52173913043478</td>
+                <td class="text-center">23</td>
+                <td class="text-center">35.0</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">35.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>34</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN SELAR PELATA ( 7 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.75</td>
+                <td class="text-center">4</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">22.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>35</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN SELAR/PELATA ( 7 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">21.523809523809526</td>
+                <td class="text-center">21</td>
+                <td class="text-center">22.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">25.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>36</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.392857142857142</td>
+                <td class="text-center">28</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">16.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>37</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN SENANGIN (ANTARA 2 HINGGA 8 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.1875</td>
+                <td class="text-center">16</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">27.0</td>
+                <td class="text-center">34.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>38</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN SIAKAP (ANTARA 2 HINGGA 4 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.23076923076923</td>
+                <td class="text-center">26</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">22.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>39</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN TENGGIRI BATANG (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">34.44444444444444</td>
+                <td class="text-center">9</td>
+                <td class="text-center">35.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">35.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>40</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN TENGGIRI BATANG (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">46.857142857142854</td>
+                <td class="text-center">7</td>
+                <td class="text-center">58.0</td>
+                <td class="text-center">45.0</td>
+                <td class="text-center">58.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>41</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN TENGGIRI PAPAN (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.75</td>
+                <td class="text-center">8</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>42</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN TILAPIA HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">26</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>43</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN TILAPIA MERAH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">17.5</td>
+                <td class="text-center">12</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">19.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>44</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.11111111111111</td>
+                <td class="text-center">27</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>45</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>JAMBU BATU BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.97</td>
+                <td class="text-center">17</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">5.99</td>
+                </tr>
+                
+                <tr class="">
+                <td>46</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.285714285714286</td>
+                <td class="text-center">28</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>47</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.714285714285714</td>
+                <td class="text-center">28</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">13.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>48</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>49</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.017857142857143</td>
+                <td class="text-center">28</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">8.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>50</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KAILAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.803571428571429</td>
+                <td class="text-center">28</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>51</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KANGKUNG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.571428571428571</td>
+                <td class="text-center">28</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>52</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>53</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">23</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>54</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KERANG (SAIZ SEDERHANA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.875</td>
+                <td class="text-center">16</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">16.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>55</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KETAM RENJONG/BUNGA (ANTARA 5 HINGGA 8 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.62962962962963</td>
+                <td class="text-center">27</td>
+                <td class="text-center">32.0</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">40.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>56</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.24</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">5.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>57</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">13.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>58</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.892857142857143</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>59</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.678214285714287</td>
+                <td class="text-center">28</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">16.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>60</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>KUBIS PANJANG (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.134615384615385</td>
+                <td class="text-center">26</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>61</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.88888888888889</td>
+                <td class="text-center">27</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>62</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.714285714285714</td>
+                <td class="text-center">28</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>63</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>LIMAU NIPIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.6067857142857145</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>64</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.821428571428571</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>65</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">5.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>66</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.84</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>67</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.4</td>
+                <td class="text-center">6.4</td>
+                <td class="text-center">6.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>68</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">3</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>69</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>MINYAK MASAK TULEN CAP SERI MURNI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.780000000000001</td>
+                <td class="text-center">5</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">13.5</td>
+                <td class="text-center">14.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>70</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>OREN VALENCIA (SAIZ M)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">1.0</td>
+                <td class="text-center">1.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>71</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>72</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>PISANG BERANGAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.909090909090909</td>
+                <td class="text-center">22</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>73</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>PISANG EMAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.794117647058823</td>
+                <td class="text-center">17</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>74</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>ROTI GARDENIA BREAKTHRU - ROTI GANDUM PENUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>75</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>ROTI GARDENIA WHOLEMEAL</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>76</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>77</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>78</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">2</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">3.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>79</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>SANTAN KELAPA SEGAR (BIASA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>80</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.839285714285714</td>
+                <td class="text-center">28</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>81</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.220000000000001</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.5</td>
+                <td class="text-center">5.5</td>
+                <td class="text-center">6.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>82</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.34</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>83</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>SOTONG ( 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.772727272727273</td>
+                <td class="text-center">22</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">22.0</td>
+                <td class="text-center">33.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>84</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>85</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>86</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">27</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>87</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>TELUR AYAM GRED B (BERAT 60.0GM HINGGA 64.9GM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">4.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>88</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>TEMBIKAI MERAH TANPA BIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">22</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>89</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">2.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>90</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.678571428571429</td>
+                <td class="text-center">28</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>91</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0175</td>
+                <td class="text-center">28</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>92</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.428571428571429</td>
+                <td class="text-center">28</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>93</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.375</td>
+                <td class="text-center">28</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>94</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>UDANG PUTIH KECIL ( 61 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">22.625</td>
+                <td class="text-center">8</td>
+                <td class="text-center">24.0</td>
+                <td class="text-center">22.0</td>
+                <td class="text-center">25.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>95</td>
+                <td>KAMPAR</td>
+                <td>PASAR GOPENG</td>
+                <td>UDANG PUTIH/VANNAMEI (TERNAK) (ANTARA 41 HINGGA 60 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.571428571428573</td>
+                <td class="text-center">28</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">32.0</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20KPDN%2CSebut%20Harga%20KPDN%2CHarga%20Terkini%20KPDN%2CMin%20Harga%20KPDN%2CMax%20Harga%20KPDN%0D%0AKAMPAR%2CPASAR%20GOPENG%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C8.790000000000001%2C20%2C8.99%2C7.99%2C8.99%0D%0AKAMPAR%2CPASAR%20GOPENG%2CAYAM%20BERSIH%20-%20STANDARD%2CTIDAK%2C9.4%2C28%2C9.4%2C9.4%2C9.4%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C3.9642857142857144%2C28%2C4.0%2C3.5%2C4.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.964285714285714%2C28%2C5.0%2C4.0%2C5.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C3.39%2C2%2C3.49%2C3.29%2C3.49%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C8.821428571428571%2C28%2C8.0%2C8.0%2C10.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBAYAM%20HIJAU%2CTIDAK%2C4.607142857142857%2C28%2C6.0%2C4.0%2C6.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBAYAM%20MERAH%2CTIDAK%2C4.333333333333333%2C15%2C6.0%2C4.0%2C6.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBERAS%20CAP%20RAMBUTAN%20%28SST5%25%29%2CTIDAK%2C26.0%2C1%2C26.0%2C26.0%2C26.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBETIK%20BIASA%2CTIDAK%2C4.833333333333333%2C12%2C5.0%2C4.5%2C5.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBIHUN%20KERING%20TEMPATAN%20%28CAP%20JASMINE%29%2CTIDAK%2C3.5%2C5%2C3.5%2C3.5%2C3.5%0D%0AKAMPAR%2CPASAR%20GOPENG%2CBROKOLI%2CTIDAK%2C12.409090909090908%2C22%2C12.0%2C12.0%2C15.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CCILI%20HIJAU%2CTIDAK%2C11.464285714285714%2C28%2C10.0%2C8.0%2C15.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C26.714285714285715%2C28%2C27.0%2C25.0%2C27.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C26.714285714285715%2C28%2C27.0%2C25.0%2C27.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C15.428571428571429%2C28%2C16.0%2C15.0%2C19.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CEPAL%20HIJAU%20GRANNY%20SMITH%20%28SAIZ%20M%29%2CTIDAK%2C1.0%2C27%2C1.0%2C1.0%2C1.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%2C5%2C2.85%2C2.85%2C2.85%0D%0AKAMPAR%2CPASAR%20GOPENG%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C8.107142857142858%2C28%2C8.0%2C8.0%2C9.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20BAWAL%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C29.678571428571427%2C28%2C30.0%2C26.0%2C35.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20BAWAL%20PUTIH%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C40.0%2C1%2C40.0%2C40.0%2C40.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C20.0%2C24%2C20.0%2C20.0%2C20.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C11.321428571428571%2C28%2C14.0%2C10.0%2C14.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20GELAMA%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.374375%2C16%2C9.99%2C9.99%2C14.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20JENAHAK%20%28KEPINGAN%29%20%281KG%29%2CTIDAK%2C45.0%2C5%2C45.0%2C45.0%2C45.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20KELI%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C8.5%2C28%2C8.5%2C8.5%2C8.5%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C14.62962962962963%2C27%2C14.0%2C12.0%2C17.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20KEMBUNG%20KECIL/PELALING%20%28ANTARA%2010%20HINGGA%2018%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.5%2C2%2C12.0%2C9.0%2C12.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20KERAPU%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C22.333333333333332%2C15%2C24.0%2C18.0%2C26.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20KERISI%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C18.62962962962963%2C27%2C16.0%2C16.0%2C22.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20MERAH%20%28KEPINGAN%29%2CTIDAK%2C45.0%2C1%2C45.0%2C45.0%2C45.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20MERAH%20%28%E2%89%A5%201%20KILOGRAM%20SEEKOR%29%2CTIDAK%2C44.999%2C5%2C45.995000000000005%2C35.0%2C48.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20PARI%20%28KEPINGAN%29%2CTIDAK%2C29.52173913043478%2C23%2C35.0%2C28.0%2C35.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20SELAR%20PELATA%20%28%E2%89%A4%207%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C19.75%2C4%2C15.0%2C15.0%2C22.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20SELAR/PELATA%20%28%E2%89%A4%207%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C21.523809523809526%2C21%2C22.0%2C18.0%2C25.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C13.392857142857142%2C28%2C15.0%2C10.0%2C16.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20SENANGIN%20%28ANTARA%202%20HINGGA%208%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C30.1875%2C16%2C28.0%2C27.0%2C34.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20SIAKAP%20%28ANTARA%202%20HINGGA%204%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C20.23076923076923%2C26%2C20.0%2C18.0%2C22.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20TENGGIRI%20BATANG%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C34.44444444444444%2C9%2C35.0%2C30.0%2C35.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20TENGGIRI%20BATANG%20%28KEPINGAN%29%2CTIDAK%2C46.857142857142854%2C7%2C58.0%2C45.0%2C58.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20TENGGIRI%20PAPAN%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C28.75%2C8%2C28.0%2C28.0%2C30.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20TILAPIA%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.0%2C26%2C10.0%2C10.0%2C10.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20TILAPIA%20MERAH%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C17.5%2C12%2C18.0%2C15.0%2C19.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CIKAN%20TONGKOL/AYA/KAYU%20HITAM%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C16.11111111111111%2C27%2C16.0%2C15.0%2C18.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CJAMBU%20BATU%20BERBIJI%2CTIDAK%2C4.97%2C17%2C5.0%2C4.5%2C5.99%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKACANG%20BENDI%2CTIDAK%2C9.285714285714286%2C28%2C12.0%2C7.0%2C12.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKACANG%20BUNCIS%2CTIDAK%2C10.714285714285714%2C28%2C12.0%2C8.0%2C13.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C9.0%2C28%2C9.0%2C9.0%2C9.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKACANG%20PANJANG%2CTIDAK%2C7.017857142857143%2C28%2C5.0%2C5.0%2C8.5%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKAILAN%2CTIDAK%2C7.803571428571429%2C28%2C8.0%2C6.5%2C8.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKANGKUNG%2CTIDAK%2C4.571428571428571%2C28%2C5.0%2C4.0%2C6.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.0%2C1%2C15.0%2C15.0%2C15.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.0%2C23%2C15.0%2C15.0%2C15.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKERANG%20%28SAIZ%20SEDERHANA%29%2CTIDAK%2C15.875%2C16%2C16.0%2C15.0%2C16.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKETAM%20RENJONG/BUNGA%20%28ANTARA%205%20HINGGA%208%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C31.62962962962963%2C27%2C32.0%2C28.0%2C40.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.24%2C5%2C5.2%2C5.2%2C5.4%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.0%2C1%2C13.0%2C13.0%2C13.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C4.892857142857143%2C28%2C4.0%2C4.0%2C6.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C11.678214285714287%2C28%2C16.0%2C9.99%2C16.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CKUBIS%20PANJANG%20%28TEMPATAN%29%2CTIDAK%2C4.134615384615385%2C26%2C3.5%2C3.5%2C6.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C8.88888888888889%2C27%2C6.0%2C6.0%2C10.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CLIMAU%20KASTURI%2CTIDAK%2C8.714285714285714%2C28%2C10.0%2C7.0%2C10.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CLIMAU%20NIPIS%2CTIDAK%2C7.6067857142857145%2C28%2C6.99%2C5.0%2C10.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CLOBAK%20MERAH%2CTIDAK%2C4.821428571428571%2C28%2C6.0%2C4.0%2C6.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.8%2C5%2C5.2%2C4.7%2C5.2%0D%0AKAMPAR%2CPASAR%20GOPENG%2CMARJERIN%20PLANTA%2CTIDAK%2C5.84%2C5%2C6.8%2C5.2%2C6.8%0D%0AKAMPAR%2CPASAR%20GOPENG%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.4%2C5%2C6.4%2C6.4%2C6.4%0D%0AKAMPAR%2CPASAR%20GOPENG%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%2C3%2C2.5%2C2.5%2C2.5%0D%0AKAMPAR%2CPASAR%20GOPENG%2CMINYAK%20MASAK%20TULEN%20CAP%20SERI%20MURNI%2CTIDAK%2C13.780000000000001%2C5%2C13.5%2C13.5%2C14.2%0D%0AKAMPAR%2CPASAR%20GOPENG%2COREN%20VALENCIA%20%28SAIZ%20M%29%2CTIDAK%2C1.0%2C28%2C1.0%2C1.0%2C1.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.0%2C5%2C2.0%2C2.0%2C2.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CPISANG%20BERANGAN%2CTIDAK%2C4.909090909090909%2C22%2C5.0%2C4.5%2C5.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CPISANG%20EMAS%2CTIDAK%2C4.794117647058823%2C17%2C5.0%2C4.5%2C5.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CROTI%20GARDENIA%20BREAKTHRU%20-%20ROTI%20GANDUM%20PENUH%2CTIDAK%2C4.0%2C1%2C4.0%2C4.0%2C4.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CROTI%20GARDENIA%20WHOLEMEAL%2CTIDAK%2C4.0%2C4%2C4.0%2C4.0%2C4.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%2C5%2C3.0%2C3.0%2C3.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.0%2C1%2C4.0%2C4.0%2C4.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.3%2C2%2C3.3%2C3.3%2C3.3%0D%0AKAMPAR%2CPASAR%20GOPENG%2CSANTAN%20KELAPA%20SEGAR%20%28BIASA%29%2CTIDAK%2C9.0%2C28%2C9.0%2C9.0%2C9.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CSAWI%2CTIDAK%2C4.839285714285714%2C28%2C6.0%2C3.5%2C6.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.220000000000001%2C5%2C5.5%2C5.5%2C6.4%0D%0AKAMPAR%2CPASAR%20GOPENG%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.34%2C5%2C3.2%2C3.2%2C3.9%0D%0AKAMPAR%2CPASAR%20GOPENG%2CSOTONG%20%28%E2%89%A5%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C28.772727272727273%2C22%2C30.0%2C22.0%2C33.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%2C5%2C1.4%2C1.4%2C1.4%0D%0AKAMPAR%2CPASAR%20GOPENG%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C3.0%2C1%2C3.0%2C3.0%2C3.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C3.0%2C27%2C3.0%2C3.0%2C3.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CTELUR%20AYAM%20GRED%20B%20%28BERAT%2060.0GM%20HINGGA%2064.9GM%29%2CTIDAK%2C4.3%2C28%2C4.3%2C4.3%2C4.3%0D%0AKAMPAR%2CPASAR%20GOPENG%2CTEMBIKAI%20MERAH%20TANPA%20BIJI%2CTIDAK%2C4.0%2C22%2C4.0%2C4.0%2C4.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.0%2C5%2C2.0%2C2.0%2C2.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CTERUNG%20PANJANG%2CTIDAK%2C7.678571428571429%2C28%2C7.0%2C6.5%2C8.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CTIMUN%2CTIDAK%2C4.0175%2C28%2C5.0%2C3.0%2C5.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CTOMATO%2CTIDAK%2C5.428571428571429%2C28%2C5.0%2C5.0%2C6.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C3.375%2C28%2C3.5%2C3.0%2C3.5%0D%0AKAMPAR%2CPASAR%20GOPENG%2CUDANG%20PUTIH%20KECIL%20%28%E2%89%A5%2061%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C22.625%2C8%2C24.0%2C22.0%2C25.0%0D%0AKAMPAR%2CPASAR%20GOPENG%2CUDANG%20PUTIH/VANNAMEI%20%28TERNAK%29%20%28ANTARA%2041%20HINGGA%2060%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C29.571428571428573%2C28%2C28.0%2C26.0%2C32.0%0D%0A" download="overview_daerah.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
