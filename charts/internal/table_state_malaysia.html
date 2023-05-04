@@ -1,0 +1,287 @@
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+<style>
+    table#myTable {
+        margin: auto;
+    }
+    body {
+        font-family: Arial;
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    table.display tbody tr td {
+        font-size: 12px;
+        line-height: 1.0;
+    }
+    table.display thead th {
+        font-size: 14px;
+        background-color: #D4D4D4;
+        padding: 5px;
+    }
+    .malaysia-row td {
+        font-weight: bold;
+    }
+    /* Define a CSS class for pagination buttons */
+    .pagination-button {
+        font-size: 12px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    table.display thead th:nth-child(3),
+    table.display thead th:nth-child(4),
+    table.display thead th:nth-child(5) {
+    background-color: #1E7664;
+    color: #fff; /* add this line */
+    }
+    table.display thead th:nth-child(6),
+    table.display thead th:nth-child(7),
+    table.display thead th:nth-child(8) {
+    background-color: #FFA500;
+    }
+</style>
+<script>
+$(document).ready(function() {
+    $('#myTable').DataTable({
+        "paging": false,
+        "pageLength": 15,
+        "lengthChange": false,
+        "searching": false, // change searching to carian
+        "ordering": true,
+        "info": false,
+        "autoWidth": false,
+        "order": [],
+        "language": {
+            "lengthMenu": "Paparkan _MENU_ item",
+            "zeroRecords": "Tiada rekod yang ditemui",
+            "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+            "infoEmpty": "Tiada rekod yang tersedia",
+            "zeroRecords": "Tiada rekod yang dicari",
+            "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+            "search": "Carian:",
+            "paginate": {
+                "previous": "Sebelum",
+                "next": "Seterusnya",
+                "first": "Pertama",
+                "last": "Akhir",
+                "paginate_button": {
+                    "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                }
+            }
+        }
+    });
+    $('#refreshButton').click(function() {
+        table.draw();
+    });
+});
+</script>
+<table id="myTable" class="display" border="1">
+  <thead>
+    <tr>
+     <th>Bil.</th>
+      <th>Negeri</th>
+      <th>Outlet DOSM</th>
+      <th>Sebut DOSM</th>
+      <th>Item DOSM</th>
+      <th>Outlet KPDN</th>
+      <th>Sebut Harga KPDN</th>
+      <th>Item KPDN</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="malaysia-row">
+    <td>1</td>
+      <td>MALAYSIA</td>
+      <td class="text-center">990</td>
+      <td class="text-center">17258958</td>
+      <td class="text-center">230</td>
+      <td class="text-center">953</td>
+      <td class="text-center">17258958</td>
+      <td class="text-center">230</td>
+    </tr>
+    
+    <tr class="">
+    <td>2</td>
+      <td>JOHOR</td>
+      <td class="text-center">76</td>
+      <td class="text-center">1981574</td>
+      <td class="text-center">218</td>
+      <td class="text-center">91</td>
+      <td class="text-center">1288618</td>
+      <td class="text-center">219</td>
+    </tr>
+    
+    <tr class="">
+    <td>3</td>
+      <td>KEDAH</td>
+      <td class="text-center">59</td>
+      <td class="text-center">932855</td>
+      <td class="text-center">215</td>
+      <td class="text-center">57</td>
+      <td class="text-center">1100966</td>
+      <td class="text-center">218</td>
+    </tr>
+    
+    <tr class="">
+    <td>4</td>
+      <td>KELANTAN</td>
+      <td class="text-center">150</td>
+      <td class="text-center">1430362</td>
+      <td class="text-center">215</td>
+      <td class="text-center">104</td>
+      <td class="text-center">1125641</td>
+      <td class="text-center">213</td>
+    </tr>
+    
+    <tr class="">
+    <td>5</td>
+      <td>MELAKA</td>
+      <td class="text-center">14</td>
+      <td class="text-center">182917</td>
+      <td class="text-center">217</td>
+      <td class="text-center">17</td>
+      <td class="text-center">490106</td>
+      <td class="text-center">217</td>
+    </tr>
+    
+    <tr class="">
+    <td>6</td>
+      <td>NEGERI SEMBILAN</td>
+      <td class="text-center">43</td>
+      <td class="text-center">954549</td>
+      <td class="text-center">218</td>
+      <td class="text-center">36</td>
+      <td class="text-center">634817</td>
+      <td class="text-center">216</td>
+    </tr>
+    
+    <tr class="">
+    <td>7</td>
+      <td>PAHANG</td>
+      <td class="text-center">39</td>
+      <td class="text-center">1246438</td>
+      <td class="text-center">217</td>
+      <td class="text-center">76</td>
+      <td class="text-center">1092514</td>
+      <td class="text-center">218</td>
+    </tr>
+    
+    <tr class="">
+    <td>8</td>
+      <td>PERAK</td>
+      <td class="text-center">84</td>
+      <td class="text-center">2165493</td>
+      <td class="text-center">219</td>
+      <td class="text-center">57</td>
+      <td class="text-center">1421247</td>
+      <td class="text-center">218</td>
+    </tr>
+    
+    <tr class="">
+    <td>9</td>
+      <td>PERLIS</td>
+      <td class="text-center">50</td>
+      <td class="text-center">454544</td>
+      <td class="text-center">210</td>
+      <td class="text-center">17</td>
+      <td class="text-center">81951</td>
+      <td class="text-center">192</td>
+    </tr>
+    
+    <tr class="">
+    <td>10</td>
+      <td>PULAU PINANG</td>
+      <td class="text-center">44</td>
+      <td class="text-center">1012230</td>
+      <td class="text-center">211</td>
+      <td class="text-center">70</td>
+      <td class="text-center">1865307</td>
+      <td class="text-center">213</td>
+    </tr>
+    
+    <tr class="">
+    <td>11</td>
+      <td>SABAH</td>
+      <td class="text-center">92</td>
+      <td class="text-center">1039872</td>
+      <td class="text-center">215</td>
+      <td class="text-center">79</td>
+      <td class="text-center">1201114</td>
+      <td class="text-center">216</td>
+    </tr>
+    
+    <tr class="">
+    <td>12</td>
+      <td>SARAWAK</td>
+      <td class="text-center">99</td>
+      <td class="text-center">1152199</td>
+      <td class="text-center">214</td>
+      <td class="text-center">85</td>
+      <td class="text-center">1189294</td>
+      <td class="text-center">215</td>
+    </tr>
+    
+    <tr class="">
+    <td>13</td>
+      <td>SELANGOR</td>
+      <td class="text-center">47</td>
+      <td class="text-center">1204141</td>
+      <td class="text-center">219</td>
+      <td class="text-center">107</td>
+      <td class="text-center">2794709</td>
+      <td class="text-center">219</td>
+    </tr>
+    
+    <tr class="">
+    <td>14</td>
+      <td>TERENGGANU</td>
+      <td class="text-center">72</td>
+      <td class="text-center">888223</td>
+      <td class="text-center">213</td>
+      <td class="text-center">77</td>
+      <td class="text-center">1085752</td>
+      <td class="text-center">215</td>
+    </tr>
+    
+    <tr class="">
+    <td>15</td>
+      <td>W.P. KUALA LUMPUR</td>
+      <td class="text-center">99</td>
+      <td class="text-center">2243082</td>
+      <td class="text-center">219</td>
+      <td class="text-center">67</td>
+      <td class="text-center">1609883</td>
+      <td class="text-center">219</td>
+    </tr>
+    
+    <tr class="">
+    <td>16</td>
+      <td>W.P. LABUAN</td>
+      <td class="text-center">10</td>
+      <td class="text-center">186315</td>
+      <td class="text-center">180</td>
+      <td class="text-center">6</td>
+      <td class="text-center">113290</td>
+      <td class="text-center">190</td>
+    </tr>
+    
+    <tr class="">
+    <td>17</td>
+      <td>W.P. PUTRAJAYA</td>
+      <td class="text-center">12</td>
+      <td class="text-center">184164</td>
+      <td class="text-center">215</td>
+      <td class="text-center">8</td>
+      <td class="text-center">163749</td>
+      <td class="text-center">213</td>
+    </tr>
+    
+  </tbody>
+  <h2>Bilangan outlet, sebut harga dan item di setiap negeri</h2>
+</table><br>
+ <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFNegeri%2COutlet%20DOSM%2CSebut%20Harga%20DOSM%2CItem%20DOSM%2COutlet%20KPDN%2CSebut%20Harga%20KPDN%2CItem%20KPDN%0D%0AMALAYSIA%2C990%2C17258958%2C230%2C953%2C17258958%2C230%0D%0AJOHOR%2C76%2C1981574%2C218%2C91%2C1288618%2C219%0D%0AKEDAH%2C59%2C932855%2C215%2C57%2C1100966%2C218%0D%0AKELANTAN%2C150%2C1430362%2C215%2C104%2C1125641%2C213%0D%0AMELAKA%2C14%2C182917%2C217%2C17%2C490106%2C217%0D%0ANEGERI%20SEMBILAN%2C43%2C954549%2C218%2C36%2C634817%2C216%0D%0APAHANG%2C39%2C1246438%2C217%2C76%2C1092514%2C218%0D%0APERAK%2C84%2C2165493%2C219%2C57%2C1421247%2C218%0D%0APERLIS%2C50%2C454544%2C210%2C17%2C81951%2C192%0D%0APULAU%20PINANG%2C44%2C1012230%2C211%2C70%2C1865307%2C213%0D%0ASABAH%2C92%2C1039872%2C215%2C79%2C1201114%2C216%0D%0ASARAWAK%2C99%2C1152199%2C214%2C85%2C1189294%2C215%0D%0ASELANGOR%2C47%2C1204141%2C219%2C107%2C2794709%2C219%0D%0ATERENGGANU%2C72%2C888223%2C213%2C77%2C1085752%2C215%0D%0AW.P.%20KUALA%20LUMPUR%2C99%2C2243082%2C219%2C67%2C1609883%2C219%0D%0AW.P.%20LABUAN%2C10%2C186315%2C180%2C6%2C113290%2C190%0D%0AW.P.%20PUTRAJAYA%2C12%2C184164%2C215%2C8%2C163749%2C213%0D%0A" download="overview_malaysia.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
