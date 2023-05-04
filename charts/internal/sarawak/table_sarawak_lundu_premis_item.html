@@ -1,0 +1,2107 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6) {
+                background-color: #1E7664;
+                color: #fff; /* add this line */
+                }
+                table.display thead th:nth-child(7),
+                table.display thead th:nth-child(8),
+                table.display thead th:nth-child(9),
+                table.display thead th:nth-child(10),
+                table.display thead th:nth-child(11) {
+                background-color: #FFA500;
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Premis dan Item di Sarawak bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+            <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan Outlet</th>
+                <th>Harga Purata DOSM</th>
+                <th>Harga Purata KPDN</th>
+                <th>Sebut Harga KPDN</th>
+                <th>Harga Terkini KPDN <br> (2022-10-31)</th>
+                <th>Min Harga KPDN</th>
+                <th>Max Harga KPDN</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr class="">
+                <td>1</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>2</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.136000000000001</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>3</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>AYAM BERSIH - STANDARD</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.79</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>4</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>5</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.298</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>6</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.518</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>7</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>BERAS PREMIUM CAP UNCLE TAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>8</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>9</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>10</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>BIHUN KERING IMPORT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8199999999999994</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>11</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.518</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>12</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>13</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>14</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>15</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>16</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>GULA MERAH LEMBUT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.1</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>17</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>18</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.433333333333334</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>19</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>20</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">38.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>21</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">39.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>22</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>23</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>24</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>25</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>IKAN SIAKAP (ANTARA 2 HINGGA 4 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">22.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>26</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>IKAN TENGGIRI PAPAN (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>27</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>JAMBU BATU BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>28</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.7</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>29</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>30</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>31</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.99</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>32</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>33</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>34</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>35</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>36</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>KRAFT HI - CALCIUM SINGLES PROCESSED CHEESE 12 SLICES</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>37</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.819999999999999</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>38</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>39</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>40</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>41</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.096</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>42</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.6725</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>43</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.49</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>44</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.400000000000001</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>45</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>46</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>47</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>MINYAK MASAK TULEN CAP BURUH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>48</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.214285714285715</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>49</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>50</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>51</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>52</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.6</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>53</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.2</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>54</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>55</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>56</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>57</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>TEMBIKAI MERAH TANPA BIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>58</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.1</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>59</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.1</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>60</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>61</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>62</td>
+                <td>LUNDU</td>
+                <td>BS SUPERMART SDN. BHD. (LUNDU)</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>63</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>64</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>65</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>66</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>67</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>68</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.160000000000002</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>69</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>70</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>CILI MERAH - MINYAK</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.25</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>71</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>72</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.99</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>73</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>74</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>IKAN TILAPIA MERAH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>75</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>76</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.75</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>77</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>78</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>79</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.5</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>80</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>PAHA AYAM (CHICKEN DRUMSTICK) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>81</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.4</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>82</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>83</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7999999999999994</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>84</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.3</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>85</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.75</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>86</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>87</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.9</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>88</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>89</td>
+                <td>LUNDU</td>
+                <td>CCK FRESH MART (LUNDU)</td>
+                <td>UDANG PUTIH/VANNAMEI (TERNAK) (ANTARA 41 HINGGA 60 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.49</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">0.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>90</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>91</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.04</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.2</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">4.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>92</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.38</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>93</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.74</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">6.7</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>94</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>BERAS PREMIUM CAP UNCLE TAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">30.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">30.8</td>
+                <td class="text-center">30.8</td>
+                <td class="text-center">30.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>95</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>BERAS SUPER CAP 3A BOY (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">28.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">28.5</td>
+                <td class="text-center">28.5</td>
+                <td class="text-center">28.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>96</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">26.5</td>
+                <td class="text-center">4</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">28.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>97</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">1.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>98</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">29.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">29.9</td>
+                <td class="text-center">29.9</td>
+                <td class="text-center">29.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>99</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>GULA MERAH LEMBUT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">3.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>100</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>101</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.38</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.5</td>
+                <td class="text-center">7.2</td>
+                <td class="text-center">7.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>102</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">9.9</td>
+                <td class="text-center">3</td>
+                <td class="text-center">9.9</td>
+                <td class="text-center">9.9</td>
+                <td class="text-center">9.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>103</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.900000000000001</td>
+                <td class="text-center">3</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>104</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">17.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">17.5</td>
+                <td class="text-center">17.5</td>
+                <td class="text-center">17.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>105</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">17.5</td>
+                <td class="text-center">4</td>
+                <td class="text-center">17.5</td>
+                <td class="text-center">17.5</td>
+                <td class="text-center">17.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>106</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.8</td>
+                <td class="text-center">4</td>
+                <td class="text-center">5.8</td>
+                <td class="text-center">5.8</td>
+                <td class="text-center">5.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>107</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">14.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">14.5</td>
+                <td class="text-center">14.5</td>
+                <td class="text-center">14.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>108</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>KRAFT HI - CALCIUM SINGLES PROCESSED CHEESE 12 SLICES</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">11.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">11.9</td>
+                <td class="text-center">11.9</td>
+                <td class="text-center">11.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>109</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">25.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">25.8</td>
+                <td class="text-center">25.8</td>
+                <td class="text-center">25.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>110</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.59</td>
+                <td class="text-center">2</td>
+                <td class="text-center">4.59</td>
+                <td class="text-center">4.59</td>
+                <td class="text-center">4.59</td>
+                </tr>
+                
+                <tr class="">
+                <td>111</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>112</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">2</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">1.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>113</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.1</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.1</td>
+                <td class="text-center">4.1</td>
+                <td class="text-center">4.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>114</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.1</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.1</td>
+                <td class="text-center">3.1</td>
+                <td class="text-center">3.1</td>
+                </tr>
+                
+                <tr class="">
+                <td>115</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.6</td>
+                <td class="text-center">6.6</td>
+                <td class="text-center">6.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>116</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.75</td>
+                <td class="text-center">2</td>
+                <td class="text-center">5.75</td>
+                <td class="text-center">5.75</td>
+                <td class="text-center">5.75</td>
+                </tr>
+                
+                <tr class="">
+                <td>117</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">3.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>118</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">19.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>119</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>SYAMPU REJOICE (RICH SOFT SMOOTH)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">13.2</td>
+                <td class="text-center">1</td>
+                <td class="text-center">13.2</td>
+                <td class="text-center">13.2</td>
+                <td class="text-center">13.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>120</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.6</td>
+                <td class="text-center">2.6</td>
+                <td class="text-center">2.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>121</td>
+                <td>LUNDU</td>
+                <td>GOH JOO HAK TRADING SDN BHD</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>122</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>123</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>124</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.6</td>
+                <td class="text-center">7.6</td>
+                <td class="text-center">7.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>125</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>126</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">28.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>127</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.8</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1.8</td>
+                <td class="text-center">1.8</td>
+                <td class="text-center">1.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>128</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">28.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">28.5</td>
+                <td class="text-center">28.5</td>
+                <td class="text-center">28.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>129</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>130</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>131</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.7</td>
+                <td class="text-center">3</td>
+                <td class="text-center">7.7</td>
+                <td class="text-center">7.7</td>
+                <td class="text-center">7.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>132</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">25.3</td>
+                <td class="text-center">5</td>
+                <td class="text-center">25.3</td>
+                <td class="text-center">25.3</td>
+                <td class="text-center">25.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>133</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">5.2</td>
+                <td class="text-center">5.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>134</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">7.3</td>
+                <td class="text-center">3</td>
+                <td class="text-center">7.3</td>
+                <td class="text-center">7.3</td>
+                <td class="text-center">7.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>135</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">1.9</td>
+                <td class="text-center">1.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>136</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">4.19</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.19</td>
+                <td class="text-center">4.19</td>
+                <td class="text-center">4.19</td>
+                </tr>
+                
+                <tr class="">
+                <td>137</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">6.7</td>
+                <td class="text-center">2</td>
+                <td class="text-center">6.7</td>
+                <td class="text-center">6.7</td>
+                <td class="text-center">6.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>138</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.6</td>
+                <td class="text-center">2</td>
+                <td class="text-center">3.6</td>
+                <td class="text-center">3.6</td>
+                <td class="text-center">3.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>139</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>140</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">19.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">19.5</td>
+                <td class="text-center">19.5</td>
+                <td class="text-center">19.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>141</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">2.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.6</td>
+                <td class="text-center">2.6</td>
+                <td class="text-center">2.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>142</td>
+                <td>LUNDU</td>
+                <td>NEW NAM KEE</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">0.0</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                <td class="text-center">3.8</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20DOSM%2CHarga%20Purata%20KPDN%2CSebut%20Harga%20KPDN%2CHarga%20Terkini%20KPDN%2CMin%20Harga%20KPDN%2CMax%20Harga%20KPDN%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C13.136000000000001%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CAYAM%20BERSIH%20-%20STANDARD%2CTIDAK%2C10.79%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C5.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C5.298%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C8.518%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CBERAS%20PREMIUM%20CAP%20UNCLE%20TAN%2CTIDAK%2C29.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C28.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CTIDAK%2C5.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CBIHUN%20KERING%20IMPORT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.8199999999999994%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CBROKOLI%2CTIDAK%2C16.518%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C27.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C19.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C25.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CGULA%20MERAH%20LEMBUT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C4.1%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C7.433333333333334%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C12.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C38.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C39.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C8.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C9.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CIKAN%20SIAKAP%20%28ANTARA%202%20HINGGA%204%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C22.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CIKAN%20TENGGIRI%20PAPAN%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C27.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CJAMBU%20BATU%20BERBIJI%2CTIDAK%2C8.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C8.7%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CKACANG%20BENDI%2CTIDAK%2C8.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CKACANG%20BUNCIS%2CTIDAK%2C8.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CKACANG%20PANJANG%2CTIDAK%2C4.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C14.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CKRAFT%20HI%20-%20CALCIUM%20SINGLES%20PROCESSED%20CHEESE%2012%20SLICES%2CTIDAK%2C11.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C13.819999999999999%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C26.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C24.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C9.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CLIMAU%20KASTURI%2CTIDAK%2C4.096%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CLOBAK%20MERAH%2CTIDAK%2C4.6725%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.49%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CMARJERIN%20PLANTA%2CTIDAK%2C7.400000000000001%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C13.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CMINYAK%20MASAK%20TULEN%20CAP%20BURUH%2CTIDAK%2C7.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C25.214285714285715%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C7.6%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C7.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C19.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CTEMBIKAI%20MERAH%20TANPA%20BIJI%2CTIDAK%2C4.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C3.1%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CTERUNG%20PANJANG%2CTIDAK%2C8.1%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CTIMUN%2CTIDAK%2C2.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CTOMATO%2CTIDAK%2C8.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CBS%20SUPERMART%20SDN.%20BHD.%20%28LUNDU%29%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C4.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C12.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C5.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C8.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C29.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CBROKOLI%2CTIDAK%2C14.160000000000002%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C25.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CCILI%20MERAH%20-%20MINYAK%2CTIDAK%2C18.25%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C8.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CIKAN%20BAWAL%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C20.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C8.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CIKAN%20TILAPIA%20MERAH%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C14.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CKACANG%20BENDI%2CTIDAK%2C8.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CKACANG%20PANJANG%2CTIDAK%2C6.75%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C16.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C16.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C11.5%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CPAHA%20AYAM%20%28CHICKEN%20DRUMSTICK%29%20%281KG%29%2CTIDAK%2C16.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.4%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C7.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.7999999999999994%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.3%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CTERUNG%20PANJANG%2CTIDAK%2C8.75%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CTIMUN%2CTIDAK%2C3.0%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CTOMATO%2CTIDAK%2C7.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C3.8%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CCCK%20FRESH%20MART%20%28LUNDU%29%2CUDANG%20PUTIH/VANNAMEI%20%28TERNAK%29%20%28ANTARA%2041%20HINGGA%2060%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C31.49%2C0.0%2C0%2C0.0%2C0.0%2C0.0%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C0.0%2C3.8%2C1%2C3.8%2C3.8%2C3.8%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C0.0%2C4.04%2C5%2C4.2%2C3.7%2C4.3%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C0.0%2C4.38%2C5%2C4.3%2C4.3%2C4.5%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C6.74%2C5%2C6.8%2C6.7%2C6.8%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CBERAS%20PREMIUM%20CAP%20UNCLE%20TAN%2CTIDAK%2C0.0%2C30.8%2C5%2C30.8%2C30.8%2C30.8%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CBERAS%20SUPER%20CAP%203A%20BOY%20%28IMPORT%29%2CTIDAK%2C0.0%2C28.5%2C5%2C28.5%2C28.5%2C28.5%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C0.0%2C26.5%2C4%2C28.0%2C26.0%2C28.0%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C0.0%2C1.7%2C1%2C1.7%2C1.7%2C1.7%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C0.0%2C29.9%2C5%2C29.9%2C29.9%2C29.9%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CGULA%20MERAH%20LEMBUT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C3.3%2C1%2C3.3%2C3.3%2C3.3%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.85%2C5%2C2.85%2C2.85%2C2.85%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C0.0%2C7.38%2C5%2C7.5%2C7.2%2C7.5%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C9.9%2C3%2C9.9%2C9.9%2C9.9%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C0.0%2C6.900000000000001%2C3%2C6.9%2C6.9%2C6.9%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C0.0%2C17.5%2C1%2C17.5%2C17.5%2C17.5%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C0.0%2C17.5%2C4%2C17.5%2C17.5%2C17.5%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C0.0%2C5.8%2C4%2C5.8%2C5.8%2C5.8%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C0.0%2C14.5%2C1%2C14.5%2C14.5%2C14.5%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CKRAFT%20HI%20-%20CALCIUM%20SINGLES%20PROCESSED%20CHEESE%2012%20SLICES%2CTIDAK%2C0.0%2C11.9%2C5%2C11.9%2C11.9%2C11.9%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C0.0%2C25.8%2C5%2C25.8%2C25.8%2C25.8%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C0.0%2C4.59%2C2%2C4.59%2C4.59%2C4.59%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CMARJERIN%20PLANTA%2CTIDAK%2C0.0%2C6.9%2C5%2C6.9%2C6.9%2C6.9%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C0.0%2C1.9%2C2%2C1.9%2C1.9%2C1.9%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C0.0%2C4.1%2C1%2C4.1%2C4.1%2C4.1%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C0.0%2C3.1%2C1%2C3.1%2C3.1%2C3.1%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C0.0%2C6.6%2C5%2C6.6%2C6.6%2C6.6%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C0.0%2C5.75%2C2%2C5.75%2C5.75%2C5.75%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CSOS%20CILI%20MAGGI%2CTIDAK%2C0.0%2C3.7%2C5%2C3.7%2C3.7%2C3.7%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C0.0%2C19.9%2C5%2C19.9%2C19.9%2C19.9%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CSYAMPU%20REJOICE%20%28RICH%20SOFT%20SMOOTH%29%2CTIDAK%2C0.0%2C13.2%2C1%2C13.2%2C13.2%2C13.2%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.6%2C5%2C2.6%2C2.6%2C2.6%0D%0ALUNDU%2CGOH%20JOO%20HAK%20TRADING%20SDN%20BHD%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C3.8%2C5%2C3.8%2C3.8%2C3.8%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C0.0%2C5.0%2C4%2C5.0%2C5.0%2C5.0%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C0.0%2C5.0%2C5%2C5.0%2C5.0%2C5.0%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C7.6%2C5%2C7.6%2C7.6%2C7.6%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C0.0%2C3.9%2C1%2C3.9%2C3.9%2C3.9%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C0.0%2C28.0%2C5%2C28.0%2C28.0%2C28.0%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C0.0%2C1.8%2C1%2C1.8%2C1.8%2C1.8%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C0.0%2C28.5%2C5%2C28.5%2C28.5%2C28.5%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.85%2C5%2C2.85%2C2.85%2C2.85%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C0.0%2C6.0%2C5%2C6.0%2C6.0%2C6.0%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C0.0%2C7.7%2C3%2C7.7%2C7.7%2C7.7%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C0.0%2C25.3%2C5%2C25.3%2C25.3%2C25.3%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C0.0%2C5.2%2C5%2C5.2%2C5.2%2C5.2%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CMARJERIN%20PLANTA%2CTIDAK%2C0.0%2C7.3%2C3%2C7.3%2C7.3%2C7.3%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C0.0%2C1.9%2C5%2C1.9%2C1.9%2C1.9%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C0.0%2C4.19%2C1%2C4.19%2C4.19%2C4.19%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C0.0%2C6.7%2C2%2C6.7%2C6.7%2C6.7%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CSOS%20CILI%20MAGGI%2CTIDAK%2C0.0%2C3.6%2C2%2C3.6%2C3.6%2C3.6%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C0.0%2C1.4%2C1%2C1.4%2C1.4%2C1.4%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C0.0%2C19.5%2C5%2C19.5%2C19.5%2C19.5%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.6%2C5%2C2.6%2C2.6%2C2.6%0D%0ALUNDU%2CNEW%20NAM%20KEE%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C3.8%2C5%2C3.8%2C3.8%2C3.8%0D%0A" download="overview_daerah.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
