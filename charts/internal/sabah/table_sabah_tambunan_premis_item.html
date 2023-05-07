@@ -1,0 +1,2149 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6) {
+                background-color: #1E7664;
+                color: #fff; /* add this line */
+                }
+                table.display thead th:nth-child(8) {
+                background-color: RGB(47,85,151);
+                color: #fff; /* add this line */
+                }
+                table.display thead th:nth-child(7),
+                table.display thead th:nth-child(9),
+                table.display thead th:nth-child(10),
+                table.display thead th:nth-child(11),
+                table.display thead th:nth-child(12) {
+                background-color: #FFA500;
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Outlet dan Item di Sabah bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+                <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan <br>Outlet</th>
+                <th>Harga Purata <br>DOSM</th>
+                <th>Harga Purata <br>KPDN</th>
+                <th>Perbezaan <br>Harga</th>
+                <th>Sebut Harga <br>KPDN</th>
+                <th>Harga Terkini KPDN <br> (2022-10-31)</th>
+                <th>Min Harga <br>KPDN</th>
+                <th>Max Harga <br>KPDN</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr class="">
+                <td class="text-center">1</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>ANGGUR MERAH BERBIJI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.39</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">2</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.77</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">3</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.67</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">4</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.23</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">5</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BAYAM HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">6</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BAYAM MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.10</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">7</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BERAS BASMATHI - FAIZA (KASHMIR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">40.19</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">8</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BERAS SUPER CAP ANGGUR SAZARICE 5% (IMPORT THAILAND)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.23</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">9</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BERAS SUPER CAP RODA SAZARICE 5% (IMPORT THAILAND)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">10</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.49</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">11</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.79</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">12</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">13</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>CILI HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">14</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.80</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">15</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>CILI MERAH - KULAI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.12</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">16</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.79</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">17</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">42.69</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">18</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.90</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">19</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>GULA MERAH LEMBUT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.09</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">20</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">21</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">22</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">36.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">23</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">50.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">24</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">25</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>IKAN KELI (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">26</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.05</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">27</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>IKAN SELAR KUNING ( 11 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.16</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">28</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>IKAN SELAR PELATA ( 7 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">29</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>IKAN SELAR/PELATA ( 7 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.49</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">30</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">31</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.18</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">32</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.54</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">33</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">34</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.07</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">35</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.69</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">36</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.65</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">37</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.63</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">38</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">39</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.08</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">40</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">41</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>KUBIS PANJANG (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.20</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">42</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">27.59</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">43</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.89</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">44</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.88</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">45</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>LIMAU NIPIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">46</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.80</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">47</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.55</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">48</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">49</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>MINYAK MASAK SEBATIAN CAP HELANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.35</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">50</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>MINYAK MASAK SEBATIAN CAP NEPTUNE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">37.20</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">51</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.36</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">52</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.09</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">53</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.18</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">54</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.29</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">55</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">56</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.20</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">57</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.79</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">58</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.59</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">59</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.95</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">60</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.79</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">61</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">20.63</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">62</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>SYAMPU REJOICE (RICH SOFT SMOOTH)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">63</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>TEMBIKAI SUSU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">64</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.74</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">65</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.51</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">66</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.47</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">67</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.32</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">68</td>
+                <td>TAMBUNAN</td>
+                <td>GMART BORNEO RETAIL SDN BHD - TAMBUNAN</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.59</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">69</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">3.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">70</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">7.00</td>
+                <td class="text-center">-</td>
+                <td class="text-center">12</td>
+                <td class="text-center">8.50</td>
+                <td class="text-center">5.50</td>
+                <td class="text-center">8.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">71</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">27</td>
+                <td class="text-center">5.99</td>
+                <td class="text-center">5.99</td>
+                <td class="text-center">5.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">72</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">7.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">27</td>
+                <td class="text-center">7.50</td>
+                <td class="text-center">7.50</td>
+                <td class="text-center">7.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">73</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BAYAM HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">6</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">3.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">74</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BERAS BASMATHI - FAIZA (KASHMIR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">38.00</td>
+                <td class="text-center">-</td>
+                <td class="text-center">2</td>
+                <td class="text-center">38.00</td>
+                <td class="text-center">38.00</td>
+                <td class="text-center">38.00</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">75</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BERAS SUPER CAP ANGGUR SAZARICE 5% (IMPORT THAILAND)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">26.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">26.50</td>
+                <td class="text-center">26.50</td>
+                <td class="text-center">26.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">76</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BERAS SUPER CAP RODA SAZARICE 5% (IMPORT THAILAND)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">26.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">26.50</td>
+                <td class="text-center">26.50</td>
+                <td class="text-center">26.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">77</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4.30</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.30</td>
+                <td class="text-center">4.30</td>
+                <td class="text-center">4.30</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">78</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3.75</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.75</td>
+                <td class="text-center">3.75</td>
+                <td class="text-center">3.75</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">79</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>BERUS GIGI ORAL B (COMPLETE EASY CLEAN - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4.30</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.30</td>
+                <td class="text-center">4.30</td>
+                <td class="text-center">4.30</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">80</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">22.60</td>
+                <td class="text-center">-</td>
+                <td class="text-center">16</td>
+                <td class="text-center">22.60</td>
+                <td class="text-center">22.60</td>
+                <td class="text-center">22.60</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">81</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>CILI KERING LEPER (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">17.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">26</td>
+                <td class="text-center">17.50</td>
+                <td class="text-center">17.50</td>
+                <td class="text-center">17.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">82</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>CILI MERAH - KULAI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">21.00</td>
+                <td class="text-center">-</td>
+                <td class="text-center">11</td>
+                <td class="text-center">21.00</td>
+                <td class="text-center">21.00</td>
+                <td class="text-center">21.00</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">83</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1.70</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1.70</td>
+                <td class="text-center">1.70</td>
+                <td class="text-center">1.70</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">84</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">30.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">30.50</td>
+                <td class="text-center">30.50</td>
+                <td class="text-center">30.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">85</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>GULA MERAH LEMBUT (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4.60</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.60</td>
+                <td class="text-center">4.60</td>
+                <td class="text-center">4.60</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">86</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">87</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">10.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">27</td>
+                <td class="text-center">10.99</td>
+                <td class="text-center">10.99</td>
+                <td class="text-center">10.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">88</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>HUGGIES DRY DIAPERS (M72)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">42.25</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">42.25</td>
+                <td class="text-center">42.25</td>
+                <td class="text-center">42.25</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">89</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">8.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">90</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>IKAN GELAMA (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">8.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">91</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">10.85</td>
+                <td class="text-center">-</td>
+                <td class="text-center">14</td>
+                <td class="text-center">12.99</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">12.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">92</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>IKAN MERAH ( 1 KILOGRAM SEEKOR)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">22.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3</td>
+                <td class="text-center">22.99</td>
+                <td class="text-center">22.99</td>
+                <td class="text-center">22.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">93</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>IKAN PARI (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">9.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">9.50</td>
+                <td class="text-center">9.50</td>
+                <td class="text-center">9.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">94</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>IKAN SELAR/PELATA ( 7 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">10</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">9.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">95</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">10.18</td>
+                <td class="text-center">-</td>
+                <td class="text-center">19</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">8.50</td>
+                <td class="text-center">11.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">96</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">12.25</td>
+                <td class="text-center">-</td>
+                <td class="text-center">12</td>
+                <td class="text-center">13.00</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">13.00</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">97</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">23</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">9.99</td>
+                <td class="text-center">9.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">98</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">23</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">99</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">8.80</td>
+                <td class="text-center">-</td>
+                <td class="text-center">27</td>
+                <td class="text-center">8.80</td>
+                <td class="text-center">8.80</td>
+                <td class="text-center">8.80</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">100</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">6.00</td>
+                <td class="text-center">-</td>
+                <td class="text-center">26</td>
+                <td class="text-center">6.00</td>
+                <td class="text-center">6.00</td>
+                <td class="text-center">6.00</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">101</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KANGKUNG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">17</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">7.99</td>
+                <td class="text-center">7.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">102</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KEPAK AYAM (CHICKEN WING)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">16.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">16.50</td>
+                <td class="text-center">16.50</td>
+                <td class="text-center">16.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">103</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KEPAK AYAM (CHICKEN WING) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">16.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">26</td>
+                <td class="text-center">16.50</td>
+                <td class="text-center">16.50</td>
+                <td class="text-center">16.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">104</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">6.75</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.75</td>
+                <td class="text-center">6.75</td>
+                <td class="text-center">6.75</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">105</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">15.40</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">15.40</td>
+                <td class="text-center">15.40</td>
+                <td class="text-center">15.40</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">106</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">21</td>
+                <td class="text-center">5.99</td>
+                <td class="text-center">5.99</td>
+                <td class="text-center">6.00</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">107</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>KUBIS PANJANG (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5.49</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3</td>
+                <td class="text-center">5.99</td>
+                <td class="text-center">4.50</td>
+                <td class="text-center">5.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">108</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>LACTOGEN 2 RUMUSAN SUSULAN (KOTAK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">26.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">26.99</td>
+                <td class="text-center">26.99</td>
+                <td class="text-center">26.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">109</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">19.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">11</td>
+                <td class="text-center">19.50</td>
+                <td class="text-center">19.50</td>
+                <td class="text-center">19.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">110</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">10.61</td>
+                <td class="text-center">-</td>
+                <td class="text-center">18</td>
+                <td class="text-center">10.00</td>
+                <td class="text-center">10.00</td>
+                <td class="text-center">10.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">111</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>LIMAU NIPIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">8.95</td>
+                <td class="text-center">-</td>
+                <td class="text-center">22</td>
+                <td class="text-center">8.99</td>
+                <td class="text-center">8.75</td>
+                <td class="text-center">9.00</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">112</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">27</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">113</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.50</td>
+                <td class="text-center">4.50</td>
+                <td class="text-center">4.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">114</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">7.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3</td>
+                <td class="text-center">7.50</td>
+                <td class="text-center">7.50</td>
+                <td class="text-center">7.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">115</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">2.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">25</td>
+                <td class="text-center">2.50</td>
+                <td class="text-center">2.50</td>
+                <td class="text-center">2.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">116</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>MINYAK MASAK TULEN CAP VESAWIT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">16.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">21</td>
+                <td class="text-center">7.10</td>
+                <td class="text-center">7.10</td>
+                <td class="text-center">33.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">117</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>PAHA AYAM (CHICKEN DRUMSTICK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">12.90</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">12.90</td>
+                <td class="text-center">12.90</td>
+                <td class="text-center">12.90</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">118</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>PAHA AYAM (CHICKEN DRUMSTICK) (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">12.90</td>
+                <td class="text-center">-</td>
+                <td class="text-center">14</td>
+                <td class="text-center">12.90</td>
+                <td class="text-center">12.90</td>
+                <td class="text-center">12.90</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">119</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>PERENCAH TOM YAM ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">2.10</td>
+                <td class="text-center">-</td>
+                <td class="text-center">2</td>
+                <td class="text-center">2.10</td>
+                <td class="text-center">2.10</td>
+                <td class="text-center">2.10</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">120</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4.30</td>
+                <td class="text-center">-</td>
+                <td class="text-center">2</td>
+                <td class="text-center">4.30</td>
+                <td class="text-center">4.30</td>
+                <td class="text-center">4.30</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">121</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>ROTI WHOLEMEAL (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">2</td>
+                <td class="text-center">5.50</td>
+                <td class="text-center">5.50</td>
+                <td class="text-center">5.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">122</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4.20</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.20</td>
+                <td class="text-center">4.20</td>
+                <td class="text-center">4.20</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">123</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3.20</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3</td>
+                <td class="text-center">3.20</td>
+                <td class="text-center">3.20</td>
+                <td class="text-center">3.20</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">124</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">23</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">125</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                <td class="text-center">6.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">126</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3.80</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4</td>
+                <td class="text-center">3.80</td>
+                <td class="text-center">3.80</td>
+                <td class="text-center">3.80</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">127</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1.60</td>
+                <td class="text-center">-</td>
+                <td class="text-center">2</td>
+                <td class="text-center">1.60</td>
+                <td class="text-center">1.60</td>
+                <td class="text-center">1.60</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">128</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">20.80</td>
+                <td class="text-center">-</td>
+                <td class="text-center">5</td>
+                <td class="text-center">20.80</td>
+                <td class="text-center">20.80</td>
+                <td class="text-center">20.80</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">129</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>SYAMPU REJOICE (RICH SOFT SMOOTH)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">11.90</td>
+                <td class="text-center">-</td>
+                <td class="text-center">1</td>
+                <td class="text-center">11.90</td>
+                <td class="text-center">11.90</td>
+                <td class="text-center">11.90</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">130</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">8.63</td>
+                <td class="text-center">-</td>
+                <td class="text-center">11</td>
+                <td class="text-center">9.00</td>
+                <td class="text-center">4.95</td>
+                <td class="text-center">9.00</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">131</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">2.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">4</td>
+                <td class="text-center">2.99</td>
+                <td class="text-center">2.99</td>
+                <td class="text-center">2.99</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">132</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">6.50</td>
+                <td class="text-center">-</td>
+                <td class="text-center">22</td>
+                <td class="text-center">6.50</td>
+                <td class="text-center">6.50</td>
+                <td class="text-center">6.50</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">133</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3.00</td>
+                <td class="text-center">-</td>
+                <td class="text-center">8</td>
+                <td class="text-center">3.00</td>
+                <td class="text-center">3.00</td>
+                <td class="text-center">3.00</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">134</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">8.88</td>
+                <td class="text-center">-</td>
+                <td class="text-center">17</td>
+                <td class="text-center">7.00</td>
+                <td class="text-center">7.00</td>
+                <td class="text-center">9.90</td>
+                </tr>
+                
+                <tr class="">
+                <td class="text-center">135</td>
+                <td>TAMBUNAN</td>
+                <td>SABINDO SUPERMARKET TAMBUNAN</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">-</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">-</td>
+                <td class="text-center">26</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">3.99</td>
+                <td class="text-center">3.99</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20DOSM%2CHarga%20Purata%20KPDN%2CSebut%20Harga%20KPDN%2CHarga%20Terkini%20KPDN%2CMin%20Harga%20KPDN%2CMax%20Harga%20KPDN%2CPerbezaan%20Harga%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CANGGUR%20MERAH%20BERBIJI%2CTIDAK%2C20.39%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C20.39%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C3.766%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C3.766%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.667777777777778%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C4.667777777777778%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C6.230740740740742%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C6.230740740740742%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBAYAM%20HIJAU%2CTIDAK%2C6.989999999999999%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C6.989999999999999%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBAYAM%20MERAH%2CTIDAK%2C7.09909090909091%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C7.09909090909091%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBERAS%20BASMATHI%20-%20FAIZA%20%28KASHMIR%29%2CTIDAK%2C40.190000000000005%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C40.190000000000005%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBERAS%20SUPER%20CAP%20ANGGUR%20SAZARICE%205%25%20%28IMPORT%20THAILAND%29%2CTIDAK%2C27.23%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C27.23%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBERAS%20SUPER%20CAP%20RODA%20SAZARICE%205%25%20%28IMPORT%20THAILAND%29%2CTIDAK%2C26.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C26.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CTIDAK%2C5.49%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C5.49%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C4.79%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C4.79%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CBROKOLI%2CTIDAK%2C10.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C10.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CCILI%20HIJAU%2CTIDAK%2C18.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C18.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C19.80481481481481%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C19.80481481481481%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CCILI%20MERAH%20-%20KULAI%2CTIDAK%2C20.12111111111111%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C20.12111111111111%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.79%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C1.79%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C42.69%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C42.69%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C24.9%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C24.9%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CGULA%20MERAH%20LEMBUT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C4.09%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C4.09%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C2.85%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C8.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C8.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C36.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C36.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C50.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C50.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C8.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C8.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CIKAN%20KELI%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C9.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C9.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CIKAN%20KERISI%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C8.0525%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C8.0525%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CIKAN%20SELAR%20KUNING%20%28%E2%89%A5%2011%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C9.156666666666666%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C9.156666666666666%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CIKAN%20SELAR%20PELATA%20%28%E2%89%A4%207%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C7.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C7.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CIKAN%20SELAR/PELATA%20%28%E2%89%A4%207%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.49%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C10.49%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C9.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C9.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKACANG%20BENDI%2CTIDAK%2C9.182307692307692%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C9.182307692307692%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKACANG%20BUNCIS%2CTIDAK%2C7.5381481481481485%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C7.5381481481481485%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C9.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C9.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKACANG%20PANJANG%2CTIDAK%2C6.073333333333333%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C6.073333333333333%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C15.69%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C15.69%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C15.647692307692306%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C15.647692307692306%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C6.63%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C6.63%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C15.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C15.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C4.08375%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C4.08375%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C12.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C12.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CKUBIS%20PANJANG%20%28TEMPATAN%29%2CTIDAK%2C5.204814814814815%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C5.204814814814815%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C27.589999999999996%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C27.589999999999996%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C16.889999999999997%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C16.889999999999997%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CLIMAU%20KASTURI%2CTIDAK%2C8.87888888888889%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C8.87888888888889%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CLIMAU%20NIPIS%2CTIDAK%2C9.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C9.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CLOBAK%20MERAH%2CTIDAK%2C4.797407407407407%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C4.797407407407407%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.55%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C4.55%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CMARJERIN%20PLANTA%2CTIDAK%2C7.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C7.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20HELANG%2CTIDAK%2C8.35%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C8.35%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CMINYAK%20MASAK%20SEBATIAN%20CAP%20NEPTUNE%2CTIDAK%2C37.2%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C37.2%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C28.35571428571429%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C28.35571428571429%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C2.09%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C2.09%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C4.18%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C4.18%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.29%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C4.29%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C2.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C2.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CSAWI%2CTIDAK%2C7.2011111111111115%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C7.2011111111111115%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C7.79%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C7.79%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C7.590000000000001%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C7.590000000000001%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.95%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C3.95%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.7899999999999998%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C1.7899999999999998%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C20.63%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C20.63%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CSYAMPU%20REJOICE%20%28RICH%20SOFT%20SMOOTH%29%2CTIDAK%2C11.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C11.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CTEMBIKAI%20SUSU%2CTIDAK%2C3.99%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C3.99%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.74%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C2.74%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CTERUNG%20PANJANG%2CTIDAK%2C6.508518518518519%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C6.508518518518519%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CTIMUN%2CTIDAK%2C3.47%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C3.47%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CTOMATO%2CTIDAK%2C5.320434782608696%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C5.320434782608696%0D%0ATAMBUNAN%2CGMART%20BORNEO%20RETAIL%20SDN%20BHD%20-%20TAMBUNAN%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C3.59%2C0.0%2C0%2C0.0%2C0.0%2C0.0%2C3.59%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C0.0%2C3.99%2C1%2C3.99%2C3.99%2C3.99%2C-3.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C0.0%2C7.0%2C12%2C8.5%2C5.5%2C8.5%2C-7.0%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C0.0%2C5.990000000000001%2C27%2C5.99%2C5.99%2C5.99%2C-5.990000000000001%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C7.5%2C27%2C7.5%2C7.5%2C7.5%2C-7.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBAYAM%20HIJAU%2CTIDAK%2C0.0%2C3.99%2C6%2C3.99%2C3.99%2C3.99%2C-3.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBERAS%20BASMATHI%20-%20FAIZA%20%28KASHMIR%29%2CTIDAK%2C0.0%2C38.0%2C2%2C38.0%2C38.0%2C38.0%2C-38.0%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBERAS%20SUPER%20CAP%20ANGGUR%20SAZARICE%205%25%20%28IMPORT%20THAILAND%29%2CTIDAK%2C0.0%2C26.5%2C5%2C26.5%2C26.5%2C26.5%2C-26.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBERAS%20SUPER%20CAP%20RODA%20SAZARICE%205%25%20%28IMPORT%20THAILAND%29%2CTIDAK%2C0.0%2C26.5%2C5%2C26.5%2C26.5%2C26.5%2C-26.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CTIDAK%2C0.0%2C4.3%2C1%2C4.3%2C4.3%2C4.3%2C-4.3%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C0.0%2C3.75%2C1%2C3.75%2C3.75%2C3.75%2C-3.75%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CBERUS%20GIGI%20ORAL%20B%20%28COMPLETE%20EASY%20CLEAN%20-%20SOFT%29%2CTIDAK%2C0.0%2C4.3%2C1%2C4.3%2C4.3%2C4.3%2C-4.3%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C0.0%2C22.6%2C16%2C22.6%2C22.6%2C22.6%2C-22.6%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CCILI%20KERING%20LEPER%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C0.0%2C17.5%2C26%2C17.5%2C17.5%2C17.5%2C-17.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CCILI%20MERAH%20-%20KULAI%2CTIDAK%2C0.0%2C21.0%2C11%2C21.0%2C21.0%2C21.0%2C-21.0%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C0.0%2C1.7%2C1%2C1.7%2C1.7%2C1.7%2C-1.7%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C0.0%2C30.5%2C5%2C30.5%2C30.5%2C30.5%2C-30.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CGULA%20MERAH%20LEMBUT%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C4.6%2C5%2C4.6%2C4.6%2C4.6%2C-4.6%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.85%2C5%2C2.85%2C2.85%2C2.85%2C-2.85%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C0.0%2C10.99%2C27%2C10.99%2C10.99%2C10.99%2C-10.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CHUGGIES%20DRY%20DIAPERS%20%28M72%29%2CTIDAK%2C0.0%2C42.25%2C5%2C42.25%2C42.25%2C42.25%2C-42.25%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C8.99%2C4%2C8.99%2C8.99%2C8.99%2C-8.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CIKAN%20GELAMA%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C8.99%2C4%2C8.99%2C8.99%2C8.99%2C-8.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CIKAN%20KERISI%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C10.847142857142858%2C14%2C12.99%2C7.99%2C12.99%2C-10.847142857142858%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CIKAN%20MERAH%20%28%E2%89%A5%201%20KILOGRAM%20SEEKOR%29%2CTIDAK%2C0.0%2C22.99%2C3%2C22.99%2C22.99%2C22.99%2C-22.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CIKAN%20PARI%20%28KEPINGAN%29%2CTIDAK%2C0.0%2C9.5%2C1%2C9.5%2C9.5%2C9.5%2C-9.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CIKAN%20SELAR/PELATA%20%28%E2%89%A4%207%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C9.99%2C10%2C9.99%2C9.99%2C9.99%2C-9.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C10.183157894736842%2C19%2C9.99%2C8.5%2C11.99%2C-10.183157894736842%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CIKAN%20TONGKOL/AYA/KAYU%20HITAM%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C0.0%2C12.245833333333332%2C12%2C13.0%2C9.99%2C13.0%2C-12.245833333333332%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKACANG%20BENDI%2CTIDAK%2C0.0%2C9.99%2C23%2C9.99%2C9.99%2C9.99%2C-9.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKACANG%20BUNCIS%2CTIDAK%2C0.0%2C6.99%2C23%2C6.99%2C6.99%2C6.99%2C-6.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C0.0%2C8.8%2C27%2C8.8%2C8.8%2C8.8%2C-8.8%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKACANG%20PANJANG%2CTIDAK%2C0.0%2C6.0%2C26%2C6.0%2C6.0%2C6.0%2C-6.0%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKANGKUNG%2CTIDAK%2C0.0%2C7.990000000000001%2C17%2C7.99%2C7.99%2C7.99%2C-7.990000000000001%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%2CTIDAK%2C0.0%2C16.5%2C1%2C16.5%2C16.5%2C16.5%2C-16.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKEPAK%20AYAM%20%28CHICKEN%20WING%29%20%281KG%29%2CTIDAK%2C0.0%2C16.5%2C26%2C16.5%2C16.5%2C16.5%2C-16.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C0.0%2C6.75%2C5%2C6.75%2C6.75%2C6.75%2C-6.75%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C0.0%2C15.4%2C1%2C15.4%2C15.4%2C15.4%2C-15.4%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C0.0%2C5.991428571428572%2C21%2C5.99%2C5.99%2C6.0%2C-5.991428571428572%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CKUBIS%20PANJANG%20%28TEMPATAN%29%2CTIDAK%2C0.0%2C5.493333333333333%2C3%2C5.99%2C4.5%2C5.99%2C-5.493333333333333%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CLACTOGEN%202%20RUMUSAN%20SUSULAN%20%28KOTAK%29%2CTIDAK%2C0.0%2C26.99%2C5%2C26.99%2C26.99%2C26.99%2C-26.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C0.0%2C19.5%2C11%2C19.5%2C19.5%2C19.5%2C-19.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CLIMAU%20KASTURI%2CTIDAK%2C0.0%2C10.605%2C18%2C10.0%2C10.0%2C10.99%2C-10.605%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CLIMAU%20NIPIS%2CTIDAK%2C0.0%2C8.954772727272728%2C22%2C8.99%2C8.75%2C8.995000000000001%2C-8.954772727272728%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CLOBAK%20MERAH%2CTIDAK%2C0.0%2C6.990000000000001%2C27%2C6.99%2C6.99%2C6.99%2C-6.990000000000001%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C0.0%2C4.5%2C5%2C4.5%2C4.5%2C4.5%2C-4.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CMARJERIN%20PLANTA%2CTIDAK%2C0.0%2C7.5%2C3%2C7.5%2C7.5%2C7.5%2C-7.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.5%2C25%2C2.5%2C2.5%2C2.5%2C-2.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CMINYAK%20MASAK%20TULEN%20CAP%20VESAWIT%2CTIDAK%2C0.0%2C16.985714285714284%2C21%2C7.1%2C7.1%2C33.5%2C-16.985714285714284%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CPAHA%20AYAM%20%28CHICKEN%20DRUMSTICK%29%2CTIDAK%2C0.0%2C12.9%2C1%2C12.9%2C12.9%2C12.9%2C-12.9%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CPAHA%20AYAM%20%28CHICKEN%20DRUMSTICK%29%20%281KG%29%2CTIDAK%2C0.0%2C12.9%2C14%2C12.9%2C12.9%2C12.9%2C-12.9%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CPERENCAH%20TOM%20YAM%20ADABI%2CTIDAK%2C0.0%2C2.1%2C2%2C2.1%2C2.1%2C2.1%2C-2.1%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C0.0%2C4.3%2C2%2C4.3%2C4.3%2C4.3%2C-4.3%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CROTI%20WHOLEMEAL%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C5.5%2C2%2C5.5%2C5.5%2C5.5%2C-5.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C0.0%2C4.2%2C1%2C4.2%2C4.2%2C4.2%2C-4.2%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C0.0%2C3.2000000000000006%2C3%2C3.2%2C3.2%2C3.2%2C-3.2000000000000006%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CSAWI%2CTIDAK%2C0.0%2C6.99%2C23%2C6.99%2C6.99%2C6.99%2C-6.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C0.0%2C6.99%2C4%2C6.99%2C6.99%2C6.99%2C-6.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CSOS%20CILI%20MAGGI%2CTIDAK%2C0.0%2C3.8%2C4%2C3.8%2C3.8%2C3.8%2C-3.8%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C0.0%2C1.6%2C2%2C1.6%2C1.6%2C1.6%2C-1.6%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C0.0%2C20.8%2C5%2C20.8%2C20.8%2C20.8%2C-20.8%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CSYAMPU%20REJOICE%20%28RICH%20SOFT%20SMOOTH%29%2CTIDAK%2C0.0%2C11.9%2C1%2C11.9%2C11.9%2C11.9%2C-11.9%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C0.0%2C8.631818181818183%2C11%2C9.0%2C4.95%2C9.0%2C-8.631818181818183%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C0.0%2C2.99%2C4%2C2.99%2C2.99%2C2.99%2C-2.99%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CTERUNG%20PANJANG%2CTIDAK%2C0.0%2C6.5%2C22%2C6.5%2C6.5%2C6.5%2C-6.5%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CTIMUN%2CTIDAK%2C0.0%2C3.0%2C8%2C3.0%2C3.0%2C3.0%2C-3.0%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CTOMATO%2CTIDAK%2C0.0%2C8.876470588235295%2C17%2C7.0%2C7.0%2C9.9%2C-8.876470588235295%0D%0ATAMBUNAN%2CSABINDO%20SUPERMARKET%20TAMBUNAN%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C0.0%2C3.99%2C26%2C3.99%2C3.99%2C3.99%2C-3.99%0D%0A" download="sabah_tambunan_outlet.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
