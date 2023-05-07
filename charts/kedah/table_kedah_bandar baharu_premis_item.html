@@ -1,0 +1,1947 @@
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+            <style>
+                table#myTable {
+                    margin: auto;
+                }
+                body {
+                    font-family: Arial;
+                    font-size: 12px;
+                }
+                h2 {
+                    font-size: 16px;
+                }
+                table.display tbody tr td {
+                    font-size: 12px;
+                    line-height: 1.0;
+                }
+                table.display thead th {
+                    font-size: 14px;
+                    background-color: #D4D4D4;
+                    padding: 5px;
+                }
+                .malaysia-row td {
+                    font-weight: bold;
+                }
+                /* Define a CSS class for pagination buttons */
+                .pagination-button {
+                    font-size: 12px;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                table.display thead th:nth-child(6),
+                table.display thead th:nth-child(7),
+                table.display thead th:nth-child(8),
+                table.display thead th:nth-child(9),
+                table.display thead th:nth-child(10) {
+                background-color: #FFA500;
+                }
+                .dataTables_wrapper {
+                transition: opacity 0.25s ease-in-out;
+                }
+                .dataTables_processing {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #999;
+                z-index: 100;
+                }
+            </style>
+            <script>
+            $(document).ready(function() {
+                $('#myTable').DataTable({
+                    "paging": true,
+                    "pageLength": 12,
+                    "lengthChange": false,
+                    "searching": true, // change searching to carian
+                    "ordering": true,
+                    "info": false,
+                    "autoWidth": false,
+                    "order": [],
+                    "deferRender": true, // Add this line to enable lazy loading
+                    "language": {
+                        "lengthMenu": "Paparkan _MENU_ item",
+                        "zeroRecords": "Tiada rekod yang ditemui",
+                        "info": "Memaparkan _PAGE_ daripada _PAGES_ halaman",
+                        "infoEmpty": "Tiada rekod yang tersedia",
+                        "zeroRecords": "Tiada rekod yang dicari",
+                        "infoFiltered": "(disaring daripada jumlah _MAX_ item)",
+                        "search": "Carian:",
+                        "paginate": {
+                            "previous": "Sebelum",
+                            "next": "Seterusnya",
+                            "first": "Pertama",
+                            "last": "Akhir",
+                            "paginate_button": {
+                                "className": "pagination-button"  // Set the class of the pagination buttons to the defined class
+                            }
+                        }
+                    }
+                });
+                $('#refreshButton').click(function() {
+                    table.draw();
+                });
+            });
+            </script>
+            
+            <h2>Statistik Harga Mengikut Negeri, Daerah, Outlet dan Item di Kedah bagi bulan dan tahun terkini: 10/2022</h2>
+            <table id="myTable" class="display" border="1">
+            <thead>
+                <tr>
+                <th>Bil.</th>
+                <th>Daerah</th>
+                <th>Outlet</th>
+                <th>Item</th>
+                <th>Padanan Outlet</th>
+                <th>Harga Purata KPDN</th>
+                <th>Sebut Harga KPDN</th>
+                <th>Harga Terkini KPDN <br> (2022-10-31)</th>
+                <th>Min Harga KPDN</th>
+                <th>Max Harga KPDN</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr class="">
+                <td>1</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>BAWANG BESAR IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">2.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>2</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>3</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">9.5</td>
+                <td class="text-center">9.5</td>
+                <td class="text-center">9.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>4</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.2</td>
+                <td class="text-center">3.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>5</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">21.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">21.0</td>
+                <td class="text-center">21.0</td>
+                <td class="text-center">21.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>6</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">29.9</td>
+                <td class="text-center">4</td>
+                <td class="text-center">29.9</td>
+                <td class="text-center">29.9</td>
+                <td class="text-center">29.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>7</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>8</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>9</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.9</td>
+                <td class="text-center">1</td>
+                <td class="text-center">11.9</td>
+                <td class="text-center">11.9</td>
+                <td class="text-center">11.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>10</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>11</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>KICAP LEMAK MANIS CAP KIPAS UDANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>12</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">13.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>13</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">4.8</td>
+                <td class="text-center">4.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>14</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>15</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">6.5</td>
+                <td class="text-center">6.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>16</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.3</td>
+                <td class="text-center">5</td>
+                <td class="text-center">12.3</td>
+                <td class="text-center">12.3</td>
+                <td class="text-center">12.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>17</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>18</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>ROTI SANDWICH GARDENIA ORIGINAL CLASSIC</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>19</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">3.3</td>
+                <td class="text-center">3.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>20</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.4</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>21</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>22</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">19.8</td>
+                <td class="text-center">19.8</td>
+                <td class="text-center">19.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>23</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>TELUR AYAM GRED A (BERAT 65.0GM HINGGA 69.9GM SEBIJI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>24</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">1.7</td>
+                <td class="text-center">1.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>25</td>
+                <td>BANDAR BAHARU</td>
+                <td>HUP HENG MINI MARKET</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">2.8</td>
+                <td class="text-center">2.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>26</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>AYAM BERSIH - STANDARD</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">29</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">9.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>27</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>28</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>29</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>30</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>BAYAM HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.827586206896552</td>
+                <td class="text-center">29</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>31</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>BAYAM MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.827586206896552</td>
+                <td class="text-center">29</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>32</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>BETIK BIASA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>33</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.482758620689655</td>
+                <td class="text-center">29</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">13.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>34</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>CILI HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>35</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>36</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>CILI MERAH - KULAI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.06896551724138</td>
+                <td class="text-center">29</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">17.0</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>37</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.689655172413793</td>
+                <td class="text-center">29</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>38</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.896551724137932</td>
+                <td class="text-center">29</td>
+                <td class="text-center">27.0</td>
+                <td class="text-center">24.0</td>
+                <td class="text-center">27.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>39</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">40.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">40.0</td>
+                <td class="text-center">40.0</td>
+                <td class="text-center">40.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>40</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.241379310344827</td>
+                <td class="text-center">29</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>41</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN GELAMA (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>42</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.96551724137931</td>
+                <td class="text-center">29</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">16.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>43</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN KEMBUNG KECIL/PELALING (ANTARA 10 HINGGA 18 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>44</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.482758620689655</td>
+                <td class="text-center">29</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">16.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>45</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN PARI (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.24137931034483</td>
+                <td class="text-center">29</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">32.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>46</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.689655172413794</td>
+                <td class="text-center">29</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>47</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN SIAKAP (ANTARA 2 HINGGA 4 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.82758620689655</td>
+                <td class="text-center">29</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">19.0</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>48</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN TILAPIA MERAH (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.137931034482758</td>
+                <td class="text-center">29</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">15.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>49</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.068965517241379</td>
+                <td class="text-center">29</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>50</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.137931034482758</td>
+                <td class="text-center">29</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>51</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.275862068965518</td>
+                <td class="text-center">29</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">11.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>52</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>53</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.137931034482759</td>
+                <td class="text-center">29</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>54</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>KAILAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.448275862068965</td>
+                <td class="text-center">29</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>55</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>KANGKUNG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.827586206896552</td>
+                <td class="text-center">29</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>56</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>KELAPA PARUT</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.662068965517241</td>
+                <td class="text-center">29</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">7.6</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>57</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>KETAM RENJONG/BUNGA (ANTARA 5 HINGGA 8 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">32.241379310344826</td>
+                <td class="text-center">29</td>
+                <td class="text-center">33.0</td>
+                <td class="text-center">31.0</td>
+                <td class="text-center">33.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>58</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.517241379310345</td>
+                <td class="text-center">29</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>59</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>LADA BENGGALA HIJAU (CAPSICUM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>60</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>61</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>LIMAU NIPIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>62</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>63</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>PISANG BERANGAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>64</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>PISANG EMAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>65</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>SANTAN KELAPA SEGAR (BIASA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>66</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.827586206896552</td>
+                <td class="text-center">29</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>67</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>SOTONG ( 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">31.724137931034484</td>
+                <td class="text-center">29</td>
+                <td class="text-center">32.0</td>
+                <td class="text-center">31.0</td>
+                <td class="text-center">32.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>68</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>TAUGE KACANG HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>69</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>TAUGE KACANG HIJAU (1KG)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">28</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>70</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>TELUR AYAM GRED A (BERAT 65.0GM HINGGA 69.9GM SEBIJI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">29</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                <td class="text-center">4.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>71</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.344827586206897</td>
+                <td class="text-center">29</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>72</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.8275862068965516</td>
+                <td class="text-center">29</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>73</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.620689655172414</td>
+                <td class="text-center">29</td>
+                <td class="text-center">6.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>74</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">29</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>75</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>UDANG PUTIH KECIL ( 61 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">18.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>76</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR AWAM SERDANG</td>
+                <td>UDANG PUTIH/VANNAMEI (TERNAK) (ANTARA 41 HINGGA 60 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">29</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">28.0</td>
+                <td class="text-center">28.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>77</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>100 PLUS (ORIGINAL)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>78</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>AYAM BERSIH - STANDARD</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">9.4</td>
+                <td class="text-center">9.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>79</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>BAWANG BESAR KUNING/HOLLAND</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>80</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>BAWANG KECIL MERAH BIASA IMPORT (INDIA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>81</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>BAWANG PUTIH IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>82</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>BAYAM HIJAU</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>83</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>BAYAM MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>84</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>BERUS GIGI COLGATE (TWISTER - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>85</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>BERUS GIGI COLGATE (ZIG ZAG - SOFT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">1</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">3.9</td>
+                <td class="text-center">3.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>86</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>BROKOLI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>87</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>CILI KERING KERINTING (BERTANGKAI/TIDAK BERTANGKAI)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">25.0</td>
+                <td class="text-center">25.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>88</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>CILI MERAH - KULAI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">20.0</td>
+                <td class="text-center">18.0</td>
+                <td class="text-center">20.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>89</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>COCA COLA (TIN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1.6</td>
+                <td class="text-center">1.6</td>
+                </tr>
+                
+                <tr class="">
+                <td>90</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>DRYPERS WEE WEE DRY (M74)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">30.9</td>
+                <td class="text-center">30.9</td>
+                <td class="text-center">30.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>91</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>DUMEX DUGRO 3 (1-3 TAHUN) PERISA ASLI (850G)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">24.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">24.9</td>
+                <td class="text-center">24.9</td>
+                <td class="text-center">24.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>92</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>GULA PUTIH BERTAPIS KASAR (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                <td class="text-center">2.85</td>
+                </tr>
+                
+                <tr class="">
+                <td>93</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>HALIA BASAH (TUA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>94</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>HORLICKS (PAKET)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.9</td>
+                <td class="text-center">1</td>
+                <td class="text-center">12.9</td>
+                <td class="text-center">12.9</td>
+                <td class="text-center">12.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>95</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>IKAN BAWAL HITAM (ANTARA 2 HINGGA 5 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">25.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">26.0</td>
+                <td class="text-center">24.0</td>
+                <td class="text-center">26.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>96</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>IKAN BILIS GRED B (KOPEK)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">23.440999999999995</td>
+                <td class="text-center">5</td>
+                <td class="text-center">23.244999999999997</td>
+                <td class="text-center">23.244999999999997</td>
+                <td class="text-center">23.49</td>
+                </tr>
+                
+                <tr class="">
+                <td>97</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>IKAN CENCARU (ANTARA 4 HINGGA 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">11.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>98</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">16.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>99</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>IKAN KEMBUNG KECIL/PELALING (ANTARA 10 HINGGA 18 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">11.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>100</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>IKAN KERISI (ANTARA 5 HINGGA 10 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">15.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">16.0</td>
+                <td class="text-center">15.0</td>
+                <td class="text-center">16.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>101</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>IKAN PARI (KEPINGAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">33.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">34.0</td>
+                <td class="text-center">33.0</td>
+                <td class="text-center">34.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>102</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>IKAN SELAYANG/SARDIN  ( 13 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.6</td>
+                <td class="text-center">5</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">11.0</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>103</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>IKAN TONGKOL/AYA/KAYU HITAM (ANTARA 1 HINGGA 2 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">13.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">13.0</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>104</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>JEM STRAWBERI LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.3</td>
+                <td class="text-center">5</td>
+                <td class="text-center">8.3</td>
+                <td class="text-center">8.3</td>
+                <td class="text-center">8.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>105</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KACANG BENDI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>106</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KACANG BUNCIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">12.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>107</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KACANG HIJAU (IMPORT)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>108</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KACANG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">7.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">7.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>109</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KAILAN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>110</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KANGKUNG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>111</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KERANG (SAIZ SEDERHANA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">3</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">14.0</td>
+                <td class="text-center">14.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>112</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KETAM RENJONG/BUNGA (ANTARA 5 HINGGA 8 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">32.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">33.0</td>
+                <td class="text-center">32.0</td>
+                <td class="text-center">33.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>113</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KORDIAL SUNQUICK (OREN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.9</td>
+                <td class="text-center">1</td>
+                <td class="text-center">12.9</td>
+                <td class="text-center">12.9</td>
+                <td class="text-center">12.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>114</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KUBIS BULAT (TEMPATAN)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>115</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>KUBIS BUNGA (CAULIFLOWER)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">9.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">9.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>116</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>LEPAAN BUTTERCUP</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">1</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>117</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>LIMAU KASTURI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>118</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>LIMAU NIPIS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                <td class="text-center">10.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>119</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>LOBAK MERAH</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>120</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>MAGGI MI SEGERA PERISA KARI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">4.7</td>
+                <td class="text-center">4.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>121</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>MARJERIN PLANTA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>122</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>MAYONIS SEBENAR LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.2</td>
+                <td class="text-center">6.2</td>
+                <td class="text-center">6.2</td>
+                </tr>
+                
+                <tr class="">
+                <td>123</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>MENTEGA KACANG HALUS LADY'S CHOICE</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">12.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">12.8</td>
+                <td class="text-center">12.8</td>
+                <td class="text-center">12.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>124</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>MINYAK MASAK PAKET (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">5</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">2.5</td>
+                <td class="text-center">2.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>125</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>PISANG EMAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>126</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>SABUN PENCUCI AXION PASTE (LEMON)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.19</td>
+                <td class="text-center">1</td>
+                <td class="text-center">4.19</td>
+                <td class="text-center">4.19</td>
+                <td class="text-center">4.19</td>
+                </tr>
+                
+                <tr class="">
+                <td>127</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>SANTAN KELAPA JENAMA KARA</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>128</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>SAWI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>129</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>SERBUK CILI BABAS</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">6.8</td>
+                <td class="text-center">6.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>130</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>SERI KAYA YEO'S</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                <td class="text-center">6.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>131</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>SOS CILI MAGGI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">3.7</td>
+                <td class="text-center">3.7</td>
+                </tr>
+                
+                <tr class="">
+                <td>132</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>SOTONG ( 6 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                <td class="text-center">30.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>133</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>SUP BUNJUT ADABI</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">1.4</td>
+                <td class="text-center">1.4</td>
+                </tr>
+                
+                <tr class="">
+                <td>134</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>SUSU TEPUNG SEGERA EVERYDAY</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">5</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">19.9</td>
+                <td class="text-center">19.9</td>
+                </tr>
+                
+                <tr class="">
+                <td>135</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>TELUR AYAM GRED B (BERAT 60.0GM HINGGA 64.9GM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">4.3</td>
+                <td class="text-center">4.3</td>
+                </tr>
+                
+                <tr class="">
+                <td>136</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>TEPUNG BERAS (PELBAGAI JENAMA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">1.8</td>
+                <td class="text-center">5</td>
+                <td class="text-center">1.8</td>
+                <td class="text-center">1.8</td>
+                <td class="text-center">1.8</td>
+                </tr>
+                
+                <tr class="">
+                <td>137</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>TERUNG PANJANG</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">8.2</td>
+                <td class="text-center">5</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">8.0</td>
+                <td class="text-center">9.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>138</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>TIMUN</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                <td class="text-center">4.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>139</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>TOMATO</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">5.4</td>
+                <td class="text-center">5</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">5.0</td>
+                <td class="text-center">6.0</td>
+                </tr>
+                
+                <tr class="">
+                <td>140</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>UBI KENTANG IMPORT (CHINA)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">3.1</td>
+                <td class="text-center">5</td>
+                <td class="text-center">3.5</td>
+                <td class="text-center">3.0</td>
+                <td class="text-center">3.5</td>
+                </tr>
+                
+                <tr class="">
+                <td>141</td>
+                <td>BANDAR BAHARU</td>
+                <td>PASAR MINI SIN KEAN JOO</td>
+                <td>UDANG PUTIH KECIL ( 61 EKOR SEKILOGRAM)</td>
+                <td class="text-center">TIDAK</td>
+                <td class="text-center">19.0</td>
+                <td class="text-center">5</td>
+                <td class="text-center">19.0</td>
+                <td class="text-center">19.0</td>
+                <td class="text-center">19.0</td>
+                </tr>
+                
+            </tbody>
+            </table><br>
+             <div style="text-align:center"><button onclick="location.reload()">Refresh Table</button>&nbsp;&nbsp;<a href="data:text/csv;charset=utf-8,%EF%BB%BFDaerah%2COutlet%2CItem%2CPadanan%20Outlet%2CHarga%20Purata%20KPDN%2CSebut%20Harga%20KPDN%2CHarga%20Terkini%20KPDN%2CMin%20Harga%20KPDN%2CMax%20Harga%20KPDN%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CBAWANG%20BESAR%20IMPORT%20%28INDIA%29%2CTIDAK%2C2.8%2C5%2C2.8%2C2.8%2C2.8%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.0%2C5%2C4.0%2C4.0%2C4.0%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C9.5%2C5%2C9.5%2C9.5%2C9.5%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C3.2%2C1%2C3.2%2C3.2%2C3.2%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C21.0%2C5%2C21.0%2C21.0%2C21.0%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C29.9%2C4%2C29.9%2C29.9%2C29.9%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%2C5%2C2.85%2C2.85%2C2.85%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C6.0%2C5%2C6.0%2C6.0%2C6.0%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C11.9%2C1%2C11.9%2C11.9%2C11.9%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C6.0%2C5%2C6.0%2C6.0%2C6.0%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CKICAP%20LEMAK%20MANIS%20CAP%20KIPAS%20UDANG%2CTIDAK%2C5.0%2C5%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C13.0%2C1%2C13.0%2C13.0%2C13.0%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.8%2C5%2C4.8%2C4.8%2C4.8%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CMARJERIN%20PLANTA%2CTIDAK%2C6.8%2C5%2C6.8%2C6.8%2C6.8%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.5%2C5%2C6.5%2C6.5%2C6.5%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C12.3%2C5%2C12.3%2C12.3%2C12.3%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%2C5%2C2.5%2C2.5%2C2.5%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CROTI%20SANDWICH%20GARDENIA%20ORIGINAL%20CLASSIC%2CTIDAK%2C3.0%2C5%2C3.0%2C3.0%2C3.0%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.3%2C5%2C3.3%2C3.3%2C3.3%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.8%2C5%2C6.9%2C6.4%2C6.9%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%2C5%2C1.4%2C1.4%2C1.4%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C19.8%2C5%2C19.8%2C19.8%2C19.8%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CTELUR%20AYAM%20GRED%20A%20%28BERAT%2065.0GM%20HINGGA%2069.9GM%20SEBIJI%29%2CTIDAK%2C4.5%2C5%2C4.5%2C4.5%2C4.5%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C1.7%2C5%2C1.7%2C1.7%2C1.7%0D%0ABANDAR%20BAHARU%2CHUP%20HENG%20MINI%20MARKET%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C2.8%2C5%2C2.8%2C2.8%2C2.8%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CAYAM%20BERSIH%20-%20STANDARD%2CTIDAK%2C9.4%2C29%2C9.4%2C9.4%2C9.4%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.0%2C29%2C4.0%2C4.0%2C4.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C5.0%2C29%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C10.0%2C29%2C10.0%2C10.0%2C10.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CBAYAM%20HIJAU%2CTIDAK%2C4.827586206896552%2C29%2C5.0%2C4.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CBAYAM%20MERAH%2CTIDAK%2C4.827586206896552%2C29%2C5.0%2C4.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CBETIK%20BIASA%2CTIDAK%2C4.0%2C29%2C4.0%2C4.0%2C4.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CBROKOLI%2CTIDAK%2C12.482758620689655%2C29%2C13.0%2C12.0%2C13.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CCILI%20HIJAU%2CTIDAK%2C13.0%2C29%2C13.0%2C12.0%2C14.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C26.0%2C29%2C26.0%2C26.0%2C26.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CCILI%20MERAH%20-%20KULAI%2CTIDAK%2C19.06896551724138%2C29%2C20.0%2C17.0%2C20.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C7.689655172413793%2C29%2C7.0%2C7.0%2C8.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20BAWAL%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C24.896551724137932%2C29%2C27.0%2C24.0%2C27.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C40.0%2C29%2C40.0%2C40.0%2C40.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.241379310344827%2C29%2C12.0%2C10.0%2C12.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20GELAMA%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C12.0%2C29%2C12.0%2C12.0%2C12.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C15.96551724137931%2C29%2C16.0%2C15.0%2C16.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20KEMBUNG%20KECIL/PELALING%20%28ANTARA%2010%20HINGGA%2018%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C12.0%2C29%2C12.0%2C12.0%2C12.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20KERISI%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C15.482758620689655%2C29%2C16.0%2C15.0%2C16.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20PARI%20%28KEPINGAN%29%2CTIDAK%2C30.24137931034483%2C29%2C30.0%2C30.0%2C32.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C11.689655172413794%2C29%2C14.0%2C9.0%2C14.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20SIAKAP%20%28ANTARA%202%20HINGGA%204%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C19.82758620689655%2C29%2C20.0%2C19.0%2C20.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20TILAPIA%20MERAH%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C14.137931034482758%2C29%2C15.0%2C13.0%2C15.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CIKAN%20TONGKOL/AYA/KAYU%20HITAM%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C13.068965517241379%2C29%2C13.0%2C13.0%2C14.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CKACANG%20BENDI%2CTIDAK%2C9.137931034482758%2C29%2C10.0%2C8.0%2C10.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CKACANG%20BUNCIS%2CTIDAK%2C10.275862068965518%2C29%2C11.0%2C9.0%2C11.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C7.0%2C29%2C7.0%2C7.0%2C7.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CKACANG%20PANJANG%2CTIDAK%2C7.137931034482759%2C29%2C7.0%2C7.0%2C9.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CKAILAN%2CTIDAK%2C7.448275862068965%2C29%2C7.0%2C7.0%2C9.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CKANGKUNG%2CTIDAK%2C4.827586206896552%2C29%2C5.0%2C4.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CKELAPA%20PARUT%2CTIDAK%2C8.662068965517241%2C29%2C9.0%2C7.6%2C9.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CKETAM%20RENJONG/BUNGA%20%28ANTARA%205%20HINGGA%208%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C32.241379310344826%2C29%2C33.0%2C31.0%2C33.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C9.517241379310345%2C29%2C10.0%2C8.0%2C12.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CLADA%20BENGGALA%20HIJAU%20%28CAPSICUM%29%2CTIDAK%2C12.0%2C29%2C12.0%2C12.0%2C12.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CLIMAU%20KASTURI%2CTIDAK%2C8.0%2C29%2C8.0%2C8.0%2C8.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CLIMAU%20NIPIS%2CTIDAK%2C8.0%2C29%2C8.0%2C8.0%2C8.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CLOBAK%20MERAH%2CTIDAK%2C5.0%2C29%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CPISANG%20BERANGAN%2CTIDAK%2C5.0%2C29%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CPISANG%20EMAS%2CTIDAK%2C5.0%2C29%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CSANTAN%20KELAPA%20SEGAR%20%28BIASA%29%2CTIDAK%2C12.0%2C29%2C12.0%2C12.0%2C12.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CSAWI%2CTIDAK%2C4.827586206896552%2C29%2C5.0%2C4.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CSOTONG%20%28%E2%89%A5%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C31.724137931034484%2C29%2C32.0%2C31.0%2C32.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CTAUGE%20KACANG%20HIJAU%2CTIDAK%2C4.0%2C1%2C4.0%2C4.0%2C4.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CTAUGE%20KACANG%20HIJAU%20%281KG%29%2CTIDAK%2C4.0%2C28%2C4.0%2C4.0%2C4.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CTELUR%20AYAM%20GRED%20A%20%28BERAT%2065.0GM%20HINGGA%2069.9GM%20SEBIJI%29%2CTIDAK%2C4.5%2C29%2C4.5%2C4.5%2C4.5%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CTERUNG%20PANJANG%2CTIDAK%2C8.344827586206897%2C29%2C8.0%2C8.0%2C10.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CTIMUN%2CTIDAK%2C3.8275862068965516%2C29%2C4.0%2C3.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CTOMATO%2CTIDAK%2C5.620689655172414%2C29%2C6.0%2C5.0%2C6.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C3.5%2C29%2C3.5%2C3.5%2C3.5%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CUDANG%20PUTIH%20KECIL%20%28%E2%89%A5%2061%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C18.0%2C29%2C18.0%2C18.0%2C18.0%0D%0ABANDAR%20BAHARU%2CPASAR%20AWAM%20SERDANG%2CUDANG%20PUTIH/VANNAMEI%20%28TERNAK%29%20%28ANTARA%2041%20HINGGA%2060%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C28.0%2C29%2C28.0%2C28.0%2C28.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2C100%20PLUS%20%28ORIGINAL%29%2CTIDAK%2C3.5%2C1%2C3.5%2C3.5%2C3.5%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CAYAM%20BERSIH%20-%20STANDARD%2CTIDAK%2C9.4%2C5%2C9.4%2C9.4%2C9.4%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CBAWANG%20BESAR%20KUNING/HOLLAND%2CTIDAK%2C4.0%2C5%2C4.0%2C4.0%2C4.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CBAWANG%20KECIL%20MERAH%20BIASA%20IMPORT%20%28INDIA%29%2CTIDAK%2C4.0%2C4%2C4.0%2C4.0%2C4.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CBAWANG%20PUTIH%20IMPORT%20%28CHINA%29%2CTIDAK%2C8.0%2C5%2C8.0%2C8.0%2C8.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CBAYAM%20HIJAU%2CTIDAK%2C5.0%2C5%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CBAYAM%20MERAH%2CTIDAK%2C5.0%2C5%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CBERUS%20GIGI%20COLGATE%20%28TWISTER%20-%20SOFT%29%2CTIDAK%2C3.9%2C1%2C3.9%2C3.9%2C3.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CBERUS%20GIGI%20COLGATE%20%28ZIG%20ZAG%20-%20SOFT%29%2CTIDAK%2C3.9%2C1%2C3.9%2C3.9%2C3.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CBROKOLI%2CTIDAK%2C12.0%2C5%2C12.0%2C12.0%2C12.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CCILI%20KERING%20KERINTING%20%28BERTANGKAI/TIDAK%20BERTANGKAI%29%2CTIDAK%2C25.0%2C5%2C25.0%2C25.0%2C25.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CCILI%20MERAH%20-%20KULAI%2CTIDAK%2C19.0%2C5%2C20.0%2C18.0%2C20.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CCOCA%20COLA%20%28TIN%29%2CTIDAK%2C1.6%2C1%2C1.6%2C1.6%2C1.6%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CDRYPERS%20WEE%20WEE%20DRY%20%28M74%29%2CTIDAK%2C30.9%2C5%2C30.9%2C30.9%2C30.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CDUMEX%20DUGRO%203%20%281-3%20TAHUN%29%20PERISA%20ASLI%20%28850G%29%2CTIDAK%2C24.9%2C5%2C24.9%2C24.9%2C24.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CGULA%20PUTIH%20BERTAPIS%20KASAR%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.85%2C5%2C2.85%2C2.85%2C2.85%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CHALIA%20BASAH%20%28TUA%29%2CTIDAK%2C7.6%2C5%2C8.0%2C7.0%2C8.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CHORLICKS%20%28PAKET%29%2CTIDAK%2C12.9%2C1%2C12.9%2C12.9%2C12.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CIKAN%20BAWAL%20HITAM%20%28ANTARA%202%20HINGGA%205%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C25.6%2C5%2C26.0%2C24.0%2C26.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CIKAN%20BILIS%20GRED%20B%20%28KOPEK%29%2CTIDAK%2C23.440999999999995%2C5%2C23.244999999999997%2C23.244999999999997%2C23.49%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CIKAN%20CENCARU%20%28ANTARA%204%20HINGGA%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C11.0%2C5%2C11.0%2C11.0%2C11.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CIKAN%20KEMBUNG%20%28ANTARA%208%20HINGGA%2012%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C16.0%2C5%2C16.0%2C16.0%2C16.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CIKAN%20KEMBUNG%20KECIL/PELALING%20%28ANTARA%2010%20HINGGA%2018%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C10.4%2C5%2C11.0%2C10.0%2C11.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CIKAN%20KERISI%20%28ANTARA%205%20HINGGA%2010%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C15.8%2C5%2C16.0%2C15.0%2C16.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CIKAN%20PARI%20%28KEPINGAN%29%2CTIDAK%2C33.2%2C5%2C34.0%2C33.0%2C34.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CIKAN%20SELAYANG/SARDIN%20%20%28%E2%89%A5%2013%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C12.6%2C5%2C14.0%2C11.0%2C14.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CIKAN%20TONGKOL/AYA/KAYU%20HITAM%20%28ANTARA%201%20HINGGA%202%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C13.4%2C5%2C14.0%2C13.0%2C14.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CJEM%20STRAWBERI%20LADY%27S%20CHOICE%2CTIDAK%2C8.3%2C5%2C8.3%2C8.3%2C8.3%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKACANG%20BENDI%2CTIDAK%2C10.0%2C5%2C10.0%2C10.0%2C10.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKACANG%20BUNCIS%2CTIDAK%2C10.4%2C5%2C10.0%2C10.0%2C12.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKACANG%20HIJAU%20%28IMPORT%29%2CTIDAK%2C7.0%2C5%2C7.0%2C7.0%2C7.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKACANG%20PANJANG%2CTIDAK%2C7.2%2C5%2C7.0%2C7.0%2C8.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKAILAN%2CTIDAK%2C9.0%2C5%2C9.0%2C9.0%2C9.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKANGKUNG%2CTIDAK%2C5.0%2C5%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKERANG%20%28SAIZ%20SEDERHANA%29%2CTIDAK%2C14.0%2C3%2C14.0%2C14.0%2C14.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKETAM%20RENJONG/BUNGA%20%28ANTARA%205%20HINGGA%208%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C32.4%2C5%2C33.0%2C32.0%2C33.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKORDIAL%20SUNQUICK%20%28OREN%29%2CTIDAK%2C12.9%2C1%2C12.9%2C12.9%2C12.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKUBIS%20BULAT%20%28TEMPATAN%29%2CTIDAK%2C5.0%2C5%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CKUBIS%20BUNGA%20%28CAULIFLOWER%29%2CTIDAK%2C9.2%2C5%2C9.0%2C9.0%2C10.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CLEPAAN%20BUTTERCUP%2CTIDAK%2C6.9%2C1%2C6.9%2C6.9%2C6.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CLIMAU%20KASTURI%2CTIDAK%2C8.0%2C5%2C8.0%2C8.0%2C8.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CLIMAU%20NIPIS%2CTIDAK%2C10.0%2C5%2C10.0%2C10.0%2C10.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CLOBAK%20MERAH%2CTIDAK%2C4.0%2C5%2C4.0%2C4.0%2C4.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CMAGGI%20MI%20SEGERA%20PERISA%20KARI%2CTIDAK%2C4.7%2C5%2C4.7%2C4.7%2C4.7%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CMARJERIN%20PLANTA%2CTIDAK%2C6.9%2C5%2C6.9%2C6.9%2C6.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CMAYONIS%20SEBENAR%20LADY%27S%20CHOICE%2CTIDAK%2C6.2%2C5%2C6.2%2C6.2%2C6.2%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CMENTEGA%20KACANG%20HALUS%20LADY%27S%20CHOICE%2CTIDAK%2C12.8%2C5%2C12.8%2C12.8%2C12.8%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CMINYAK%20MASAK%20PAKET%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C2.5%2C5%2C2.5%2C2.5%2C2.5%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CPISANG%20EMAS%2CTIDAK%2C5.0%2C5%2C5.0%2C5.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CSABUN%20PENCUCI%20AXION%20PASTE%20%28LEMON%29%2CTIDAK%2C4.19%2C1%2C4.19%2C4.19%2C4.19%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CSANTAN%20KELAPA%20JENAMA%20KARA%2CTIDAK%2C3.0%2C5%2C3.0%2C3.0%2C3.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CSAWI%2CTIDAK%2C4.2%2C5%2C5.0%2C4.0%2C5.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CSERBUK%20CILI%20BABAS%2CTIDAK%2C6.8%2C5%2C6.8%2C6.8%2C6.8%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CSERI%20KAYA%20YEO%27S%2CTIDAK%2C6.9%2C5%2C6.9%2C6.9%2C6.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CSOS%20CILI%20MAGGI%2CTIDAK%2C3.7%2C5%2C3.7%2C3.7%2C3.7%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CSOTONG%20%28%E2%89%A5%206%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C30.0%2C5%2C30.0%2C30.0%2C30.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CSUP%20BUNJUT%20ADABI%2CTIDAK%2C1.4%2C5%2C1.4%2C1.4%2C1.4%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CSUSU%20TEPUNG%20SEGERA%20EVERYDAY%2CTIDAK%2C19.9%2C5%2C19.9%2C19.9%2C19.9%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CTELUR%20AYAM%20GRED%20B%20%28BERAT%2060.0GM%20HINGGA%2064.9GM%29%2CTIDAK%2C4.3%2C5%2C4.3%2C4.3%2C4.3%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CTEPUNG%20BERAS%20%28PELBAGAI%20JENAMA%29%2CTIDAK%2C1.8%2C5%2C1.8%2C1.8%2C1.8%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CTERUNG%20PANJANG%2CTIDAK%2C8.2%2C5%2C8.0%2C8.0%2C9.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CTIMUN%2CTIDAK%2C4.0%2C5%2C4.0%2C4.0%2C4.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CTOMATO%2CTIDAK%2C5.4%2C5%2C5.0%2C5.0%2C6.0%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CUBI%20KENTANG%20IMPORT%20%28CHINA%29%2CTIDAK%2C3.1%2C5%2C3.5%2C3.0%2C3.5%0D%0ABANDAR%20BAHARU%2CPASAR%20MINI%20SIN%20KEAN%20JOO%2CUDANG%20PUTIH%20KECIL%20%28%E2%89%A5%2061%20EKOR%20SEKILOGRAM%29%2CTIDAK%2C19.0%2C5%2C19.0%2C19.0%2C19.0%0D%0A" download="kedah_bandar baharu_outlet.csv"><button style="font-family: Arial; font-size: 12px;">Muat Turun CSV</button></a></div>
