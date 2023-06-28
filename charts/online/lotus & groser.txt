@@ -1,0 +1,78 @@
+import pandas as pd
+
+import os
+import openpyxl
+from pyecharts import options as opts
+from pyecharts.charts import Bar,Calendar, Tab, Line, Page
+from pathlib import Path
+from pyecharts.options import ComponentTitleOpts
+from pyecharts.components import Table
+from pyecharts.globals import ThemeType
+from pyecharts.commons.utils import JsCode
+
+import locale
+locale.setlocale(locale.LC_ALL, 'ms_MY')
+
+df = pd.read_csv(r"C:\Users\shazureen\Desktop\uyen\EGG_MEAT.csv")
+
+
+df.dtypes
+df["main_category"].unique()
+df["sub_category"].unique()
+df["group"].unique()
+df["unit.1"].unique()
+
+df['dates'] = pd.to_datetime(df['dates'])
+df['dates']= pd.to_datetime(df['dates'], format='%d/%m/%Y')
+
+for i in df["main_category"].unique():
+
+    subset = df[df['main_category'] ==i]
+
+    for j in subset["sub_category"].unique():
+
+        subset2 = subset[subset['sub_category'] == j]
+
+        for k in subset2["group"].unique():
+
+            subset3 = subset2[subset2['group'] == k]
+
+            for l in subset3["unit.1"].unique():
+
+                subset4 = subset3[subset3['unit.1'] == l]
+
+                title = subset4['title_new'].unique()
+
+                dates_1 = subset4.groupby(by=['dates','title_new'],group_keys=False).mean()[['price_actual']].apply(lambda x:x)
+                pivot = dates_1.pivot_table(index="dates",columns="title_new",values="price_actual")
+               
+                initial_selected = pivot.columns[1:4].tolist()
+
+                line = Line(init_opts=opts.InitOpts(width='100%',theme=ThemeType.SHINE, animation_opts=opts.AnimationOpts(animation_delay=100, animation_easing="elasticOut")))
+                from datetime import datetime
+
+                formatted_index = [datetime.strftime(date, '%d/%m/%Y') for date in pivot.index.unique()]
+                line.add_xaxis(formatted_index)
+                for name2 in pivot.columns[1:]:
+                    line.add_yaxis(name2, pivot[name2].round(2).tolist(),label_opts=opts.LabelOpts(is_show=False),symbol="circle", is_selected=name2 in initial_selected)
+                line.set_global_opts(
+                                    datazoom_opts=[opts.DataZoomOpts(pos_bottom='0%',range_start=0,range_end=100,)],                                  
+                                    legend_opts=opts.LegendOpts(is_show=True, type_='scroll',pos_top='5%',selected_mode='multiple',border_width=0),
+                                    title_opts=opts.TitleOpts(subtitle=" ",pos_top="0",), #title_textstyle_opts=opts.TextStyleOpts(font_size=50)
+                                    tooltip_opts=opts.TooltipOpts(is_show=True, trigger="axis", axis_pointer_type="line", textstyle_opts=opts.TextStyleOpts(color="white")),
+                                    toolbox_opts=opts.ToolboxOpts(is_show=True, orient='vertical',pos_left='92%',pos_top=100,item_gap=10, feature={'restore': {'title': 'Reset'}, 'saveAsImage': {'title': 'Save Image'},'dataView': {'title': 'Text View', 'lang': ['Text View', 'Close', 'Refresh']},'magicType': {'type': ['line', 'bar'], 'title': { 'line': 'Line View', 'bar': 'Bar View' } }}),
+                                    #brush_opts=opts.BrushOpts(x_axis_index="all", tool_box=["lineX"]),
+                                    xaxis_opts=opts.AxisOpts(
+                                                axistick_opts=opts.AxisTickOpts(is_align_with_label=False),
+                                                is_scale=False,
+                                                boundary_gap=False, offset=0,axisline_opts=opts.AxisLineOpts(is_on_zero=False),
+                                                splitline_opts=opts.SplitLineOpts(is_show=False),
+                                                ),
+                                    yaxis_opts=opts.AxisOpts(
+                                                is_scale=True,name='Harga (RM)',name_location="center", name_gap=50,splitline_opts=opts.SplitLineOpts(is_show=False),axisline_opts=opts.AxisLineOpts(is_on_zero=False)),
+                                    )
+
+                        
+                file_path = "C:/Users/shazureen/Desktop/1. DATA PI/online lotus/HTML (21.6)/" + i + "_" + j + "_" + k + "_" + l + ".html"
+
+                line.render(file_path)
